@@ -1,0 +1,146 @@
+<!doctype html><meta charset="utf-8"><title>Lunch Liao! menu: Notice Board</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Patrick+Hand&family=DM+Sans:opsz,wght@9..40,500;9..40,700;9..40,800&display=swap">
+<link rel="stylesheet" href="proto.css">
+<style>
+.stage{--wall:#F4E7C6;--kopi:#3A2417;--red:#C8221B;--rim:#1F3C80;--kaya:#E3A92B;--felt:#2b7468;--paper:#FCF8EC;font-family:'DM Sans',sans-serif;font-weight:500;color:var(--kopi)}
+.an{font-family:'Anton';font-weight:400;letter-spacing:.02em}
+.hand{font-family:'Patrick Hand'}
+/* the wall: cream paint, peach band, thin blue stripe, terrazzo floor */
+.wall{background:
+ linear-gradient(#0000 0 664px,var(--rim) 664px 676px,#F1B28C 676px),var(--wall)}
+.floor{position:absolute;left:0;right:0;bottom:0;height:52px;border-top:4px solid #8d8577;background:radial-gradient(circle at 30% 40%,#9a958a 0 2px,#0000 3px) 0 0/34px 30px,radial-gradient(circle at 70% 70%,#e9e2d2 0 2px,#0000 3px) 0 0/46px 26px,#c3bcad}
+/* painted logo, a bit weathered */
+.logo{position:absolute;left:44px;top:6px;font-family:'Anton';font-size:118px;line-height:1.16;letter-spacing:.015em;color:#0000;
+ background:radial-gradient(circle at 30% 40%,var(--wall) 0 1px,#0000 1.6px) 0 0/37px 29px,radial-gradient(ellipse at 70% 80%,var(--wall) 0 1.8px,#0000 2.6px) 7px 3px/83px 61px,radial-gradient(ellipse at 20% 60%,#f4e7c6aa 0 3px,#0000 4px) 0 0/131px 47px,linear-gradient(var(--rim) 0 64%,#27468f 64%);-webkit-background-clip:text;background-clip:text}
+.logo i{font-style:normal;color:var(--red);-webkit-text-fill-color:var(--red);opacity:.93}
+.street{position:absolute;left:48px;top:146px;font-weight:800;font-size:17px;letter-spacing:.3em;text-transform:uppercase;color:var(--rim);display:flex;align-items:center;gap:14px}
+.street::before,.street::after{content:'';width:54px;height:6px;background:var(--red);border-radius:1px}
+/* tray return sign */
+.tray{position:absolute;left:760px;top:44px;width:330px;height:92px;background:#fff;border:4px solid var(--felt);border-radius:12px;display:flex;align-items:center;gap:14px;padding:0 16px;box-shadow:0 4px 0 rgba(58,36,23,.18);transform:rotate(-.6deg)}
+.tray svg{width:62px;height:62px;flex:none}.tray b{font-weight:800;font-size:19px;line-height:1.15;color:var(--felt);display:block}.tray span{font-size:15px;line-height:1.2}
+/* resident card */
+.res{position:absolute;right:40px;top:30px;width:400px;height:122px;background:var(--paper);border-radius:10px;box-shadow:0 0 0 3px var(--rim),0 5px 0 3px rgba(58,36,23,.2);padding:0 16px 0 0;display:flex;gap:14px;align-items:center;overflow:hidden;transform:rotate(.5deg)}
+.res .side{align-self:stretch;width:92px;background:var(--rim);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none}
+.res .side small{font-weight:800;font-size:14px;letter-spacing:.14em}.res .side b{font-family:'Anton';font-weight:400;font-size:56px;line-height:1.05}
+.res h4{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--rim)}
+.res p{font-family:'Anton';font-size:25px;line-height:1.25}
+.xp{height:14px;border:2px solid var(--kopi);border-radius:8px;margin:5px 0;background:#fff}.xp i{display:block;height:100%;width:60%;background:var(--kaya);border-right:2px solid var(--kopi);border-radius:5px 0 0 5px}
+.res .row{display:flex;justify-content:space-between;font-weight:700;font-size:15px;gap:30px}
+/* the board */
+.board{position:absolute;left:40px;top:192px;width:1136px;height:624px;background:radial-gradient(circle at 30% 30%,#256a5e 0 1.5px,#0000 2px) 0 0/9px 9px,var(--felt);border:14px solid #d5d8d6;border-radius:6px;box-shadow:0 0 0 2px #8f9593,inset 0 0 0 2px #8f9593,inset 0 10px 24px rgba(0,0,0,.28),0 10px 0 rgba(58,36,23,.2)}
+.plate{position:absolute;left:50%;top:-25px;transform:translateX(-50%);background:#e9ebe9;border:2px solid #8f9593;border-radius:4px;padding:1px 18px;font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:#4c5553;white-space:nowrap}
+.pin{position:absolute;left:50%;top:-9px;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff9 0 3px,#0000 4px),var(--pc,var(--red));box-shadow:0 0 0 1.5px rgba(58,36,23,.55),3px 6px 3px rgba(0,0,0,.35);z-index:3}
+.paper{position:absolute;background:var(--paper);box-shadow:2px 5px 0 rgba(0,0,0,.25)}
+/* hero poster */
+.missing{left:20px;top:22px;width:272px;height:556px;padding:14px 13px 0;text-align:center;transform:rotate(-1.2deg);background:#fffdf6}
+.missing h3{font-family:'Anton';font-weight:400;font-size:33px;line-height:1.15;color:var(--red);letter-spacing:.04em}
+.missing .ph{height:262px;margin-top:6px;background:repeating-linear-gradient(#C7B5D9 0 26px,#bda9d1 26px 28px);border:3px solid var(--kopi);position:relative}
+.missing .ph img{position:absolute;left:50%;bottom:4px;height:250px;transform:translateX(-50%)}
+.missing .cls{position:absolute;left:-10px;top:12px;background:var(--kaya);border:2px solid var(--kopi);font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;padding:2px 10px;transform:rotate(-6deg)}
+.missing h2{font-family:'Anton';font-weight:400;font-size:50px;line-height:1.2;letter-spacing:.03em}
+.missing q{display:block;font-family:'Patrick Hand';font-size:22px;line-height:1.1}
+.missing .seen{font-size:15px;line-height:1.25;margin-top:5px}
+.tear{position:absolute;left:0;right:0;bottom:0;height:54px;border-top:2px dashed var(--kopi);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:18px;letter-spacing:.1em;text-transform:uppercase;
+ background:repeating-linear-gradient(90deg,#0000 0 32px,rgba(58,36,23,.35) 32px 34px) 0 0/100% 9px no-repeat,repeating-linear-gradient(90deg,#0000 0 32px,rgba(58,36,23,.35) 32px 34px) 0 100%/100% 9px no-repeat,#F2D27C}
+.tear svg{width:20px;height:20px}
+/* map notices */
+.grid{position:absolute;left:316px;top:20px;width:776px;height:560px}
+.note{position:absolute;width:244px;height:268px;padding:9px 10px 0;background:var(--paper);box-shadow:2px 5px 0 rgba(0,0,0,.25);transition:transform .12s}
+.note:nth-child(1){left:0;top:4px;transform:rotate(-1.4deg);--pc:#E3A92B}
+.note:nth-child(2){left:266px;top:0;transform:rotate(1deg);background:#fdeede;--pc:#1F3C80}
+.note:nth-child(3){left:532px;top:6px;transform:rotate(-.6deg);background:#eaf4f8;--pc:#C8221B}
+.note:nth-child(4){left:130px;top:290px;transform:rotate(1.3deg);background:#eaf6ee;--pc:#C8221B}
+.note:nth-child(5){left:400px;top:286px;transform:rotate(-1deg);background:#fbeaee;--pc:#E3A92B}
+.note .k{display:flex;justify-content:space-between;font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#7a5f4d;margin-bottom:5px}
+.note img{width:100%;height:124px;object-fit:cover;border:2px solid var(--kopi)}
+.note b{display:block;font-family:'Anton';font-weight:400;font-size:23px;line-height:1.3;letter-spacing:.02em;margin-top:3px}
+.note p{font-size:15px;line-height:1.24}
+.wk{display:none;position:absolute;right:-12px;top:92px;background:var(--red);color:#fff;font-family:'Anton';font-size:19px;letter-spacing:.08em;padding:2px 12px;transform:rotate(-7deg);box-shadow:0 3px 0 rgba(0,0,0,.3)}
+.note.on{z-index:5;transform:rotate(0) scale(1.06);box-shadow:0 0 0 5px var(--red),5px 11px 0 4px rgba(0,0,0,.3)}.note.on .wk{display:block}
+.zoom{position:absolute;right:8px;bottom:26px;width:110px;padding:10px 8px 12px;background:#fff59c;font-family:'Patrick Hand';font-size:19px;line-height:1.05;text-align:center;transform:rotate(4deg);box-shadow:2px 4px 0 rgba(0,0,0,.25)}
+.zoom u{text-decoration-color:var(--red);text-decoration-thickness:2px}
+.cat{position:absolute;left:8px;bottom:22px;width:104px;height:124px;padding:8px 6px;background:#fff;transform:rotate(-4deg);text-align:center;font-size:14px;line-height:1.15;font-weight:700}
+.cat strong{display:block;font-family:'Anton';font-weight:400;font-size:19px;color:var(--red);letter-spacing:.04em}.cat svg{width:54px;height:44px;margin:2px auto}
+/* right column */
+.go{position:absolute;left:1206px;top:192px;width:354px}
+.play{display:block;position:relative;width:100%;height:212px;padding:26px 26px 0;background:var(--red);color:#fff;border:6px solid var(--paper);box-shadow:0 0 0 3px var(--kopi),4px 9px 0 3px rgba(58,36,23,.3);transform:rotate(-.8deg)}
+.play small{display:block;font-weight:800;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:#ffd9a8}
+.play strong{display:block;font-family:'Anton';font-weight:400;font-size:50px;line-height:1.25;letter-spacing:.02em;text-shadow:0 4px 0 #8f1711;white-space:nowrap}
+.play em{display:block;font-style:normal;font-family:'Patrick Hand';font-size:23px;line-height:1.1;margin-top:6px;max-width:230px}
+.play .tri{position:absolute;right:18px;bottom:14px;width:56px;height:56px;border-radius:50%;background:var(--paper);color:var(--red);display:grid;place-items:center;box-shadow:0 0 0 4px #8f1711,0 0 0 8px #d9d3c3,0 5px 0 8px rgba(0,0,0,.25)}
+.play .tri svg{width:28px;height:28px;margin-left:5px}
+.tape{position:absolute;width:76px;height:24px;background:rgba(240,222,170,.8);box-shadow:0 1px 0 rgba(0,0,0,.12);z-index:4}
+.bots{margin:26px 0 0;background:var(--paper);box-shadow:2px 5px 0 rgba(58,36,23,.22);transform:rotate(.6deg);position:relative}
+.bots h5{font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding:9px 14px 7px}
+.bots div{display:flex;border-top:2px dashed var(--kopi)}
+.bots button{flex:1;height:50px;text-align:center;font-family:'Anton';font-size:22px;letter-spacing:.05em;border-left:2px dashed var(--kopi);position:relative}
+.bots button:first-child{border-left:0}
+.bots .on{background:var(--kaya)}.bots .on::after{content:'';position:absolute;left:14%;right:14%;top:5px;bottom:5px;border:3px solid var(--red);border-radius:50%;transform:rotate(-5deg)}
+.fly{display:flex;gap:16px;margin-top:26px}
+.fly button{flex:1;height:126px;padding:20px 12px 0;position:relative;box-shadow:2px 5px 0 rgba(58,36,23,.22);text-align:center}
+.fly button:nth-child(1){background:#A6D6BE;transform:rotate(-1.5deg)}.fly button:nth-child(2){background:#F2D27C;transform:rotate(1.2deg)}
+.fly b{display:block;font-family:'Anton';font-weight:400;font-size:25px;line-height:1.2;letter-spacing:.03em}.fly span{font-size:15px;line-height:1.2;display:block;margin-top:4px}
+.new{position:absolute;right:-14px;top:-18px;width:46px;height:46px;background:var(--red);transform:rotate(12deg);z-index:5}
+.new::before,.new::after{content:'';position:absolute;inset:0;background:var(--red);transform:rotate(30deg)}.new::after{transform:rotate(60deg)}
+.new i{position:absolute;inset:0;z-index:1;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:14px;letter-spacing:.06em;color:#fff}
+/* letterboxes */
+.boxes{display:flex;gap:10px;margin-top:24px}
+.boxes button{flex:1;height:104px;border-radius:5px;background:linear-gradient(#e4e7e5,#c3c8c6);box-shadow:0 0 0 2px #7d8583,0 5px 0 2px rgba(58,36,23,.22);text-align:center;padding-top:10px;position:relative}
+.boxes button::before{content:'';display:block;height:9px;margin:0 16px 9px;background:#39403f;border-radius:5px;box-shadow:0 2px 0 #fff8}
+.boxes small{display:block;font-weight:800;font-size:14px;letter-spacing:.1em;color:#5a6361}
+.boxes b{display:inline-block;margin-top:5px;background:#fff;border:2px solid #39403f;border-radius:3px;padding:2px 8px;font-weight:800;font-size:15px;letter-spacing:.04em}
+.foot{position:absolute;right:40px;bottom:14px;font-weight:700;font-size:15px;letter-spacing:.03em;color:#4b443a}
+.blk{position:absolute;left:44px;bottom:11px;font-weight:700;font-size:15px;color:#4b443a}
+/* frame 2: board up close */
+.f2{z-index:10}
+.f2 .board{left:24px;top:40px;width:1552px;height:836px}
+.f2 .note{width:476px;height:366px;padding:12px 14px 0}
+.f2 .note:nth-child(1){left:26px;top:22px}.f2 .note:nth-child(2){left:524px;top:16px}.f2 .note:nth-child(3){left:1022px;top:24px}
+.f2 .note:nth-child(4){left:26px;top:416px}.f2 .note:nth-child(5){left:524px;top:410px}
+.f2 .note img{height:216px}.f2 .note b{font-size:36px;line-height:1.25}.f2 .note p{font-size:19px}.f2 .note .k{font-size:15px}
+.f2 .note.on{transform:rotate(0) scale(1.03)}.f2 .wk{top:176px;font-size:26px;right:-16px}
+.pick{left:1030px;top:420px;width:462px;height:360px;background:#fffdf6;padding:22px 24px;transform:rotate(1deg)}
+.pick h4{font-weight:800;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--rim);border-bottom:3px double var(--rim);padding-bottom:8px}
+.pick h2{font-family:'Anton';font-weight:400;font-size:38px;line-height:1.2;margin-top:10px}
+.pick p{font-family:'Patrick Hand';font-size:22px;line-height:1.15;margin-top:4px}
+.pick .ok{position:absolute;left:24px;right:24px;bottom:22px;height:76px;background:var(--red);color:#fff;font-family:'Anton';font-size:36px;letter-spacing:.03em;text-align:center;box-shadow:0 0 0 3px var(--kopi),0 6px 0 3px #8f1711;border-radius:8px}
+.back{position:absolute;right:26px;top:-27px;background:#fff59c;font-family:'Patrick Hand';font-size:20px;padding:1px 16px;box-shadow:2px 3px 0 rgba(0,0,0,.25);transform:rotate(1.5deg)}
+</style>
+<div class="stage">
+<div class="frame wall">
+ <h1 class="logo">LUNCH LIAO<i>!</i></h1>
+ <div class="street">inspired by Singaporean culture</div>
+ <div class="tray"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#2b7468"/><rect x="12" y="38" width="40" height="7" rx="3" fill="#fff"/><path d="M20 36a12 9 0 0 1 24 0z" fill="#fff"/><path d="M32 12v10m-6-5 6-6 6 6" stroke="#F2D27C" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 32 17)"/></svg><div><b>Please return your tray</b><span>Thank you ah. Aunty got enough to do.</span></div></div>
+ <div class="res"><div class="side"><small>LEVEL</small><b>4</b></div><div style="flex:1"><h4>Resident card &middot; Blk 51</h4><p>Resident level 4</p><div class="xp"><i></i></div><div class="row"><span>XP 180 / 300</span><span>12 wins</span></div></div></div>
+
+ <div class="board"><div class="plate">Notices &middot; Blk 51 void deck</div>
+  <div class="paper missing"><i class="pin"></i><h3>HAVE YOU SEEN HER?</h3>
+   <div class="ph"><img src="assets/heroes/ahma_full.png" alt=""><span class="cls">Tank</span></div>
+   <h2>AH MA</h2><q>Walk slowly also can reach.</q><p class="seen">Last seen queueing for chicken rice.</p>
+   <button class="tear"><svg viewBox="0 0 20 20"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="4" cy="4" r="2.6" fill="#F2D27C" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="16" r="2.6" fill="#F2D27C" stroke="currentColor" stroke-width="2"/></svg>Change hero</button></div>
+  <div class="grid"><template data-maps><button class="note" data-map="{id}"><i class="pin"></i><div class="k"><span>Notice {n}</span><span>{tag}</span></div><img src="assets/maps/{id}.jpg" alt=""><b>{short}</b><p>{line}</p><span class="wk">THIS WEEK</span></button></template>
+   <div class="paper cat"><i class="pin" style="--pc:#1d6f6a"></i><strong>LOST CAT</strong><svg viewBox="0 0 54 44"><path d="M10 40V20L8 6l10 7h18l10-7-2 14v20z" fill="#F1B28C" stroke="#3A2417" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="24" r="2.5" fill="#3A2417"/><circle cx="34" cy="24" r="2.5" fill="#3A2417"/><path d="M24 31l3 2 3-2" stroke="#3A2417" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>Answers to Kopi.</div>
+   <button class="zoom" data-go="maps"><i class="pin" style="--pc:#1F3C80"></i>Cannot see? <u>Look closer</u></button></div>
+ </div>
+
+ <div class="go">
+  <button class="play"><i class="tape" style="left:-22px;top:-8px;transform:rotate(-38deg)"></i><i class="tape" style="right:-22px;top:-8px;transform:rotate(38deg)"></i>
+   <small>Lunch time already</small><strong>CHOPE A SEAT</strong><em>at <span data-f="short"></span></em>
+   <span class="tri"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z" fill="currentColor"/></svg></span></button>
+  <div class="bots"><i class="pin" style="--pc:#1F3C80"></i><h5>Bots how fierce? Tear one</h5><div><button data-bots="Easy">Easy</button><button class="on" data-bots="Normal">Normal</button><button data-bots="Hard">Hard</button></div></div>
+  <div class="fly"><button><i class="tape" style="left:50%;margin-left:-38px;top:-10px;transform:rotate(-3deg)"></i><b>Practice range</b><span>Warm up first.</span></button>
+   <button><i class="tape" style="left:50%;margin-left:-38px;top:-10px;transform:rotate(2deg)"></i><span class="new"><i>NEW</i></span><b>Tutorial</b><span>First time? Start here.</span></button></div>
+  <div class="boxes"><button><small>#01-01</small><b>Settings</b></button><button><small>#01-02</small><b>Controls</b></button><button><small>#01-03</small><b>Credits</b></button></div>
+ </div>
+ <div class="floor"></div><div class="blk">Keep the void deck clean. No ball games.</div>
+ <div class="foot">Lunch Liao! v0.11.0 &middot; &copy; 2026 Nigel Yeap</div>
+</div>
+
+<div class="frame f2 wall"><div class="floor"></div>
+ <div class="board"><div class="plate">Where to makan this week? Pick one notice</div><button class="back" data-go="">Back to the wall</button>
+  <div class="grid" style="left:0;top:0;width:100%;height:100%"><template data-maps><button class="note" data-map="{id}"><i class="pin"></i><div class="k"><span>Notice {n}</span><span>{tag}</span></div><img src="assets/maps/{id}.jpg" alt=""><b>{short}</b><p>{line}</p><span class="wk">THIS WEEK</span></button></template>
+   <div class="paper pick"><i class="pin" style="--pc:#1F3C80"></i><h4>Lunch Liao town council &middot; this week</h4><h2 data-f="short"></h2><p data-f="line"></p><button class="ok" data-go="">Can, chope here</button></div></div>
+ </div>
+</div>
+</div>
+<script src="proto.js"></script>

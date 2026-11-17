@@ -1,0 +1,8 @@
+/* shared by every menu mockup: reset, the 1600x900 stage, the map picker frame toggle */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0c0c0c;overflow:hidden}
+.stage{width:1600px;height:900px;position:relative;overflow:hidden;transform-origin:0 0;-webkit-font-smoothing:antialiased}
+.frame{position:absolute;inset:0;overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:inherit}
+img{display:block}
+body:not(.maps) .f2{display:none}

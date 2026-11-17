@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Lunch Liao! menu v3: Window</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="proto.css"><link rel="stylesheet" href="v3.css">
+<style>
+.stage{--d:'Baloo 2';--b:'Nunito';--ink:#3A2417;--paper:#F3ECD9;--acc:#C8221B;--acc-ink:#FFF7E6;--acc-d:#8f1711;--ring:#1F3C80;--chip:#FFFBF0}
+.logo b,.pk h2,.play,.who b,.pk .card b,.pk .sel>b{font-weight:800!important}
+.win{position:absolute;left:48px;top:48px;width:1000px;height:770px;border-radius:40px;background-size:cover;background-position:center;border:10px solid #1F3C80;box-shadow:0 0 0 8px #FFFBF0,0 12px 0 8px rgba(58,36,23,.1)}
+.win::after{content:"";position:absolute;inset:0;border-radius:30px;background:linear-gradient(0deg,rgba(40,24,14,.35),rgba(40,24,14,0) 45%)}
+.hero{position:absolute;left:330px;top:150px;height:740px;filter:drop-shadow(0 14px 10px rgba(0,0,0,.25))}
+.f1 .chip.map{position:absolute;left:84px;top:84px;width:290px}
+.who{position:absolute;left:770px;top:650px;color:#FFF7E6;text-shadow:0 2px 6px rgba(0,0,0,.5)}
+.top{right:56px;top:48px}
+.col{position:absolute;left:1124px;top:170px;width:420px}
+.col .logo b{font-size:66px;line-height:.95}
+.col .play{width:100%;height:132px;font-size:46px;margin-top:150px}
+.col .chip.bots{width:170px;margin-top:22px}
+.col .subs{display:flex;flex-direction:column;gap:20px;margin-top:40px;padding-left:4px}
+.foot{right:56px;bottom:34px}</style></head><body><div class="stage">
+<div class="frame f1"><div class="win" data-f="bg"></div><img class="hero" src="assets/heroes/ahma_full.png" alt="Ah Ma"><button class="chip map" data-go="maps"><img data-f="img" alt=""><span><small>Map</small><b data-f="short"></b></span><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><div class="who"><b>Ah Ma</b><button>Change hero</button></div><div class="top"><span class="lv" title="Level 4 · 180/300 XP"><u><b>4</b></u>12 wins</span><button class="ic" title="Settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></button><button class="ic" title="Controls"><svg viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="19" height="11" rx="3"/><path d="M6 10.5h.01M9.5 10.5h.01M13 10.5h.01M16.5 10.5h.01M7.5 14h9"/></svg></button><button class="ic" title="Credits"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.2v.1"/></svg></button></div><div class="col"><div class="logo"><b>LUNCH<br>LIAO!</b><i>inspired by Singaporean culture</i></div><button class="play">Chope a seat</button><button class="chip bots"><span><small>Bots</small><b>Normal</b></span><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button><div class="subs"><button class="sub">Practice</button><button class="sub">Tutorial <em>NEW</em></button></div></div><div class="foot">Lunch Liao! v0.11.0 · © 2026 Nigel Yeap</div></div>
+<div class="frame f2 pk"><header><h2>Pick a place</h2><button class="x" data-go="">Back</button></header>
+<div class="grid"><template data-maps><button class="card" data-map="{id}"><img src="assets/maps/{id}.jpg" alt=""><span><b>{short}</b><small>{tag}</small></span></button></template>
+<div class="sel"><small>Selected</small><b data-f="short"></b><button class="play" data-go="">Chope here</button></div></div></div>
+</div><script src="proto.js"></script></body></html>

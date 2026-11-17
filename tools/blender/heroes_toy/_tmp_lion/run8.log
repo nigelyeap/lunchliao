@@ -1,0 +1,20 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:07.636  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_build.blend"
+00:10.474  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_34.png'
+00:11.646  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_face.png'
+00:13.118  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_side.png'
+00:15.376  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_back.png'
+TOY_TRIS 30987 objects 88
+TOY_TOP [('h_furring', 2600), ('h_face', 2320), ('cloth', 2237), ('h_shell', 1848), ('hemfur', 1536), ('j_lipfur', 1500), ('j_jaw', 1280), ('h_blackfur', 1000), ('clothfur', 816), ('f_pants', 808), ('r_pants', 808), ('h_eyefur', 648), ('tail', 604), ('f_shoe', 576), ('f_sole', 576), ('r_shoe', 576), ('r_sole', 576), ('h_petal', 560), ('h_lip', 556), ('f_cuff', 540)]
+[build] raw top 2.347 GS 0.9373 height 2.199
+Info: Saved as "lion_build.blend"
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

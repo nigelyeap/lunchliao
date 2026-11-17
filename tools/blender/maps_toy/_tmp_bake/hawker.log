@@ -1,0 +1,436 @@
+11:05:53 | INFO: Data are loaded, start creating Blender stuff
+11:05:53 | INFO: Blender create Mesh node CANOPY_acc_green
+11:05:53 | INFO: Blender create Mesh node CANOPY_zinc
+11:05:53 | INFO: Blender create Mesh node FAN_00_steel
+11:05:53 | INFO: Blender create Mesh node FAN_01_steel
+11:05:53 | INFO: Blender create Mesh node FAN_02_steel
+11:05:53 | INFO: Blender create Mesh node FAN_03_steel
+11:05:53 | INFO: Blender create Mesh node FAN_04_steel
+11:05:53 | INFO: Blender create Mesh node FAN_05_steel
+11:05:53 | INFO: Blender create Mesh node FAN_06_steel
+11:05:53 | INFO: Blender create Mesh node FAN_07_steel
+11:05:53 | INFO: Blender create Mesh node FAN_08_steel
+11:05:53 | INFO: Blender create Mesh node FAN_09_steel
+11:05:53 | INFO: Blender create Mesh node HDB_acc_blue
+11:05:53 | INFO: Blender create Mesh node HDB_acc_green
+11:05:53 | INFO: Blender create Mesh node HDB_acc_orange
+11:05:53 | INFO: Blender create Mesh node HDB_acc_yellow
+11:05:53 | INFO: Blender create Mesh node HDB_c_7fb2d6
+11:05:53 | INFO: Blender create Mesh node HDB_c_86c296
+11:05:53 | INFO: Blender create Mesh node HDB_c_d9b862
+11:05:53 | INFO: Blender create Mesh node HDB_c_d98a78
+11:05:53 | INFO: Blender create Mesh node HDB_extras
+11:05:53 | INFO: Blender create Mesh node HDB_FRONT_acc_blue
+11:05:53 | INFO: Blender create Mesh node HDB_FRONT_acc_yellow
+11:05:53 | INFO: Blender create Mesh node HDB_FRONT_c_d9b862
+11:05:53 | INFO: Blender create Mesh node HDB_FRONT_c_d98a78
+11:05:53 | INFO: Blender create Mesh node HDB_FRONT_extras
+11:05:53 | INFO: Blender create Mesh node HDB_FRONT_hdb_window
+11:05:53 | INFO: Blender create Mesh node HDB_hdb_window
+11:05:53 | INFO: Blender create Mesh node HDB_leaf
+11:05:53 | INFO: Blender create Mesh node HDB_leaf_dark
+11:05:53 | INFO: Blender create Mesh node HDB_trunk
+11:05:53 | INFO: Blender create Mesh node LIGHTS_glow
+11:05:53 | INFO: Blender create Mesh node LIGHTS_steel_dark
+11:05:53 | INFO: Blender create Mesh node LIGHTS_white
+11:05:53 | INFO: Blender create Mesh node MAP_acc_blue
+11:05:54 | INFO: Blender create Mesh node MAP_acc_green
+11:05:54 | INFO: Blender create Mesh node MAP_acc_orange
+11:05:54 | INFO: Blender create Mesh node MAP_acc_yellow
+11:05:54 | INFO: Blender create Mesh node MAP_asphalt
+11:05:54 | INFO: Blender create Mesh node MAP_bin_dark
+11:05:54 | INFO: Blender create Mesh node MAP_bin_green
+11:05:54 | INFO: Blender create Mesh node MAP_c_2b5fa8
+11:05:54 | INFO: Blender create Mesh node MAP_c_3a2418
+11:05:54 | INFO: Blender create Mesh node MAP_c_3f8fb5
+11:05:54 | INFO: Blender create Mesh node MAP_c_3f9b6c
+11:05:54 | INFO: Blender create Mesh node MAP_c_8a5a44
+11:05:54 | INFO: Blender create Mesh node MAP_c_8fbf78
+11:05:54 | INFO: Blender create Mesh node MAP_c_c96a48
+11:05:54 | INFO: Blender create Mesh node MAP_c_c2477f
+11:05:54 | INFO: Blender create Mesh node MAP_c_d23b2a
+11:05:54 | INFO: Blender create Mesh node MAP_c_d9534a
+11:05:54 | INFO: Blender create Mesh node MAP_c_e3a92b
+11:05:54 | INFO: Blender create Mesh node MAP_c_e3c46a
+11:05:54 | INFO: Blender create Mesh node MAP_c_e9c47a
+11:05:54 | INFO: Blender create Mesh node MAP_concrete
+11:05:54 | INFO: Blender create Mesh node MAP_court_paving
+11:05:54 | INFO: Blender create Mesh node MAP_dark
+11:05:54 | INFO: Blender create Mesh node MAP_extras
+11:05:54 | INFO: Blender create Mesh node MAP_fence_mesh
+11:05:54 | INFO: Blender create Mesh node MAP_floor_tile
+11:05:54 | INFO: Blender create Mesh node MAP_glass
+11:05:54 | INFO: Blender create Mesh node MAP_glow
+11:05:54 | INFO: Blender create Mesh node MAP_hdb_window
+11:05:54 | INFO: Blender create Mesh node MAP_leaf
+11:05:54 | INFO: Blender create Mesh node MAP_leaf_dark
+11:05:54 | INFO: Blender create Mesh node MAP_menus
+11:05:54 | INFO: Blender create Mesh node MAP_paint_yellow
+11:05:54 | INFO: Blender create Mesh node MAP_pavement
+11:05:54 | INFO: Blender create Mesh node MAP_pedestal
+11:05:54 | INFO: Blender create Mesh node MAP_signs
+11:05:54 | INFO: Blender create Mesh node MAP_skirting
+11:05:54 | INFO: Blender create Mesh node MAP_spawn_mat
+11:05:54 | INFO: Blender create Mesh node MAP_steel
+11:05:54 | INFO: Blender create Mesh node MAP_steel_dark
+11:05:54 | INFO: Blender create Mesh node MAP_table_top
+11:05:54 | INFO: Blender create Mesh node MAP_terracotta
+11:05:54 | INFO: Blender create Mesh node MAP_tile_aqua
+11:05:54 | INFO: Blender create Mesh node MAP_white
+11:05:54 | INFO: Blender create Mesh node MAP_zinc
+11:05:54 | INFO: Blender create Mesh node ROOF_acc_blue
+11:05:54 | INFO: Blender create Mesh node ROOF_acc_green
+11:05:54 | INFO: Blender create Mesh node ROOF_acc_orange
+11:05:54 | INFO: Blender create Mesh node ROOF_acc_yellow
+11:05:54 | INFO: Blender create Mesh node ROOF_beam_green
+11:05:54 | INFO: Blender create Mesh node ROOF_hdb_white
+11:05:54 | INFO: Blender create Mesh node ROOF_hdb_window
+11:05:54 | INFO: Blender create Mesh node ROOF_paint_yellow
+11:05:54 | INFO: Blender create Mesh node ROOF_slab_mint
+11:05:54 | INFO: Blender create Mesh node ROOF_steel_dark
+11:05:54 | INFO: Blender create Mesh node STEAM_00_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_01_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_02_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_03_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_04_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_05_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_06_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_07_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_08_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_09_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_10_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_11_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_12_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_13_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_14_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_15_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_16_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_17_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_18_steam
+11:05:54 | INFO: Blender create Mesh node STEAM_19_steam
+11:05:54 | INFO: Blender create Mesh node UMB_acc_blue
+11:05:54 | INFO: Blender create Mesh node UMB_acc_orange
+11:05:54 | INFO: Blender create Mesh node UMB_acc_yellow
+11:05:54 | INFO: glTF import finished in 1.20s
+AO bake 80 skip ['FAN_00', 'FAN_01', 'FAN_02', 'FAN_03', 'FAN_04', 'FAN_05', 'FAN_06', 'FAN_07', 'FAN_08', 'FAN_09', 'MAP_fence_mesh', 'MAP_glass', 'STEAM_00', 'STEAM_01', 'STEAM_02', 'STEAM_03', 'STEAM_04', 'STEAM_05', 'STEAM_06', 'STEAM_07', 'STEAM_08', 'STEAM_09', 'STEAM_10', 'STEAM_11', 'STEAM_12', 'STEAM_13', 'STEAM_14', 'STEAM_15', 'STEAM_16', 'STEAM_17', 'STEAM_18', 'STEAM_19']
+AO    3s unwrapped
+AO    8s packed
+AO    8s islands 15733
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+AO  813s baked
+AO  819s coverage 52.3%
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+11:19:34 | INFO: Starting glTF 2.0 export
+11:19:34 | INFO: Extracting primitive: CANOPY_acc_green
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: CANOPY_zinc
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_00_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_01_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_02_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_03_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_04_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_05_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_06_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_07_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_08_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: FAN_09_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_acc_blue
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_acc_green
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_acc_orange
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_acc_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_c_7fb2d6
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_c_86c296
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_c_d9b862
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_c_d98a78
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_extras
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_FRONT_acc_blue
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_FRONT_acc_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_FRONT_c_d9b862
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_FRONT_c_d98a78
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_FRONT_extras
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_FRONT_hdb_window
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_hdb_window
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_leaf
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_leaf_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: HDB_trunk
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: LIGHTS_glow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: LIGHTS_steel_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: LIGHTS_white
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_acc_blue
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_acc_green
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_acc_orange
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_acc_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_asphalt
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_bin_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_bin_green
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_2b5fa8
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_3a2418
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_3f8fb5
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_3f9b6c
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_8a5a44
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_8fbf78
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_c96a48
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_c2477f
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_d23b2a
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_d9534a
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_e3a92b
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_e3c46a
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_c_e9c47a
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_concrete
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_court_paving
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_extras
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_fence_mesh
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_floor_tile
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_glass
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_glow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_hdb_window
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_leaf
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_leaf_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_menus
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_paint_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_pavement
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_pedestal
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_signs
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_skirting
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_spawn_mat
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_steel
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_steel_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_table_top
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_terracotta
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_tile_aqua
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_white
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: MAP_zinc
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_acc_blue
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_acc_green
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_acc_orange
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_acc_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_beam_green
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_hdb_white
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_hdb_window
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_paint_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_slab_mint
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: ROOF_steel_dark
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_00_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_01_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_02_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_03_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_04_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_05_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_06_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_07_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_08_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_09_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_10_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_11_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_12_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_13_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_14_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_15_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_16_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_17_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_18_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: STEAM_19_steam
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: UMB_acc_blue
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: UMB_acc_orange
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Extracting primitive: UMB_acc_yellow
+11:19:34 | INFO: Primitives created: 1
+11:19:34 | INFO: Finished glTF 2.0 export in 0.2513589859008789 s
+13:57.645  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/maps_toy/_tmp_bake/hawker_check.png'
+14:07.134  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/maps_toy/_tmp_bake/hawker_check_ao.png'
+
+AO wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/maps/hawker_lit.glb 13825 KB /Users/nigelyeap/Documents/lunchliao-hd/assets/maps/hawker_ao.png 3513 KB
+AO done hawker
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

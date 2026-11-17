@@ -1,0 +1,92 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:03.948  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_build.blend"
+00:06.036  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_34.png'
+00:07.212  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_face.png'
+00:08.458  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_side.png'
+00:09.630  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_back.png'
+00:09.631  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_build.blend"
+00:09.857  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_rig.blend"
+00:10.036  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_anim.blend"
+TOY_TRIS 34599 objects 80
+TOY_TOP [('cloth', 3071), ('h_rimfur', 2650), ('h_face', 2500), ('h_shell', 1848), ('hemfur', 1526), ('clothband', 1464), ('bibtrim', 1000), ('j_lipfur', 916), ('j_jaw', 880), ('h_lipfur', 836), ('f_pants', 808), ('r_pants', 808), ('h_blackfur', 800), ('h_eyeball', 720), ('h_mirror_fur', 700), ('h_eyering', 640), ('tail', 604), ('f_shoe', 576), ('f_sole', 576), ('r_shoe', 576)]
+[build] raw top 2.468 GS 0.9373 height 2.313
+Info: Saved as "lion_build.blend"
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 16802 17797
+Info: Saved as "lion_rig.blend"
+Info: Saved as "lion_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult', 'feed', 'pounce', 'shake']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+00:18:47 | INFO: Starting glTF 2.0 export
+00:18:47 | INFO: Extracting primitive: lion_body
+00:18:47 | INFO: Primitives created: 12
+00:18:47 | INFO: Extracting primitive: lion_head
+00:18:47 | INFO: Primitives created: 10
+00:18:47 | INFO: Finished glTF 2.0 export in 0.6024861335754395 s
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/lion.glb 1681 KB
+00:18:47 | INFO: Data are loaded, start creating Blender stuff
+00:18:47 | INFO: Blender create Mesh node lion_body
+00:18:47 | INFO: Blender create Mesh node lion_head
+00:18:47 | INFO: glTF import finished in 0.15s
+00:10.997  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_anim.blend"
+00:30.781  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/shots/heroes_toy/lion/beauty.png'
+00:34.721  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/t_0.png'
+00:39.714  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/t_1.png'
+00:44.448  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/t_2.png'
+00:46.524  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e_smile.png'
+00:48.904  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e_angry.png'
+00:51.020  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e_grin.png'
+00:53.163  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e_ult.png'
+00:55.252  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e2_none.png'
+00:57.439  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e2_blink.png'
+00:59.542  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/e2_mouth_open.png'
+01:03.272  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/face_front.png'
+01:06.631  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/face_34.png'
+01:21.849  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/far.png'
+01:24.923  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_idle_0.png'
+01:29.002  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_idle_1.png'
+01:31.775  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_idle_2.png'
+01:34.348  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_idle_3.png'
+01:38.333  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_run_0.png'
+01:41.031  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_run_1.png'
+01:43.982  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_run_2.png'
+01:46.671  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_run_3.png'
+01:49.077  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_attack_0.png'
+01:51.520  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_attack_1.png'
+01:54.486  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_attack_2.png'
+01:56.835  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_attack_3.png'
+01:59.261  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_ult_0.png'
+02:01.632  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_ult_1.png'
+02:05.060  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_ult_2.png'
+02:08.484  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_ult_3.png'
+02:11.351  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_feed_0.png'
+02:14.985  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_feed_1.png'
+02:18.892  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_feed_2.png'
+02:23.506  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_feed_3.png'
+02:29.851  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_pounce_0.png'
+02:35.083  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_pounce_1.png'
+02:40.455  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_pounce_2.png'
+02:45.570  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_pounce_3.png'
+02:53.672  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_shake_0.png'
+03:02.176  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_shake_1.png'
+03:09.889  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_shake_2.png'
+03:17.463  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/a_shake_3.png'
+[verify] tris 34599; X -1.121..1.126 height(Z after import) 2.318 depth(Y) -1.632..0.643
+[verify] bones ['root', 'hips', 'spine', 'chest', 'neck', 'head', 'eye.l', 'eye.r', 'prop', 'upperarm.l', 'lowerarm.l', 'hand.l', 'handslot.l', 'upperarm.r', 'lowerarm.r', 'hand.r', 'handslot.r', 'upperleg.l', 'lowerleg.l', 'foot.l', 'toes.l', 'upperleg.r', 'lowerleg.r', 'foot.r', 'toes.r', 'rear', 'rthigh.l', 'rshin.l', 'rfoot.l', 'rthigh.r', 'rshin.r', 'rfoot.r', 'tail']
+[verify] morphs on lion_body ['Basis', 'belly']
+[verify] lion_body: 17797 tris, 12 mats
+[verify] morphs on lion_head ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+[verify] lion_head: 16802 tris, 10 mats
+[verify] head mesh bbox centre world (-0.003, 0.155, 1.72), in head bone space y 0.296 z 0.044, size (1.227, 0.975, 1.187)
+[verify] actions [('attack', 18), ('feed', 30), ('idle', 60), ('pounce', 20), ('run', 24), ('shake', 18), ('ult', 2)]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

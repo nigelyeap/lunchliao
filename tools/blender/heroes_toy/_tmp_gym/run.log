@@ -1,0 +1,67 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:03.222  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_build.blend"
+00:03.297  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_rig.blend"
+00:03.360  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_anim.blend"
+TOY_TRIS 25147 objects 47
+TOY_TOP [('h_hair', 2600), ('h_face', 2065), ('h_head', 1500), ('tank', 1280), ('torso', 1202), ('arm_r', 1200), ('arm_l', 1200), ('hand_r', 1100), ('hand_l', 1100), ('pipe_neck', 768), ('h_ear', 720), ('calf', 712), ('sockcuff', 672), ('pipe_hem', 576)]
+Info: Saved as "gym_build.blend"
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 7749 17398
+Info: Saved as "gym_rig.blend"
+Info: Saved as "gym_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+00:18:36 | INFO: Starting glTF 2.0 export
+00:18:36 | INFO: Extracting primitive: gym_body
+00:18:36 | INFO: Primitives created: 11
+00:18:36 | INFO: Extracting primitive: gym_head
+00:18:36 | INFO: Primitives created: 13
+00:18:37 | INFO: Finished glTF 2.0 export in 0.19287514686584473 s
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/gym.glb 960 KB
+00:18:37 | INFO: Data are loaded, start creating Blender stuff
+00:18:37 | INFO: Blender create Mesh node gym_body
+00:18:37 | INFO: Blender create Mesh node gym_head
+00:18:37 | INFO: glTF import finished in 0.05s
+00:03.696  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_anim.blend"
+00:18.430  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/shots/heroes_toy/gym/beauty.png'
+00:21.639  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/t_0.png'
+00:24.572  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/t_1.png'
+00:27.541  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/t_2.png'
+00:29.218  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/e_smile.png'
+00:30.895  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/e_angry.png'
+00:32.561  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/e_grin.png'
+00:34.200  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/e_ult.png'
+00:35.761  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_idle_0.png'
+00:37.386  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_idle_1.png'
+00:38.939  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_idle_2.png'
+00:40.519  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_idle_3.png'
+00:41.957  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_run_0.png'
+00:43.430  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_run_1.png'
+00:44.952  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_run_2.png'
+00:46.504  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_run_3.png'
+00:48.056  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_attack_0.png'
+00:49.571  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_attack_1.png'
+00:51.158  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_attack_2.png'
+00:52.682  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_attack_3.png'
+00:54.210  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_ult_0.png'
+00:55.757  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_ult_1.png'
+00:57.306  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_ult_2.png'
+00:58.813  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/a_ult_3.png'
+[verify] tris 25147; X -0.910..0.887 height(Z after import) 2.050 depth(Y) -0.580..0.899
+[verify] bones ['root', 'hips', 'spine', 'chest', 'neck', 'head', 'eye.l', 'eye.r', 'prop', 'upperarm.l', 'lowerarm.l', 'hand.l', 'handslot.l', 'upperarm.r', 'lowerarm.r', 'hand.r', 'handslot.r', 'upperleg.l', 'lowerleg.l', 'foot.l', 'toes.l', 'upperleg.r', 'lowerleg.r', 'foot.r', 'toes.r']
+[verify] gym_body: 17398 tris, 11 mats
+[verify] morphs on gym_head ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+[verify] gym_head: 7749 tris, 13 mats
+[verify] actions [('attack', 18), ('idle', 60), ('run', 24), ('ult', 2)]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit
+FINISHED

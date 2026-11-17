@@ -1,0 +1,123 @@
+<!doctype html><meta charset="utf-8"><title>Lunch Liao! menu: Lunch Line (MRT)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Gochi+Hand&display=swap">
+<link rel="stylesheet" href="proto.css">
+<style>
+.stage{--cream:#F6EFDD;--kopi:#3A2417;--red:#C8221B;--kaya:#E3A92B;--yel:#F7C92E;--green:#1C4A40;--line:#F1B28C;font-family:'Nunito',sans-serif;color:var(--kopi)}
+.frame{background:linear-gradient(#e3d8c0 0 0) 0 0/100% 2px,linear-gradient(90deg,rgba(58,36,23,.07) 2px,transparent 2px) 0 0/100px 100px,linear-gradient(rgba(58,36,23,.07) 2px,transparent 2px) 0 92px/100px 100px,var(--cream)}
+.fk{font-family:'Fredoka',sans-serif}
+/* sign band */
+.band{position:absolute;left:0;right:0;top:0;height:92px;background:var(--green);color:#fff;display:flex;align-items:center;padding:0 40px;border-bottom:6px solid var(--kopi);box-shadow:0 6px 0 rgba(58,36,23,.15)}
+.band .ring{width:58px;height:58px;border-radius:50%;background:var(--line);border:5px solid #fff;display:grid;place-items:center;font:700 22px 'Fredoka';color:var(--kopi);margin-right:16px;flex:none}
+.band h1{font:700 50px/1 'Fredoka';letter-spacing:.02em}
+.band .tag{margin-left:20px;padding-left:20px;border-left:3px solid rgba(255,255,255,.35);font-weight:800;font-size:16px;line-height:1.3;color:#d6e6dc}
+.band nav{margin-left:auto;display:flex;gap:26px}
+.exit{display:flex;align-items:center;gap:11px;font:600 22px 'Fredoka'}
+.exit i{font-style:normal;width:50px;height:50px;border-radius:9px;background:var(--yel);color:var(--kopi);display:grid;place-items:center;font:700 30px 'Fredoka';box-shadow:0 4px 0 rgba(0,0,0,.3)}
+.exit small{display:block;font:800 13px 'Nunito';letter-spacing:.14em;text-transform:uppercase;color:#bfd6ca}
+/* line map */
+.lbl{position:absolute;left:40px;top:112px;display:flex;align-items:center;gap:12px;font-weight:800;font-size:17px}
+.loz{display:inline-flex;font:700 16px/1 'Fredoka';border-radius:20px;overflow:hidden;box-shadow:0 0 0 3px var(--kopi);flex:none}
+.loz b,.loz span{padding:5px 8px 5px 10px;font-weight:700}.loz b{background:var(--c,var(--line))}.loz span{background:var(--kopi);color:#fff;padding:5px 10px 5px 7px}
+.c1{--c:#F2D27C}.c2{--c:#F1B28C}.c3{--c:#9EC9DF}.c4{--c:#A6D6BE}.c5{--c:#EBC1C9}
+.route{position:absolute;left:40px;right:40px;top:150px;height:320px;display:grid;grid-template-columns:repeat(5,1fr)}
+.route::before{content:'';position:absolute;left:110px;right:110px;top:170px;height:18px;border-radius:9px;background:var(--line);box-shadow:0 0 0 4px var(--kopi)}
+.stn{position:relative;display:flex;flex-direction:column;align-items:center}
+.stn .ph{width:244px;height:138px;border-radius:24px;border:4px solid var(--kopi);overflow:hidden;background:#fff;box-shadow:0 6px 0 rgba(58,36,23,.2);transition:.15s}
+.stn .ph img{width:100%;height:100%;object-fit:cover}
+.stn .stem{width:4px;height:22px;background:var(--kopi)}
+.stn .dot{width:38px;height:38px;border-radius:50%;background:#fff;border:7px solid var(--kopi);margin-top:-1px;position:relative;z-index:1}
+.stn .nm{display:flex;align-items:center;gap:9px;margin-top:12px;font:600 23px/1 'Fredoka';white-space:nowrap}
+.stn p{width:262px;margin-top:8px;font-weight:700;font-size:15.5px;line-height:1.28;text-align:center;color:#5b4233}
+.stn .here{display:none;position:absolute;top:122px;right:6px;background:var(--red);color:#fff;font:700 15px 'Fredoka';letter-spacing:.06em;padding:4px 11px;border-radius:8px;transform:rotate(4deg);box-shadow:0 3px 0 rgba(58,36,23,.35);z-index:2}
+.stn.on .ph{border:6px solid var(--red);transform:rotate(-1.5deg) scale(1.04);box-shadow:0 8px 0 rgba(58,36,23,.25)}
+.stn.on .dot{width:50px;height:50px;margin-top:-7px;margin-bottom:-6px;background:var(--yel);box-shadow:0 0 0 6px var(--red)}
+.stn.on .here{display:block}
+/* hero */
+.hero{position:absolute;left:34px;bottom:64px;height:362px;filter:drop-shadow(0 5px 0 rgba(58,36,23,.18))}
+.hsh{position:absolute;left:52px;bottom:58px;width:210px;height:26px;border-radius:50%;background:rgba(58,36,23,.14)}
+.plate{position:absolute;left:292px;top:498px;width:300px}
+.plate .np{background:var(--green);color:#fff;border-radius:16px;padding:10px 18px 12px;box-shadow:0 0 0 4px var(--kopi),0 6px 0 4px rgba(58,36,23,.2);display:flex;align-items:center;justify-content:space-between}
+.plate h2{font:700 50px/1 'Fredoka'}
+.plate .loz{box-shadow:0 0 0 3px #fff;font-size:17px}
+.plate q{display:block;margin:14px 2px 12px;font-style:italic;font-weight:700;font-size:18px}
+.pill{height:44px;padding:0 20px;border-radius:22px;background:#fff;font:600 19px 'Fredoka';box-shadow:0 0 0 3px var(--kopi),0 5px 0 3px rgba(58,36,23,.2)}
+/* stored value card */
+.card{position:absolute;left:296px;top:688px;width:286px;height:132px;border-radius:16px;padding:12px 16px;transform:rotate(-3deg);background:linear-gradient(135deg,#9EC9DF 0 52%,#A6D6BE 52%);box-shadow:0 0 0 3px var(--kopi),0 6px 0 3px rgba(58,36,23,.22)}
+.card .t{display:flex;justify-content:space-between;align-items:baseline;font:700 19px 'Fredoka'}.card .t small{font:800 13px 'Nunito';letter-spacing:.1em;text-transform:uppercase}
+.card .v{display:flex;align-items:baseline;gap:10px;margin-top:6px;font:700 30px/1 'Fredoka'}.card .v span{font:800 16px 'Nunito'}
+.card .bar{height:14px;border-radius:7px;background:#fff;border:3px solid var(--kopi);margin-top:9px;overflow:hidden}.card .bar i{display:block;width:60%;height:100%;background:var(--red)}
+.card .x{display:flex;justify-content:space-between;margin-top:4px;font-weight:800;font-size:15px}
+/* departure */
+.dep{position:absolute;left:644px;top:498px;width:466px;height:112px;border-radius:16px;background:#2b2a27;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;box-shadow:0 0 0 4px var(--kopi),0 6px 0 4px rgba(58,36,23,.2)}
+.dep small{display:block;font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--yel);margin-bottom:8px}
+.dep .s{display:flex;align-items:center;gap:10px;font:600 30px/1 'Fredoka';white-space:nowrap}.dep .loz{box-shadow:0 0 0 3px #fff}
+.dep .m{text-align:right;font:700 40px/1 'Fredoka';color:var(--yel)}.dep .m span{font-size:20px}
+.crowd{position:absolute;left:644px;top:626px;width:466px}
+.crowd>b{display:block;font-weight:800;font-size:15px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.crowd div{display:flex;gap:10px}
+.crowd button{flex:1;height:50px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;gap:8px;font:600 20px 'Fredoka';box-shadow:0 0 0 3px var(--kopi),0 4px 0 3px rgba(58,36,23,.2)}
+.crowd button i{width:10px;height:16px;border-radius:5px 5px 3px 3px;background:currentColor;margin-right:-5px;opacity:.75}.crowd button i:last-of-type{margin-right:0}
+.crowd .on{background:var(--kopi);color:var(--yel)}
+.play{position:absolute;left:644px;top:724px;width:466px;height:104px;border-radius:26px;background:var(--red);color:#fff;display:flex;align-items:center;padding:0 22px 0 28px;box-shadow:0 0 0 4px var(--kopi),0 9px 0 4px #8f1711}
+.play b{font:700 46px/1 'Fredoka'}.play small{display:block;font-weight:800;font-size:15px;letter-spacing:.06em;margin-top:5px;color:#ffe2a8}
+.play svg{margin-left:auto;width:74px;height:74px;flex:none}
+/* A4 paper signs */
+.a4{position:absolute;top:500px;width:186px;height:262px;background:#fffefa;padding:26px 12px 0;text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:900;color:#111;box-shadow:0 5px 0 rgba(58,36,23,.18),0 0 0 1px rgba(58,36,23,.15)}
+.a4::before,.a4::after{content:'';position:absolute;top:-11px;width:58px;height:24px;background:rgba(242,210,124,.8);border-left:1px dashed rgba(58,36,23,.2);border-right:1px dashed rgba(58,36,23,.2)}
+.a4::before{left:-14px;transform:rotate(-38deg)}.a4::after{right:-14px;transform:rotate(36deg)}
+.a4 u{display:block;font-size:27px;line-height:1.08;text-underline-offset:4px;text-decoration-thickness:3px}
+.a4 svg{width:124px;margin:18px auto 12px;display:block}
+.a4 span{display:block;font-size:15px;line-height:1.2}
+.a4 em{display:block;font:400 21px/1 'Gochi Hand';color:#1F3C80;margin-top:8px;transform:rotate(-3deg)}
+.a4 .new{position:absolute;right:-20px;top:92px;width:66px;height:66px;border-radius:50%;background:var(--yel);border:3px solid var(--red);color:var(--red);display:grid;place-items:center;font:700 19px 'Fredoka';transform:rotate(14deg);box-shadow:0 3px 0 rgba(58,36,23,.3)}
+.a4.p{left:1166px;transform:rotate(-2.4deg)}.a4.t{left:1374px;top:512px;transform:rotate(1.8deg)}
+/* platform edge */
+.yl{position:absolute;left:0;right:0;bottom:46px;height:18px;background:radial-gradient(circle,#d9a916 0 4px,transparent 5px) 0 0/18px 18px,var(--yel);border-top:3px solid var(--kopi);border-bottom:3px solid var(--kopi)}
+.edge{position:absolute;left:0;right:0;bottom:0;height:46px;background:#d8ccb4;display:flex;align-items:center;justify-content:space-between;padding:0 40px;font-weight:800;font-size:15px;color:#5b4233}
+/* frame 2 */
+.f2{z-index:5}
+.f2 .ttl{position:absolute;left:40px;top:112px;display:flex;align-items:center;gap:14px;font:600 30px 'Fredoka'}
+.f2 .route{top:168px;height:560px}.f2 .route::before{top:16px}
+.big{position:relative;display:flex;flex-direction:column;align-items:center}
+.big .dot{width:50px;height:50px;border-radius:50%;background:#fff;border:8px solid var(--kopi);position:relative;z-index:1}
+.big .stem{width:4px;height:22px;background:var(--kopi)}
+.big .cd{width:280px;height:452px;background:#fff;border-radius:22px;box-shadow:0 0 0 4px var(--kopi),0 8px 0 4px rgba(58,36,23,.2);overflow:hidden;display:flex;flex-direction:column;transition:.15s}
+.big img{width:100%;height:186px;object-fit:cover;border-bottom:4px solid var(--kopi)}
+.big .in{padding:14px 16px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.big h3{font:600 25px/1.1 'Fredoka';margin:10px 0 8px}
+.big .tg{font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;background:var(--c);border-radius:8px;padding:3px 9px}
+.big p{font-weight:700;font-size:16px;line-height:1.3;color:#5b4233;margin-top:10px}
+.big .st{margin-top:auto;font:600 17px 'Fredoka';color:#8a7361}
+.big.on .dot{background:var(--yel);box-shadow:0 0 0 7px var(--red)}
+.big.on .cd{box-shadow:0 0 0 7px var(--red),0 12px 0 7px rgba(58,36,23,.25);transform:translateY(-4px) rotate(-1deg)}
+.big.on .st{color:var(--red)}.big.on .st::before{content:'You are here'}.big:not(.on) .st::before{content:'Tap to alight here'}
+.f2 .play{left:auto;right:40px;top:754px;height:74px;width:400px;border-radius:22px}.f2 .play b{font-size:34px}.f2 .play svg{width:52px;height:52px}
+.f2 .nx{position:absolute;left:40px;top:762px;display:flex;align-items:center;gap:16px;font:600 26px 'Fredoka'}
+</style>
+<div class="stage">
+<div class="frame">
+ <div class="band"><div class="ring">LL</div><h1>LUNCH LIAO!</h1><div class="tag">inspired by<br>Singaporean culture</div>
+  <nav><button class="exit"><i>A</i><div><small>Exit</small>Settings</div></button><button class="exit"><i>B</i><div><small>Exit</small>Controls</div></button><button class="exit"><i>C</i><div><small>Exit</small>Credits</div></button></nav></div>
+ <div class="lbl"><span class="loz"><b>LL</b><span>Lunch Line</span></span>Where to makan today? Tap a station.<button class="pill" data-go="maps" style="height:32px;font-size:16px;padding:0 14px;margin-left:6px">Full line map</button></div>
+ <div class="route"><template data-maps><button class="stn c{i}" data-map="{id}"><span class="here">YOU ARE HERE</span><div class="ph"><img src="assets/maps/{id}.jpg" alt=""></div><div class="stem"></div><div class="dot"></div><div class="nm"><span class="loz"><b>LL</b><span>{i}</span></span>{short}</div><p>{line}</p></button></template></div>
+ <div class="hsh"></div><img class="hero" src="assets/heroes/ahma_full.png" alt="Ah Ma">
+ <div class="plate"><div class="np"><h2>Ah Ma</h2><span class="loz c5"><b>TK</b><span>Tank</span></span></div><q>Walk slowly also can reach.</q><button class="pill">Change hero</button></div>
+ <div class="card"><div class="t">Liao Card<small>Stored value</small></div><div class="v">Level 4<span>12 wins</span></div><div class="bar"><i></i></div><div class="x"><span>Top up to Level 5</span><span>180/300 XP</span></div></div>
+ <div class="dep"><div><small>Next stop</small><div class="s"><span class="loz"><b>LL</b><span data-f="i"></span></span><span data-f="short"></span></div></div><div><small>Next train</small><div class="m">1 <span>min</span></div></div></div>
+ <div class="crowd"><b>Crowd level (bots)</b><div><button data-bots="Easy"><i></i>Easy</button><button class="on" data-bots="Normal"><i></i><i></i>Normal</button><button data-bots="Hard"><i></i><i></i><i></i>Hard</button></div></div>
+ <button class="play"><div><b>Chope a seat</b><small>Doors closing. Faster board lah.</small></div><svg viewBox="0 0 74 74"><circle cx="37" cy="37" r="34" fill="#fff"/><path d="M18 30h22V18l20 19-20 19V44H18z" fill="#C8221B"/></svg></button>
+ <button class="a4 p"><u>PRACTICE RANGE</u><svg viewBox="0 0 92 68"><path d="M0 22h56V4l36 30-36 30V46H0z" fill="#d6201a"/></svg><span>NO BOTS.<br>NO STRESS.</span></button>
+ <button class="a4 t"><u>TUTORIAL THIS WAY</u><svg viewBox="0 0 92 68"><path d="M0 22h56V4l36 30-36 30V46H0z" fill="#d6201a"/></svg><span>FIRST TIME HERE?</span><em>5 min only, can!</em><b class="new">NEW</b></button>
+ <div class="yl"></div><div class="edge"><span>Please wait behind the yellow line. Ah Ma is coming, slowly.</span><span>Lunch Liao! v0.11.0 &middot; &copy; 2026 Nigel Yeap</span></div>
+</div>
+<div class="frame f2">
+ <div class="band"><div class="ring">LL</div><h1>LUNCH LIAO!</h1><div class="tag">inspired by<br>Singaporean culture</div>
+  <nav><button class="exit" data-go=""><i>&larr;</i><div><small>Back to</small>Platform</div></button></nav></div>
+ <div class="ttl"><span class="loz" style="font-size:20px"><b>LL</b><span>Lunch Line</span></span>System map. Five stops, all got food.</div>
+ <div class="route"><template data-maps><button class="big c{i}" data-map="{id}"><div class="dot"></div><div class="stem"></div><div class="cd"><img src="assets/maps/{id}.jpg" alt=""><div class="in"><span class="loz"><b>LL</b><span>{i}</span></span><h3>{name}</h3><span class="tg">{tag}</span><p>{line}</p><span class="st"></span></div></div></button></template></div>
+ <div class="nx">Next stop:<span class="loz" style="font-size:20px"><b>LL</b><span data-f="i"></span></span><span data-f="short"></span></div>
+ <button class="play" data-go=""><div><b>Chope a seat</b></div><svg viewBox="0 0 74 74"><circle cx="37" cy="37" r="34" fill="#fff"/><path d="M18 30h22V18l20 19-20 19V44H18z" fill="#C8221B"/></svg></button>
+ <div class="yl"></div><div class="edge"><span>Mind the platform gap. Hold on to your tray.</span><span>Lunch Liao! v0.11.0 &middot; &copy; 2026 Nigel Yeap</span></div>
+</div>
+</div>
+<script src="proto.js"></script>

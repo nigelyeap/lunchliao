@@ -1,0 +1,91 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:'SansSC';src:url('file:///Users/nigelyeap/Documents/lunchliao-hd/assets/fonts/NotoSansSC-Bold.otf');font-weight:700}
+@font-face{font-family:'SansSC';src:url('file:///Users/nigelyeap/Documents/lunchliao-hd/assets/fonts/NotoSansSC-Black.otf');font-weight:900}
+@font-face{font-family:'SerifSC';src:url('file:///Users/nigelyeap/Documents/lunchliao-hd/assets/fonts/NotoSerifSC-Black.otf');font-weight:900}
+@font-face{font-family:'Disp';src:url('file:///Users/nigelyeap/Documents/lunchliao-hd/assets/fonts/NotoSerifDisplay-Black.ttf');font-weight:900}
+@font-face{font-family:'TamilSans';src:url('file:///Users/nigelyeap/Documents/lunchliao-hd/assets/fonts/NotoSansTamil-Bold.ttf');font-weight:700}
+@font-face{font-family:'TamilSans';src:url('file:///Users/nigelyeap/Documents/lunchliao-hd/assets/fonts/NotoSansTamil-Black.ttf');font-weight:900}
+*{box-sizing:border-box;margin:0;padding:0}html,body{overflow:hidden;background:transparent}
+body{position:relative;font-family:'SansSC';-webkit-font-smoothing:antialiased}
+.art{position:absolute;inset:0;filter:url(#wob) saturate(.86) contrast(.97)}
+.wear{position:absolute;inset:0;pointer-events:none}
+.wear div{position:absolute;inset:0;background:#000}
+.chips{filter:url(#chips)} .dirt{filter:url(#dirt);mix-blend-mode:multiply} .streak{filter:url(#streak);mix-blend-mode:multiply}
+.edge{background:transparent!important;box-shadow:inset 0 0 90px 12px rgba(48,30,14,.42);mix-blend-mode:multiply}
+.sun{background:linear-gradient(125deg,rgba(255,236,190,.14),rgba(255,236,190,0) 55%)!important;mix-blend-mode:screen}
+body.em{background:#000}.em .dark{visibility:hidden}.em .wear{display:none}.em .art{filter:none}
+
+  .frame{position:absolute;inset:0;background:linear-gradient(#4a6f69,#33504b);border-radius:26px}
+  .frame i{position:absolute;width:20px;height:20px;border-radius:50%;background:radial-gradient(#9fb3a8,#52665f)}
+  .panel{position:absolute;left:44px;top:44px;right:44px;bottom:44px;border-radius:10px;background:linear-gradient(#f2d476,#e6bd58);overflow:hidden}
+  .band{position:absolute;left:0;right:0;top:0;height:470px;background:linear-gradient(#b8432f,#9e3626)}
+  .band:after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:#7d2a1d}
+  .plate{position:absolute;left:34px;top:30px;width:330px;height:140px;border-radius:18px;background:#2f4a46;border:6px solid #e9dcb4;display:flex;align-items:center;justify-content:center;font:900 74px/1 'Disp';color:#f3e6bd;white-space:nowrap}
+  .zhname{position:absolute;left:360px;right:360px;top:30px;white-space:nowrap;text-align:center;font:900 180px/1.05 'SerifSC';color:#f7e9bd;text-shadow:7px 7px 0 #5d1b10,-3px -3px 0 #5d1b10,3px -3px 0 #5d1b10,-3px 3px 0 #5d1b10}
+  .enname{position:absolute;left:0;right:0;top:262px;white-space:nowrap;text-align:center;font:900 92px/1 'Disp';color:#ffffff;letter-spacing:3px;text-shadow:5px 5px 0 #5d1b10}
+  .sub{position:absolute;left:0;right:0;top:392px;text-align:center;font:700 46px/1 'SansSC';color:#f3d98f;letter-spacing:6px}
+  .badge{position:absolute;right:34px;top:28px;width:210px;height:210px;border-radius:50%;background:#f3e6bd;border:8px solid #2f4a46;text-align:center;color:#9e3626;font:900 30px/1.1 'Disp';padding-top:34px;box-sizing:border-box}
+  .badge b{display:block;font:900 60px/1 'Disp'} .badge span{display:block;font:900 30px/1.2 'SansSC';color:#2f4a46}
+  .tiles{position:absolute;left:34px;right:34px;top:520px;bottom:24px;display:flex;gap:30px}
+  .tile{flex:1;background:#fdf4d6;border:7px solid #5d1b10;border-radius:22px;padding:12px;display:flex;flex-direction:column}
+  .tile svg{width:100%;flex:1;min-height:0;border-radius:14px}
+  .cap{text-align:center;color:#5d1b10;margin-top:6px;font:700 30px/1.1 'SansSC'} .cap b{display:block;font-size:50px;font-weight:900} .cap span{letter-spacing:1px}
+  </style></head>
+<body class="em" style="width:2048px;height:1024px"><svg width="0" height="0" style="position:absolute"><defs>
+<filter id="wob" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4.5"/></filter>
+<filter id="chips" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="3" seed="11"/><feColorMatrix type="matrix" values="0 0 0 0 .96  0 0 0 0 .91  0 0 0 0 .78  26 0 0 0 -19.6"/></filter>
+<filter id="dirt" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".007" numOctaves="4" seed="7"/><feColorMatrix type="matrix" values="0 0 0 0 .42  0 0 0 0 .3  0 0 0 0 .18  2.2 0 0 0 -1.04"/></filter>
+<filter id="streak" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04 .0025" numOctaves="2" seed="21"/><feColorMatrix type="matrix" values="0 0 0 0 .35  0 0 0 0 .24  0 0 0 0 .14  1.1 0 0 0 -.52"/></filter>
+</defs></svg>
+<div class="art">
+  <div class="frame dark"><i style="left:14px;top:14px"></i><i style="left:1994px;top:14px"></i><i style="left:14px;top:990px"></i><i style="left:1994px;top:990px"></i><i style="left:1014px;top:14px"></i><i style="left:1014px;top:990px"></i></div>
+  <div class="panel"><div class="band"></div>
+   <div class="plate dark">#01-23</div>
+   <div class="zhname">金成海南鸡饭</div>
+   <div class="enname">KIM SENG HAINANESE CHICKEN RICE</div>
+   <div class="sub">白鸡 · 烧鸡 · 烧肉</div>
+   <div class="badge">SINCE<b>1987</b><span>创立于1987</span></div>
+   <div class="tiles">
+    <div class="tile"><svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#cf6b4a"/>
+<ellipse cx="100" cy="136" rx="84" ry="40" fill="#efe6d2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="100" cy="132" rx="62" ry="27" fill="#d8ccb2"/>
+<path d="M44 128 Q54 70 100 66 Q146 70 156 128 Q100 150 44 128Z" fill="#fbf5e4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#e7dcc0"><circle cx="78" cy="94" r="3"/><circle cx="108" cy="82" r="3"/><circle cx="126" cy="108" r="3"/><circle cx="90" cy="116" r="3"/></g>
+<g transform="rotate(-14 62 96)"><rect x="36" y="81" width="52" height="30" rx="13" fill="#f3dfa8" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 90 Q62 85 80 90" fill="none" stroke="#fff3cc" stroke-width="4" stroke-linecap="round"/></g><g transform="rotate(4 96 88)"><rect x="70" y="73" width="52" height="30" rx="13" fill="#f3dfa8" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M78 82 Q96 77 114 82" fill="none" stroke="#fff3cc" stroke-width="4" stroke-linecap="round"/></g><g transform="rotate(18 128 98)"><rect x="102" y="83" width="52" height="30" rx="13" fill="#f3dfa8" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M110 92 Q128 87 146 92" fill="none" stroke="#fff3cc" stroke-width="4" stroke-linecap="round"/></g>
+
+
+<g><circle cx="38" cy="150" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="38" cy="150" r="6" fill="#d8e6b4"/><circle cx="62" cy="160" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="62" cy="160" r="6" fill="#d8e6b4"/></g>
+<g><path d="M150 148 h34 a4 4 0 0 1 4 4 q-2 16 -21 16 q-19 0 -21 -16 a4 4 0 0 1 4 -4Z" fill="#e4e0d4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="167" cy="150" rx="15" ry="5" fill="#c4391f"/></g></svg><div class="cap"><b class="zh">白鸡</b><span>Steamed Chicken</span></div></div>
+    <div class="tile"><svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#4f8f86"/>
+<ellipse cx="100" cy="136" rx="84" ry="40" fill="#efe6d2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="100" cy="132" rx="62" ry="27" fill="#d8ccb2"/>
+<path d="M44 128 Q54 70 100 66 Q146 70 156 128 Q100 150 44 128Z" fill="#fbf5e4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#e7dcc0"><circle cx="78" cy="94" r="3"/><circle cx="108" cy="82" r="3"/><circle cx="126" cy="108" r="3"/><circle cx="90" cy="116" r="3"/></g>
+<g transform="rotate(-14 62 96)"><rect x="36" y="81" width="52" height="30" rx="13" fill="#c9782f" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 90 Q62 85 80 90" fill="none" stroke="#e8a24c" stroke-width="4" stroke-linecap="round"/></g><g transform="rotate(4 96 88)"><rect x="70" y="73" width="52" height="30" rx="13" fill="#c9782f" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M78 82 Q96 77 114 82" fill="none" stroke="#e8a24c" stroke-width="4" stroke-linecap="round"/></g><g transform="rotate(18 128 98)"><rect x="102" y="83" width="52" height="30" rx="13" fill="#c9782f" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M110 92 Q128 87 146 92" fill="none" stroke="#e8a24c" stroke-width="4" stroke-linecap="round"/></g>
+
+
+<g><circle cx="38" cy="150" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="38" cy="150" r="6" fill="#d8e6b4"/><circle cx="62" cy="160" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="62" cy="160" r="6" fill="#d8e6b4"/></g>
+<g><path d="M150 148 h34 a4 4 0 0 1 4 4 q-2 16 -21 16 q-19 0 -21 -16 a4 4 0 0 1 4 -4Z" fill="#e4e0d4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="167" cy="150" rx="15" ry="5" fill="#c4391f"/></g></svg><div class="cap"><b class="zh">烧鸡</b><span>Roast Chicken</span></div></div>
+    <div class="tile"><svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#d9a441"/>
+<ellipse cx="100" cy="136" rx="84" ry="40" fill="#efe6d2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="100" cy="132" rx="62" ry="27" fill="#d8ccb2"/>
+<path d="M44 128 Q54 70 100 66 Q146 70 156 128 Q100 150 44 128Z" fill="#fbf5e4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#e7dcc0"><circle cx="78" cy="94" r="3"/><circle cx="108" cy="82" r="3"/><circle cx="126" cy="108" r="3"/><circle cx="90" cy="116" r="3"/></g>
+
+<g><g transform="rotate(-8 62 96)"><rect x="37" y="82" width="50" height="28" rx="8" fill="#9a4a2c" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><rect x="41" y="93" width="42" height="7" rx="3" fill="#f0d9b0"/><path d="M42 87 h40" stroke="#d9923f" stroke-width="4" stroke-linecap="round"/></g><g transform="rotate(6 100 90)"><rect x="75" y="76" width="50" height="28" rx="8" fill="#9a4a2c" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><rect x="79" y="87" width="42" height="7" rx="3" fill="#f0d9b0"/><path d="M80 81 h40" stroke="#d9923f" stroke-width="4" stroke-linecap="round"/></g><g transform="rotate(14 136 100)"><rect x="111" y="86" width="50" height="28" rx="8" fill="#9a4a2c" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><rect x="115" y="97" width="42" height="7" rx="3" fill="#f0d9b0"/><path d="M116 91 h40" stroke="#d9923f" stroke-width="4" stroke-linecap="round"/></g></g>
+
+<g><circle cx="38" cy="150" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="38" cy="150" r="6" fill="#d8e6b4"/><circle cx="62" cy="160" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="62" cy="160" r="6" fill="#d8e6b4"/></g>
+<g><path d="M150 148 h34 a4 4 0 0 1 4 4 q-2 16 -21 16 q-19 0 -21 -16 a4 4 0 0 1 4 -4Z" fill="#e4e0d4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="167" cy="150" rx="15" ry="5" fill="#c4391f"/></g></svg><div class="cap"><b class="zh">烧肉</b><span>Roast Pork</span></div></div>
+    <div class="tile"><svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#7a9bb0"/>
+<ellipse cx="100" cy="136" rx="84" ry="40" fill="#efe6d2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="100" cy="132" rx="62" ry="27" fill="#d8ccb2"/>
+<path d="M44 128 Q54 70 100 66 Q146 70 156 128 Q100 150 44 128Z" fill="#fbf5e4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#e7dcc0"><circle cx="78" cy="94" r="3"/><circle cx="108" cy="82" r="3"/><circle cx="126" cy="108" r="3"/><circle cx="90" cy="116" r="3"/></g>
+
+
+<g transform="rotate(-18 100 90)"><path d="M52 98 Q50 62 96 64 Q128 66 128 92 Q126 118 90 116 Q58 116 52 98Z" fill="#c9782f" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><rect x="120" y="82" width="38" height="14" rx="7" fill="#f6ecd2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="162" cy="86" r="9" fill="#f6ecd2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></g>
+<g><circle cx="38" cy="150" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="38" cy="150" r="6" fill="#d8e6b4"/><circle cx="62" cy="160" r="13" fill="#b6c98a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="62" cy="160" r="6" fill="#d8e6b4"/></g>
+<g><path d="M150 148 h34 a4 4 0 0 1 4 4 q-2 16 -21 16 q-19 0 -21 -16 a4 4 0 0 1 4 -4Z" fill="#e4e0d4" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="167" cy="150" rx="15" ry="5" fill="#c4391f"/></g></svg><div class="cap"><b class="zh">鸡腿饭</b><span>Chicken Leg Rice</span></div></div>
+    <div class="tile"><svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#c98f53"/>
+<path d="M30 100 H170 Q166 170 100 172 Q34 170 30 100Z" fill="#efe6d2" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M40 118 H160" stroke="#3f8a78" stroke-width="7" stroke-linecap="round"/>
+<ellipse cx="100" cy="100" rx="70" ry="16" fill="#e8c46a" stroke="#3a2a20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="100" cy="100" rx="52" ry="9" fill="#f3d98f"/>
+<g fill="#7fae5a" stroke="#3a2a20" stroke-width="3"><circle cx="78" cy="98" r="6"/><circle cx="112" cy="102" r="6"/><circle cx="96" cy="94" r="5"/></g>
+<g stroke="#e9e3d3" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85"><path d="M80 78 q-10 -14 0 -26 q10 -12 0 -22"/><path d="M110 76 q-10 -14 0 -26 q10 -12 0 -22"/></g></svg><div class="cap"><b class="zh">例汤</b><span>Soup of the Day</span></div></div>
+   </div>
+  </div></div>
+<div class="wear"><div class="chips"></div><div class="dirt"></div><div class="streak"></div><div class="edge"></div><div class="sun"></div></div></body></html>

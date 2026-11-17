@@ -1,0 +1,70 @@
+<!doctype html><meta charset="utf-8"><title>Lunch Liao! menu: Kopitiam</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@500;600;700;800&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="proto.css">
+<style>
+.stage{--enamel:#F3ECD9;--kopi:#3A2417;--red:#C8221B;--rim:#1F3C80;--kaya:#E3A92B;--jade:#1d6f6a;font-family:'Barlow Condensed',sans-serif;color:var(--kopi);
+ background:radial-gradient(circle at 20% 30%,#c9bea9 0 2px,transparent 3px) 0 0/46px 46px,radial-gradient(circle at 70% 60%,#dcc4b0 0 3px,transparent 4px) 0 0/58px 58px,radial-gradient(circle at 45% 85%,#b7c2ba 0 2px,transparent 3px) 0 0/38px 38px,#e6dcc6}
+.slab{font-family:'Alfa Slab One';font-weight:400}
+.head{position:absolute;left:0;right:0;top:0;height:104px;background:var(--red);border-bottom:8px solid var(--rim);display:flex;align-items:center;padding:0 40px;color:var(--enamel);box-shadow:0 6px 0 rgba(58,36,23,.18)}
+.head h1{font-family:'Alfa Slab One';font-weight:400;font-size:54px;line-height:1;letter-spacing:.01em;text-shadow:0 4px 0 #8f1711}
+.head .tag{margin-left:22px;padding-left:22px;border-left:2px solid rgba(243,236,217,.5);font-weight:700;font-size:16px;letter-spacing:.18em;text-transform:uppercase;line-height:1.3}
+.head nav{margin-left:auto;display:flex;gap:10px}
+.head nav button{height:44px;padding:0 18px;border-radius:22px;background:var(--enamel);color:var(--kopi);font-weight:800;font-size:17px;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 0 0 3px var(--rim) inset}
+.stamp{margin-left:18px;display:flex;align-items:center;gap:12px;background:var(--enamel);color:var(--kopi);border-radius:10px;padding:8px 14px 8px 8px;box-shadow:0 0 0 3px var(--rim) inset}
+.stamp .lv{width:48px;height:48px;border-radius:50%;background:var(--kaya);display:grid;place-items:center;font-family:'Alfa Slab One';font-size:22px;border:2px dashed var(--kopi)}
+.stamp small{display:block;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.stamp .dots{display:flex;gap:4px;margin-top:5px}.stamp .dots i{width:14px;height:14px;border-radius:50%;border:2px solid var(--kopi)}.stamp .dots i.f{background:var(--red);border-color:var(--red)}
+.sect{position:absolute;left:40px;top:128px;font-weight:800;font-size:17px;letter-spacing:.2em;text-transform:uppercase;color:var(--jade)}
+.stalls{position:absolute;left:40px;right:40px;top:166px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.stall{position:relative;background:var(--enamel);border-radius:10px;box-shadow:0 0 0 3px var(--kopi),0 7px 0 3px rgba(58,36,23,.25);overflow:hidden;height:268px}
+.stall .sign{height:46px;display:flex;align-items:center;gap:10px;padding:0 10px;background:var(--kaya);border-bottom:3px solid var(--kopi)}
+.stall:nth-of-type(2) .sign{background:#f1b28c}.stall:nth-of-type(3) .sign{background:#9ec9df}.stall:nth-of-type(4) .sign{background:#a6d6be}.stall:nth-of-type(5) .sign{background:#ebc1c9}
+.stall .no{flex:none;font-weight:800;font-size:14px;letter-spacing:.04em;background:var(--kopi);color:var(--enamel);border-radius:4px;padding:2px 6px}
+.stall .sign b{font-family:'Alfa Slab One';font-weight:400;font-size:20px;line-height:1;white-space:nowrap}
+.stall img{width:100%;height:136px;object-fit:cover;border-bottom:3px solid var(--kopi)}
+.stall p{padding:8px 12px 0;font-weight:600;font-size:16px;line-height:1.22}
+.stall .tis{display:none;position:absolute;right:10px;top:150px;transform:rotate(7deg);background:#fff;border:2px solid var(--kopi);border-radius:5px;padding:5px 9px 4px;font-weight:800;font-size:14px;letter-spacing:.12em;color:var(--red);box-shadow:0 3px 0 rgba(58,36,23,.3)}
+.stall .tis::before{content:'';display:block;height:5px;margin:0 -9px 4px;background:repeating-linear-gradient(90deg,var(--rim) 0 6px,#fff 6px 10px);margin-top:-5px;border-radius:3px 3px 0 0}
+.stall.on{box-shadow:0 0 0 5px var(--red),0 9px 0 5px rgba(58,36,23,.3);transform:translateY(-6px)}.stall.on .tis{display:block}
+.table{position:absolute;left:40px;top:474px;width:700px;height:400px}
+.plate{position:absolute;left:150px;bottom:6px;width:400px;height:128px;border-radius:50%;background:var(--enamel);box-shadow:0 0 0 9px var(--rim),0 0 0 13px var(--enamel),0 12px 0 13px rgba(58,36,23,.22)}
+.plate::after{content:'';position:absolute;inset:16px 34px;border-radius:50%;border:2px solid rgba(31,60,128,.35)}
+.table img.h{position:absolute;left:350px;bottom:54px;height:404px;transform:translateX(-50%);filter:drop-shadow(0 6px 0 rgba(58,36,23,.2))}
+.name{position:absolute;left:0;top:44px;width:210px}
+.name .r{display:inline-block;background:var(--kopi);color:var(--kaya);font-weight:800;font-size:14px;letter-spacing:.18em;text-transform:uppercase;padding:3px 10px;border-radius:5px}
+.name h2{font-family:'Alfa Slab One';font-weight:400;font-size:64px;line-height:.95;margin:8px 0 6px}
+.name q{display:block;font-weight:600;font-size:19px;line-height:1.2;font-style:italic;margin-bottom:14px}
+.btn{height:46px;padding:0 18px;border-radius:10px;background:var(--enamel);font-weight:800;font-size:17px;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 0 0 3px var(--kopi),0 5px 0 3px rgba(58,36,23,.25)}
+.chit{position:absolute;left:800px;top:476px;width:380px;padding-bottom:34px!important;background:#fbf8f0;padding:20px 24px;font-family:'Courier Prime',monospace;font-size:17px;line-height:1.35;box-shadow:0 6px 0 rgba(58,36,23,.2);transform:rotate(-1.2deg);
+ clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),96% 100%,92% calc(100% - 9px),88% 100%,84% calc(100% - 9px),80% 100%,76% calc(100% - 9px),72% 100%,68% calc(100% - 9px),64% 100%,60% calc(100% - 9px),56% 100%,52% calc(100% - 9px),48% 100%,44% calc(100% - 9px),40% 100%,36% calc(100% - 9px),32% 100%,28% calc(100% - 9px),24% 100%,20% calc(100% - 9px),16% 100%,12% calc(100% - 9px),8% 100%,4% calc(100% - 9px),0 100%)}
+.chit h3{font-family:'Alfa Slab One';font-weight:400;font-size:24px;text-align:center}
+.chit .q{text-align:center;font-size:14px;letter-spacing:.1em;border-bottom:2px dashed var(--kopi);padding-bottom:10px;margin-bottom:12px}
+.chit dl{display:grid;grid-template-columns:76px 1fr;row-gap:9px}.chit dt{font-weight:700;text-transform:uppercase;font-size:14px;padding-top:2px}.chit dd{font-weight:700}
+.chit .nt{font-weight:400;font-size:15px;line-height:1.3}
+.chit .bots{display:flex;gap:6px;font-family:'Barlow Condensed'}
+.chit .bots button{flex:1;height:36px;text-align:center;border:2px solid var(--kopi);border-radius:8px;font-weight:800;font-size:16px;letter-spacing:.08em;text-transform:uppercase}
+.chit .bots .on{background:var(--kopi);color:var(--enamel)}
+.chit .tot{margin-top:14px;border-top:2px dashed var(--kopi);padding-top:10px;font-size:14px;line-height:1.3}
+.go{position:absolute;left:1220px;top:478px;width:340px}
+.play{display:flex;align-items:center;justify-content:space-between;width:100%;height:124px;padding:0 24px;border-radius:16px;background:var(--red);color:var(--enamel);font-family:'Alfa Slab One';font-size:36px;line-height:1.05;box-shadow:0 0 0 4px var(--kopi),0 9px 0 4px #8f1711}
+.play span{width:58px;height:58px;border-radius:50%;background:var(--enamel);color:var(--red);display:grid;place-items:center;flex:none}.play svg{width:24px;height:24px;margin-left:4px}
+.go .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;margin-top:22px;font-size:19px}
+.go em{font-style:normal;font-size:12px;background:var(--kaya);border-radius:9px;padding:2px 8px;letter-spacing:.1em}
+.foot{position:absolute;left:1220px;width:340px;bottom:26px;font-weight:600;font-size:15px;letter-spacing:.04em;line-height:1.4;color:#6b513f;text-align:right}
+</style>
+<div class="stage"><div class="frame">
+ <div class="head"><h1>LUNCH LIAO!</h1><div class="tag">inspired by<br>Singaporean culture</div>
+  <nav><button>Settings</button><button>Controls</button><button>Credits</button></nav>
+  <div class="stamp"><div class="lv">4</div><div><small>Level 4 &middot; 180/300 XP &middot; 12 wins</small><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i></div></div></div></div>
+ <div class="sect">Where to makan? Pick a place</div>
+ <div class="stalls"><template data-maps><button class="stall" data-map="{id}"><div class="sign"><span class="no">#01-{n}</span><b>{short}</b></div><img src="assets/maps/{id}.jpg" alt=""><p>{line}</p><span class="tis">CHOPED</span></button></template></div>
+ <div class="table"><div class="plate"></div><img class="h" src="assets/heroes/ahma_full.png" alt="">
+  <div class="name"><span class="r">Tank</span><h2>Ah Ma</h2><q>Walk slowly also can reach.</q><button class="btn">Change hero</button></div></div>
+ <div class="chit"><h3>ORDER CHIT</h3><div class="q">QUEUE NO. 0412 &middot; TABLE FOR 1</div>
+  <dl><dt>Place</dt><dd data-f="name"></dd><dt>Note</dt><dd class="nt" data-f="line"></dd><dt>Hero</dt><dd>Ah Ma (Tank)</dd><dt>Bots</dt><dd><div class="bots"><button data-bots="Easy">Easy</button><button class="on" data-bots="Normal">Normal</button><button data-bots="Hard">Hard</button></div></dd></dl>
+  <div class="tot">Tissue packet on the table means the seat is taken. Please return your tray.</div></div>
+ <div class="go"><button class="play">Chope<br>a seat<span><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z" fill="currentColor"/></svg></span></button>
+  <button class="btn">Practice range</button><button class="btn">Tutorial <em>NEW</em></button></div>
+ <div class="foot">Lunch Liao! v0.11.0<br>&copy; 2026 Nigel Yeap</div>
+</div></div>
+<script src="proto.js"></script>

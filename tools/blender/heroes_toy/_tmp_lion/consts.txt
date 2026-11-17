@@ -1,0 +1,8 @@
+TB = (0.0, .36, .68, 1.0)                                        # tier edges as a fraction of the way from spine to hem
+TF = ((.25, .5, .75, 1.0), (.1, .45, .85, 1.0), (.1, .45, .85, 1.0))
+TA, TR, TS, TK, TP = (.03, .045, .06), (.02, .035, .055), (.02, .035, .045), (19.0, 23.0, 17.0), (0.0, 2.1, 4.0)   # flare, ripple, scallop, wave number, phase
+SIDE = [(k, f) for k in range(3) for f in TF[k]]                 # spine outwards
+DESC = [(1, k, f) for k, f in reversed(SIDE)] + [(0, 0, 0.0)] + [(-1, k, f) for k, f in SIDE]      # right hem, over the spine, left hem
+NP = len(DESC)
+GOLDQ = {i for i in range(NP - 1) if {DESC[i][2], DESC[i + 1][2]} == {.85, 1.0}}      # gold strip just above each tier edge
+ROPES = [i for i, (sd, k, f) in enumerate(DESC) if f == 1.0 and k < 2]

@@ -1,0 +1,14 @@
+{
+  "src": "mus_match.wav",
+  "loopStart": 0.512,
+  "loopEnd": 32.512,
+  "sampleRate": 48000,
+  "loopStartSample": 24576,
+  "loopEndSample": 1560576,
+  "note": "Original v2. Play from 0 once, then loop loopStart to loopEnd. Pickup before loopStart.",
+  "bpm": 120,
+  "bar": 2,
+  "bars": 16,
+  "key": "E minor (Dorian)",
+  "version": 2
+}

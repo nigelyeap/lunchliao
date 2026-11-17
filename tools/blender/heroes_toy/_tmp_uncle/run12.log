@@ -1,0 +1,47 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:16.478  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_build.blend"
+00:16.690  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_rig.blend"
+00:16.856  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_anim.blend"
+TOY_TRIS 27896 objects 64
+TOY_TOP [('h_head', 2924), ('h_face', 2450), ('hips_sh', 2064), ('singlet', 2016), ('torso', 1314), ('h_comb', 1232), ('h_fringe', 1200), ('arm_l', 1000), ('arm_r', 1000), ('hand_l', 950), ('hand_r', 950), ('pipe_top', 864), ('pipe_hem', 768), ('strap', 752), ('h_ear', 720), ('shorthem', 672)]
+TOY_GS 1.049 raw height 1.794 bottom -0.002
+Info: Saved as "uncle_build.blend"
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 8966 18394
+Info: Saved as "uncle_rig.blend"
+Info: Saved as "uncle_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+02:45:41 | INFO: Starting glTF 2.0 export
+02:45:41 | INFO: Extracting primitive: uncle_body
+02:45:41 | INFO: Primitives created: 13
+02:45:41 | INFO: Extracting primitive: uncle_head
+02:45:41 | INFO: Primitives created: 12
+02:45:42 | INFO: Finished glTF 2.0 export in 0.6005849838256836 s
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/uncle.glb 1239 KB
+02:45:42 | INFO: Data are loaded, start creating Blender stuff
+02:45:42 | INFO: Blender create Mesh node uncle_body
+02:45:42 | INFO: Blender create Mesh node uncle_head
+02:45:42 | INFO: glTF import finished in 0.14s
+00:17.817  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_anim.blend"
+01:17.603  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/shots/heroes_toy/uncle/beauty.png'
+01:32.038  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/t_0.png'
+01:44.904  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/t_1.png'
+01:57.936  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/t_2.png'
+[verify] tris 27360; X -0.726..0.733 height(Z after import) 1.882 depth(Y) -0.490..0.551
+[verify] bones ['root', 'hips', 'spine', 'chest', 'neck', 'head', 'eye.l', 'eye.r', 'prop', 'upperarm.l', 'lowerarm.l', 'hand.l', 'handslot.l', 'upperarm.r', 'lowerarm.r', 'hand.r', 'handslot.r', 'upperleg.l', 'lowerleg.l', 'foot.l', 'toes.l', 'upperleg.r', 'lowerleg.r', 'foot.r', 'toes.r']
+[verify] uncle_body: 18394 tris, 13 mats
+[verify] morphs on uncle_head ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+[verify] uncle_head: 8966 tris, 12 mats
+[verify] actions [('attack', 18), ('idle', 60), ('run', 24), ('ult', 2)]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

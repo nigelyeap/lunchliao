@@ -1,0 +1,52 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:04.415  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_build.blend"
+00:07.368  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_34.png'
+00:11.485  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_face.png'
+00:14.003  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_side.png'
+00:16.276  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/look_back.png'
+00:16.277  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_build.blend"
+00:16.527  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_rig.blend"
+00:16.731  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_anim.blend"
+TOY_TRIS 34599 objects 80
+TOY_TOP [('cloth', 3071), ('h_rimfur', 2650), ('h_face', 2500), ('h_shell', 1848), ('hemfur', 1526), ('clothband', 1464), ('bibtrim', 1000), ('j_lipfur', 916), ('j_jaw', 880), ('h_lipfur', 836), ('f_pants', 808), ('r_pants', 808), ('h_blackfur', 800), ('h_eyeball', 720), ('h_mirror_fur', 700), ('h_eyering', 640), ('tail', 604), ('f_shoe', 576), ('f_sole', 576), ('r_shoe', 576)]
+[build] raw top 2.468 GS 0.9373 height 2.313
+Info: Saved as "lion_build.blend"
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 16802 17797
+Info: Saved as "lion_rig.blend"
+Info: Saved as "lion_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult', 'feed', 'pounce', 'shake']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+00:17:33 | INFO: Starting glTF 2.0 export
+00:17:33 | INFO: Extracting primitive: lion_body
+00:17:33 | INFO: Primitives created: 12
+00:17:33 | INFO: Extracting primitive: lion_head
+00:17:33 | INFO: Primitives created: 10
+00:17:33 | INFO: Finished glTF 2.0 export in 0.7923228740692139 s
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/lion.glb 1681 KB
+00:17:33 | INFO: Data are loaded, start creating Blender stuff
+00:17:33 | INFO: Blender create Mesh node lion_body
+00:17:33 | INFO: Blender create Mesh node lion_head
+00:17:34 | INFO: glTF import finished in 0.21s
+00:17.993  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/lion_anim.blend"
+01:00.214  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/shots/heroes_toy/lion/beauty.png'
+01:05.123  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_lion/face_front.png'
+[verify] tris 34599; X -1.121..1.126 height(Z after import) 2.318 depth(Y) -1.632..0.643
+[verify] bones ['root', 'hips', 'spine', 'chest', 'neck', 'head', 'eye.l', 'eye.r', 'prop', 'upperarm.l', 'lowerarm.l', 'hand.l', 'handslot.l', 'upperarm.r', 'lowerarm.r', 'hand.r', 'handslot.r', 'upperleg.l', 'lowerleg.l', 'foot.l', 'toes.l', 'upperleg.r', 'lowerleg.r', 'foot.r', 'toes.r', 'rear', 'rthigh.l', 'rshin.l', 'rfoot.l', 'rthigh.r', 'rshin.r', 'rfoot.r', 'tail']
+[verify] morphs on lion_body ['Basis', 'belly']
+[verify] lion_body: 17797 tris, 12 mats
+[verify] morphs on lion_head ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+[verify] lion_head: 16802 tris, 10 mats
+[verify] head mesh bbox centre world (-0.003, 0.155, 1.72), in head bone space y 0.296 z 0.044, size (1.227, 0.975, 1.187)
+[verify] actions [('attack', 18), ('feed', 30), ('idle', 60), ('pounce', 20), ('run', 24), ('shake', 18), ('ult', 2)]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

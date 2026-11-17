@@ -1,0 +1,453 @@
+"""Gym Hunk, style `toy` (designer vinyl collectible). Game-ready: rig, skin, 6 shape keys, 4 clips, glb.
+Run: blender -b -P gym.py -- build rig anim export verify shots      (stages run in the order given)
+Axes: Z up, hero faces +Y. Reuses the toy helpers from styles/toy/ahma_toy.py (exec'd, not modified)
+and the Pose / pose_frame / make_action animation code from heroes/gym.py (imported, not modified)."""
+import bpy, sys, os, math, importlib.util
+import numpy as np
+from mathutils import Vector, Matrix, Quaternion
+
+HD = os.path.dirname(os.path.abspath(__file__))
+RT = os.path.abspath(os.path.join(HD, '..', '..', '..'))
+WORK = os.path.join(HD, '_tmp_gym'); SHOTS = os.path.join(RT, 'shots', 'heroes_toy', 'gym'); OUT_GLB = os.path.join(RT, 'assets', 'heroes', 'gym.glb')
+os.makedirs(WORK, exist_ok=True); os.makedirs(SHOTS, exist_ok=True)
+ARGS = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else ['build']
+
+# ---- reuse: old gym (animation) and the toy style helpers ------------------------------------
+sys.path.insert(0, os.path.join(RT, 'tools', 'blender', 'heroes'))
+_sp = importlib.util.spec_from_file_location('og_gym', os.path.join(RT, 'tools', 'blender', 'heroes', 'gym.py'))
+OG = importlib.util.module_from_spec(_sp); _sp.loader.exec_module(OG)
+TOY = os.path.join(RT, 'tools', 'blender', 'styles', 'toy', 'ahma_toy.py')
+_src = open(TOY).read().split('# ---------------------------------------------------------------- main')[0]
+_src = _src.replace("OUT = os.path.join(ROOT, 'shots', 'styles', 'toy')", "OUT = %r" % SHOTS).replace("TMP = os.path.join(HERE, '_tmp')", "TMP = %r" % WORK)
+_src = _src.replace("HERE = os.path.dirname(os.path.abspath(__file__))", "HERE = %r" % os.path.dirname(TOY))
+exec(compile(_src, TOY, 'exec'), globals())          # mat, mk, ell, tor, sweep, fillet, bez, stage, shoot, row, surf, sph_vf, M, V, Z, H, SC, HERO
+ss = OG.smoothstep
+
+def openb(name):
+    bpy.ops.wm.open_mainfile(filepath=os.path.join(WORK, name)); globals()['SC'] = bpy.context.scene
+
+# ---- palette ----------------------------------------------------------------------------------
+M.update(
+    skin=mat('skin', '#E9AE82', .42, sss=.12), nose=mat('nose', '#E39B72', .42, sss=.12), blush=mat('blush', '#F08A8E', .5),
+    hair=mat('hair', '#1D1A22', .3, coat=.35), brow=mat('brow', '#241C20', .45),
+    tank=mat('tank', '#1E1D25', .55), shorts=mat('shorts', '#34333F', .55), violet=mat('violet', '#7C4DFF', .35, coat=.3),
+    sock=mat('sock', '#F5F3FA', .6), shoe=mat('shoe', '#F3F1F8', .35, coat=.3), sole=mat('sole', '#D3CEE0', .5),
+    ball=mat('ball', '#2A2930', .42, coat=.25), bline=mat('bline', '#F3F1F8', .4),
+    canvas=mat('canvas', '#BBA67C', .8), cstrap=mat('cstrap', '#4A3F32', .7), bottle=mat('bottle', '#7C4DFF', .2, coat=1.0), lid=mat('lid', '#F3F1F8', .3),
+)
+
+# ---- proportions ------------------------------------------------------------------------------
+HC = V((0, 0, 1.30)); HR = V((0.50, 0.47, 0.43))                      # head centre and radii (globals used by surf())
+TR = [(.44, .285, .205), (.50, .30, .21), (.58, .315, .22), (.65, .355, .235), (.71, .405, .25), (.755, .39, .24), (.785, .31, .21),
+      (.805, .22, .18), (.83, .165, .16), (.88, .158, .155), (.96, .158, .155)]
+_a = np.array(TR); ZS = np.linspace(TR[0][0], TR[-1][0], 22); RXs = np.interp(ZS, _a[:, 0], _a[:, 1]); RYs = np.interp(ZS, _a[:, 0], _a[:, 2])
+for _ in range(3):
+    RXs[1:-1] = (RXs[:-2] + 2 * RXs[1:-1] + RXs[2:]) / 4; RYs[1:-1] = (RYs[:-2] + 2 * RYs[1:-1] + RYs[2:]) / 4
+rxz = lambda z: float(np.interp(z, ZS, RXs)); ryz = lambda z: float(np.interp(z, ZS, RYs))
+def tsurf(a_deg, z, off):
+    a = math.radians(a_deg); return V(((rxz(z) + off) * math.cos(a), (ryz(z) + off) * math.sin(a), z))
+ZH = .465
+def ztop(a):
+    c = abs(math.cos(a)); base = .80 + .035 * ss(.1, .5, c)
+    return base - (.13 if math.sin(a) > 0 else .02) * (1 - ss(.15, .55, c))
+
+SHD = {1: V((.47, 0, .69)), -1: V((-.47, 0, .69))}
+ELB = {1: V((.60, .06, .42)), -1: V((-.60, .02, .40))}
+BC = V((.50, .52, .72)); BRAD = .20                                      # medicine ball
+WR_R = V((.50, .34, .48)); PALM_R = V((.50, .50, .505))
+CB = V((-.60, .21, .19)); BOT_R = .042                                   # shaker bottle (vertical) in the left fist
+WR_L = V((-.60, .10, .27))
+LEGX = .155; BAG = V((0, -.365, .60))
+
+def loop_pts(f, n=64, close=True):
+    p = [f(2 * math.pi * i / n) for i in range(n)]
+    return p + [p[0]] if close else p
+
+def catmull(P, k=6, closed=False):
+    P = [V(p) for p in P]; n = len(P); out = []
+    for i in range(n - 1):
+        p0 = P[i - 1] if i > 0 else P[0]; p1 = P[i]; p2 = P[i + 1]; p3 = P[i + 2] if i + 2 < n else P[-1]
+        for s in range(k):
+            t = s / k; out.append(.5 * (2 * p1 + (-p0 + p2) * t + (2 * p0 - 5 * p1 + 4 * p2 - p3) * t * t + (-p0 + 3 * p1 - 3 * p2 + p3) * t ** 3))
+    out.append(P[-1]); return out
+
+# ---------------------------------------------------------------- body
+def lathe(name, zs, rx, ry, m, seg=36, off=0.0):
+    vs = []; fs = []
+    for z, a, b in zip(zs, rx, ry):
+        for i in range(seg):
+            t = 2 * math.pi * i / seg; vs.append(V(((a + off) * math.cos(t), (b + off) * math.sin(t), z)))
+    for j in range(len(zs) - 1):
+        for i in range(seg): fs.append((j * seg + i, j * seg + (i + 1) % seg, (j + 1) * seg + (i + 1) % seg, (j + 1) * seg + i))
+    fs.append(tuple(range(seg - 1, -1, -1))); return mk(name, vs, fs, m)
+
+def build_torso():
+    lathe('torso', ZS, RXs, RYs, M['skin'])
+    seg = 36; J = 9; vs = []; fs = []
+    for i in range(seg):                                                    # inner closing ring at the hem
+        t = 2 * math.pi * i / seg; r = (rxz(ZH) + .0, ryz(ZH) + .0); vs.append(V((r[0] * math.cos(t), r[1] * math.sin(t), ZH)))
+    for j in range(J):
+        for i in range(seg):
+            t = 2 * math.pi * i / seg; zt = ztop(t); z = ZH + (zt - ZH) * j / (J - 1)
+            off = .012 + .012 * (1 - ss(ZH, .56, z)); vs.append(V(((rxz(z) + off) * math.cos(t), (ryz(z) + off) * math.sin(t), z)))
+    for i in range(seg):                                                    # inner closing ring at the neckline
+        t = 2 * math.pi * i / seg; zt = ztop(t); vs.append(V(((rxz(zt) - .004) * math.cos(t), (ryz(zt) - .004) * math.sin(t), zt)))
+    R = J + 2
+    for j in range(R - 1):
+        for i in range(seg): fs.append((j * seg + i, (j + 1) * seg + i, (j + 1) * seg + (i + 1) % seg, j * seg + (i + 1) % seg))
+    mk('tank', vs, fs, M['tank'])
+    n = 40
+    sweep('pipe_neck', loop_pts(lambda t: tsurf(math.degrees(t), ztop(t), .018), n), .011, M['violet'], seg=8, round_caps=False)
+    sweep('pipe_hem', loop_pts(lambda t: tsurf(math.degrees(t), ZH + .004, .026), n), .012, M['violet'], seg=8, round_caps=False)
+
+def build_legs():
+    ell('hips_sh', (0, 0, .46), (.33, .225, .13), M['shorts'], seg=24)
+    for s in (-1, 1):
+        x = s * LEGX
+        sweep('shortleg', [(x, 0, .50), (x, .005, .38), (x, .01, .27)], [.168, .162, .154], M['shorts'], seg=18, lip=(.01, .11))
+        tor('shorthem', (x, .01, .272), Z, .154, .010, M['violet'], seg=24, rseg=5)
+        sweep('calf', [(x, .01, .31), (x, .0, .20), (x, 0, .12)], [.104, .092, .078], M['skin'], seg=20)
+        sweep('sock', [(x, 0, .185), (x, 0, .085)], [.099, .090], M['sock'], seg=20, round_caps=False)
+        tor('sockcuff', (x, 0, .185), Z, .099, .009, M['violet'], seg=28, rseg=6)
+        ell('shoe', (x, .075, .075), (.108, .19, .078), M['shoe'], seg=20)
+        ell('shoe_sole', (x, .08, .032), (.116, .205, .034), M['sole'], seg=20)
+        ell('shoe_tongue', (x, .035, .15), (.05, .055, .03), M['violet'], seg=14)
+        ell('shoe_heel', (x, -.095, .085), (.05, .03, .05), M['violet'], seg=14)
+
+def build_arm_r():
+    s = 1; S, E = SHD[1], ELB[1]
+    so = H.Soup('arm_r'); so.sphere(S, .15, seg=20); so.capsule(S, E, .128, .105); so.capsule(S.lerp(E, .25), S.lerp(E, .75) + V((0, .02, .02)), .122, .118)
+    so.capsule(E, WR_R, .098, .066); so.sphere(WR_R, .066)
+    a, _ = so.remesh(voxel=.011, smooth=5, smooth_factor=.55, target_tris=1400); H.set_material(a, M['skin']); a.name = 'arm_r'; reg(a)
+    tor('wstrap_r', E.lerp(WR_R, .86), WR_R - E, .071, .016, M['violet'], seg=28, rseg=8)
+    # hand cradling the ball from underneath: palm, four fingers up the front, thumb up the outer side
+    h = H.Soup('hand_r'); h.ellipsoid(PALM_R, (.08, .088, .03)); h.capsule(WR_R, PALM_R, .066, .06)
+    rf = .0215
+    for k, xk in enumerate((-.048, -.016, .016, .048)):
+        rr = math.sqrt((BRAD + rf) ** 2 - xk ** 2); r = rf - .0015 * (k == 0 or k == 3) - .002 * (k == 3)
+        pts = [BC + V((xk, rr * math.cos(math.radians(p)), rr * math.sin(math.radians(p)))) for p in (-66, -38, -10, 14)]
+        for p0, p1, r0, r1 in zip(pts[:-1], pts[1:], (r + .002, r, r), (r, r, r * .85)): h.capsule(p0, p1, r0, r1, seg=12)
+    rr = BRAD + .021
+    th = [BC + V((.8 * rr, .05 * rr, -.6 * rr)).normalized() * rr, BC + V((.95 * rr, .12 * rr, -.28 * rr)).normalized() * rr, BC + V((.93 * rr, .26 * rr, .0)).normalized() * rr, BC + V((.8 * rr, .38 * rr, .16 * rr)).normalized() * rr]
+    h.capsule(PALM_R + V((.04, -.02, 0)), th[0], .03, .027, seg=12)
+    for p0, p1, r0, r1 in zip(th[:-1], th[1:], (.027, .025, .024), (.025, .024, .021)): h.capsule(p0, p1, r0, r1, seg=12)
+    hd, _ = h.remesh(voxel=.0065, smooth=5, smooth_factor=.5, target_tris=1100); H.set_material(hd, M['skin']); hd.name = 'hand_r'; reg(hd)
+    ell('ball', BC, (BRAD,) * 3, M['ball'], seg=28)
+    tor('ball_seam1', BC, (1, 0, 0), BRAD, .006, M['bline'], seg=48, rseg=6)
+    tor('ball_seam2', BC, (0.6, 0, 0.8), BRAD, .006, M['bline'], seg=48, rseg=6)
+
+def build_arm_l():
+    s = -1; S, E = SHD[-1], ELB[-1]
+    so = H.Soup('arm_l'); so.sphere(S, .15, seg=20); so.capsule(S, E, .128, .105); so.capsule(S.lerp(E, .25), S.lerp(E, .75) + V((0, .02, .02)), .122, .118)
+    so.capsule(E, WR_L, .098, .066); so.sphere(WR_L, .066)
+    a, _ = so.remesh(voxel=.011, smooth=5, smooth_factor=.55, target_tris=1400); H.set_material(a, M['skin']); a.name = 'arm_l'; reg(a)
+    tor('wstrap_l', E.lerp(WR_L, .86), WR_L - E, .071, .016, M['violet'], seg=28, rseg=8)
+    # fist wrapped round the shaker bottle: palm behind the bottle, four fingers round the outer side, thumb over the inner side
+    palm = CB + V((0, -.075, 0)); h = H.Soup('hand_l'); h.ellipsoid(palm, (.052, .04, .066)); h.capsule(WR_L, palm + V((0, 0, .03)), .066, .058)
+    rho = BOT_R + .02; rf = .0195
+    def arc(z, th, rho, ra, rb):
+        pts = [V((CB.x + rho * math.cos(math.radians(t)), CB.y + rho * math.sin(math.radians(t)), z)) for t in th]
+        for p0, p1, r0, r1 in zip(pts[:-1], pts[1:], [ra] + [rf] * 5, [rf] * 4 + [rb]): h.capsule(p0, p1, r0, r1, seg=12)
+    for k, dz in enumerate((.048, .016, -.016, -.048)):
+        arc(CB.z + dz, (250, 195, 140, 95, 55), rho, rf + .002, rf * (.85 if k == 3 else .9))
+    arc(CB.z + .078, (305, 350, 20, 52), BOT_R + .022, .03, .02)
+    hd, _ = h.remesh(voxel=.0065, smooth=5, smooth_factor=.5, target_tris=1100); H.set_material(hd, M['skin']); hd.name = 'hand_l'; reg(hd)
+    sweep('bottle', [(CB.x, CB.y, CB.z - .14), (CB.x, CB.y, CB.z + .12)], [.04, .043], M['bottle'], seg=24)
+    sweep('bottle_neck', [(CB.x, CB.y, CB.z + .12), (CB.x, CB.y, CB.z + .15)], [.043, .034], M['bottle'], seg=24, round_caps=False)
+    sweep('lid', [(CB.x, CB.y, CB.z + .15), (CB.x, CB.y, CB.z + .2)], [.036, .033], M['lid'], seg=24)
+    tor('bottle_band', (CB.x, CB.y, CB.z - .09), Z, .042, .006, M['lid'], seg=28, rseg=6)
+
+def build_bag():
+    sweep('bag', [(-.17, BAG.y, BAG.z), (.17, BAG.y, BAG.z)], [.135, .135], M['canvas'], seg=20)
+    for x in (-.11, .11): tor('bag_band', (x, BAG.y, BAG.z), (1, 0, 0), .138, .011, M['cstrap'], seg=24, rseg=5)
+    path = [(-80, .70), (-55, .78), (-25, .815), (5, .82), (35, .78), (58, .70), (70, .60), (60, .54), (30, .52), (-5, .52), (-45, .55), (-80, .64)]
+    pts = catmull([tsurf(a, z, .028) for a, z in path], 3)
+    for sg in (1, -1): sweep('strap', [V((sg * p.x, p.y, p.z)) for p in pts], .019, M['cstrap'], seg=6, round_caps=False)
+
+def build_body_all():
+    build_torso(); build_legs(); build_arm_r(); build_arm_l(); build_bag()
+
+# ---------------------------------------------------------------- head
+def build_head():
+    ell('h_head', HC, HR, M['skin'], seg=40)
+    import random; rnd = random.Random(5); so = H.Soup('hair'); n = 230
+    def thr(az): return float(np.interp(az, [0, 35, 65, 95, 180], [54, 50, 32, 4, -24]))
+    for i in range(n):
+        z = 1 - 2 * (i + .5) / n; a = i * 2.39996; r = math.sqrt(1 - z * z); d = V((r * math.cos(a), r * math.sin(a), z))
+        az = math.degrees(math.atan2(abs(d.x), d.y)); el = math.degrees(math.asin(d.z))
+        if el < thr(az): continue
+        rim = el - thr(az) < 12; rad = rnd.uniform(.085, .1) if rim else rnd.uniform(.1, .125)
+        so.sphere(HC + V((d.x * HR.x, d.y * HR.y, d.z * HR.z)) * (.96 if rim else .94), rad, seg=16)
+    for c, rad in (((0, .2, .31), .14), ((.14, .17, .30), .12), ((-.14, .17, .30), .12), ((0, .02, .35), .15)): so.sphere(HC + V(c), rad, seg=18)   # quiff
+    hair, _ = so.remesh(voxel=.013, smooth=12, smooth_factor=.7, target_tris=2200); H.set_material(hair, M['hair']); hair.name = 'h_hair'; reg(hair)
+    for s in (-1, 1):
+        ell('h_ear', HC + V((s * .49, -.03, -.04)), (.04, .075, .095), M['skin'], seg=20)
+        ell('h_bud', HC + V((s * .52, -.02, -.035)), (.022, .028, .028), M['lid'], seg=14)
+    p, n_, t, u = surf(0, -.085); ell('h_nose', p + n_ * .004, (.06, .05, .05), M['nose'], seg=24)
+    # violet sweatband across the forehead
+    h0 = .235; rx = HR.x * math.sqrt(1 - (h0 / HR.z) ** 2) + .012; ry = HR.y * math.sqrt(1 - (h0 / HR.z) ** 2) + .012
+    sweep('h_band', [HC + V((rx * math.cos(2 * math.pi * i / 36), ry * math.sin(2 * math.pi * i / 36), h0)) for i in range(37)], .03, M['violet'], seg=10, round_caps=False)
+
+# ---------------------------------------------------------------- face (one mesh, six shape keys)
+FM = ['brow', 'eye', 'white', 'line', 'mouth', 'teeth', 'tongue', 'blush']
+EXe, EZe = .185, -.02
+_I = dict(bz=.16, tilt=-.012, arch=.02, eye='bead', es=(1, 1), cut=None, hl=.026, w=.19, curve=.03, up=0, dn=0, teeth=0, tongue=0, cz=-.235, arc=.058)
+EXPR = {
+    'idle': _I,
+    'blink': {**_I, 'eye': 'arc', 'arc': -.022, 'bz': .15},
+    'mouth_open': {**_I, 'w': .2, 'curve': .012, 'up': .006, 'dn': .085, 'teeth': .032, 'tongue': .05},
+    'smile': {**_I, 'w': .25, 'curve': .05, 'bz': .175, 'tilt': -.01},
+    'angry': dict(bz=.055, tilt=.085, arch=-.004, eye='bead', es=(1.08, .95), cut=(.012, .6), hl=.0, w=.2, curve=-.052, up=.018, dn=.05, teeth=.034, tongue=0, cz=-.24, arc=.058),
+    'grin': dict(bz=.19, tilt=-.012, arch=.034, eye='arc', es=(1, 1), cut=None, hl=.026, w=.34, curve=.065, up=.004, dn=.105, teeth=.034, tongue=.05, cz=-.255, arc=.062),
+    'ult': dict(bz=.175, tilt=.05, arch=.004, eye='bead', es=(1.12, 1.16), cut=None, hl=.03, w=.29, curve=.01, up=.045, dn=.115, teeth=.036, tongue=.07, cz=-.25, arc=.058),
+}
+
+def face_geo(e):
+    vs = []; fs = []; mi = []
+    def add(v, f, m):
+        o = len(vs); vs.extend(v); fs.extend([tuple(i + o for i in ff) for ff in f]); mi.extend([FM.index(m)] * len(f))
+    def hide(v): return [HC.copy() for _ in v]
+    def stroke(pts, rw, rn, off, m, show=True, seg=8):
+        P = [surf(x, z, off) for x, z in pts]; n = len(P); v = []
+        for i in range(n):
+            p, nn, _, _ = P[i]; tan = (P[min(i + 1, n - 1)][0] - P[max(i - 1, 0)][0]).normalized(); side = nn.cross(tan).normalized()
+            f = math.sin(math.pi * i / (n - 1)) ** .45 if 0 < i < n - 1 else 0.0
+            v += [p + (side * math.cos(a) * rw + nn * math.sin(a) * rn) * f for a in [2 * math.pi * k / seg for k in range(seg)]]
+        f = [(i * seg + k, i * seg + (k + 1) % seg, (i + 1) * seg + (k + 1) % seg, (i + 1) * seg + k) for i in range(n - 1) for k in range(seg)]
+        add(v if show else hide(v), f, m)
+    def blob(fx, fz, rad, off, m, tilt=0.0, show=True, seg=20, d=(0, 0), cut=None):
+        p, n, t, u = surf(fx, fz); sv, sf = sph_vf(seg, seg // 2); ct, st = math.cos(tilt), math.sin(tilt); v = []
+        for q in sv:
+            lx, lz = q.x * rad[0], q.z * rad[2]
+            if cut: lz = min(lz, cut[0] + cut[1] * lx)
+            v.append(p + t * (lx * ct - lz * st + d[0]) + u * (lx * st + lz * ct + d[1]) + n * (q.y * rad[1] + off))
+        add(v if show else hide(v), sf, m)
+    def patch(x0, x1, lo, hi, off, m, nx=20, ny=3):
+        v = []
+        for i in range(nx + 1):
+            x = x0 + (x1 - x0) * i / nx; a, b = lo(x), hi(x)
+            for j in range(ny + 1): v.append(surf(x, a + (b - a) * j / ny, off)[0])
+        f = [(i * (ny + 1) + j, (i + 1) * (ny + 1) + j, (i + 1) * (ny + 1) + j + 1, i * (ny + 1) + j + 1) for i in range(nx) for j in range(ny)]
+        add(v, f, m)
+    for s in (-1, 1):
+        stroke([(s * (EXe + q * .105), e['bz'] + EZe + q * e['tilt'] + e['arch'] * (1 - q * q)) for q in [i / 5 - 1 for i in range(11)]], .042, .021, .004, 'brow')
+        bead = e['eye'] == 'bead'; a, c = .06 * e['es'][0], .075 * e['es'][1]
+        blob(s * EXe, EZe, (a, .036, c), 0, 'eye', show=bead, seg=16, cut=(e['cut'][0], e['cut'][1] * s) if e['cut'] else None)
+        blob(s * EXe, EZe, (.02, .012, .02), .028, 'white', show=bead, seg=10, d=(.02, e['hl']))
+        blob(s * EXe, EZe, (.008, .006, .008), .026, 'white', show=bead, seg=8, d=(-.022, -.03))
+        stroke([(s * EXe + .07 * math.cos(ph), EZe - .03 + e['arc'] * 1.05 * math.sin(ph)) for ph in [math.radians(168 - 156 * i / 11) for i in range(12)]], .016, .012, .005, 'eye', show=not bead)
+        v = [surf(s * .31, -.17, .0025)[0]]; f = []
+        for j in range(1, 4):
+            for i in range(14):
+                ang = 2 * math.pi * i / 14; v.append(surf(s * .31 + .07 * j / 3 * math.cos(ang), -.17 + .05 * j / 3 * math.sin(ang), .0025 if j < 3 else .0)[0])
+        ri = lambda j, i: 1 + (j - 1) * 14 + i % 14
+        f += [(0, ri(1, i), ri(1, i + 1)) for i in range(14)]
+        f += [(ri(j, i), ri(j + 1, i), ri(j + 1, i + 1), ri(j, i + 1)) for j in (1, 2) for i in range(14)]
+        add(v, f, 'blush')
+    add([HC.copy(), HC.copy(), HC.copy()], [(0, 1, 2)], 'line')                       # keeps the slot used
+    hw = e['w'] / 2
+    def env(x): return max(0.0, 1 - (x / hw) ** 2) ** .5
+    def zc(x): return e['cz'] + e['curve'] * (x / hw) ** 2
+    def half(x): return .0085 * min(1.0, env(x) * 2.5)
+    def up(x): return zc(x) + e['up'] * env(x) + half(x)
+    def lo(x): return zc(x) - e['dn'] * env(x) - half(x)
+    patch(-hw, hw, lo, up, .003, 'mouth')
+    tw = hw * .9
+    patch(-tw, tw, lambda x: max(lo(x), up(x) - e['teeth'] * (1.15 - .4 * (x / tw) ** 2)) if e['teeth'] else up(x), up, .005, 'teeth')
+    gw = hw * .62
+    patch(-gw, gw, lo, lambda x: min(up(x), lo(x) + e['tongue'] * max(0.0, 1 - (x / gw) ** 2) ** .5), .005, 'tongue')
+    return vs, fs, mi
+
+KEYS = ['blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+def build_face():
+    vs, fs, mi = face_geo(EXPR['idle'])
+    ob = mk('h_face', vs, fs, [M[k] for k in FM], mat_idx=mi); ob.shape_key_add(name='Basis')
+    for name in KEYS:
+        k = ob.shape_key_add(name=name); k.data.foreach_set('co', [c for v in face_geo(EXPR[name])[0] for c in v])
+    return ob
+
+# ---------------------------------------------------------------- build stage
+def stage_build():
+    build_body_all(); build_head(); build_face()
+    tris = sum(H.tri_count(o) for o in HERO); print('TOY_TRIS', tris, 'objects', len(HERO))
+    agg = {}
+    for o in HERO: agg[o.name.split('.')[0]] = agg.get(o.name.split('.')[0], 0) + H.tri_count(o)
+    print('TOY_TOP', sorted(agg.items(), key=lambda kv: -kv[1])[:14])
+    stage()
+    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(WORK, 'gym_build.blend'))
+
+# ---------------------------------------------------------------- rig + weights
+def eyepos(s): return surf(s * EXe, EZe)[0]
+BONES = [
+    ('root', (0, 0, 0), (0, 0, .25), None), ('hips', (0, 0, .50), (0, 0, .60), 'root'), ('spine', (0, 0, .60), (0, 0, .70), 'hips'),
+    ('chest', (0, 0, .70), (0, 0, .80), 'spine'), ('neck', (0, 0, .80), (0, .01, .90), 'chest'), ('head', (0, .01, .90), (0, .02, 1.74), 'neck'),
+    ('eye.l', tuple(eyepos(-1)), tuple(eyepos(-1) + V((0, .06, 0))), 'head'), ('eye.r', tuple(eyepos(1)), tuple(eyepos(1) + V((0, .06, 0))), 'head'),
+    ('upperarm.l', tuple(SHD[-1]), tuple(ELB[-1]), 'chest'), ('lowerarm.l', tuple(ELB[-1]), tuple(WR_L), 'upperarm.l'),
+    ('hand.l', tuple(WR_L), tuple(CB + V((0, -.03, .0))), 'lowerarm.l'), ('handslot.l', tuple(CB), tuple(CB + V((0, .08, 0))), 'hand.l'),
+    ('upperarm.r', tuple(SHD[1]), tuple(ELB[1]), 'chest'), ('lowerarm.r', tuple(ELB[1]), tuple(WR_R), 'upperarm.r'),
+    ('hand.r', tuple(WR_R), tuple(PALM_R + V((0, .1, 0))), 'lowerarm.r'), ('handslot.r', tuple(BC), tuple(BC + V((0, .1, 0))), 'hand.r'),
+    ('upperleg.l', (-LEGX, .02, .52), (-LEGX, .01, .29), 'hips'), ('lowerleg.l', (-LEGX, .01, .29), (-LEGX, 0, .10), 'upperleg.l'),
+    ('foot.l', (-LEGX, 0, .10), (-LEGX, .12, .03), 'lowerleg.l'), ('toes.l', (-LEGX, .12, .03), (-LEGX, .26, .02), 'foot.l'),
+    ('upperleg.r', (LEGX, .02, .52), (LEGX, .01, .29), 'hips'), ('lowerleg.r', (LEGX, .01, .29), (LEGX, 0, .10), 'upperleg.r'),
+    ('foot.r', (LEGX, 0, .10), (LEGX, .12, .03), 'lowerleg.r'), ('toes.r', (LEGX, .12, .03), (LEGX, .26, .02), 'foot.r'),
+    ('prop', tuple(BAG), tuple(BAG + V((0, 0, .3))), 'chest'),
+]
+RIGID = {'eye.l', 'eye.r', 'prop', 'handslot.l', 'handslot.r'}
+
+def make_rig():
+    arm = bpy.data.armatures.new('gym_rig'); ob = bpy.data.objects.new('gym_rig', arm); bpy.context.scene.collection.objects.link(ob)
+    H.select_only([ob], ob); bpy.ops.object.mode_set(mode='EDIT')
+    for name, h, t, parent in BONES:
+        b = arm.edit_bones.new(name); b.head = h; b.tail = t
+        if parent: b.parent = arm.edit_bones[parent]; b.use_connect = False
+    bpy.ops.object.mode_set(mode='OBJECT')
+    for b in arm.bones: b.use_deform = b.name not in RIGID
+    return ob
+
+def chain(p, pts, bones, bands):
+    pts = [V(q) for q in pts]; best = None; acc = 0.0; cum = []
+    for i in range(len(pts) - 1):
+        a, b = pts[i], pts[i + 1]; d = b - a; L = d.length; t = max(0.0, min(1.0, (p - a).dot(d) / (L * L))); dist = (p - (a + d * t)).length
+        if best is None or dist < best[0]: best = (dist, acc + t * L)
+        acc += L; cum.append(acc)
+    s = best[1]; ws = [1.0]
+    for k in range(len(bones) - 1):
+        a = ss(cum[k] - bands[k], cum[k] + bands[k], s); last = ws[-1]; ws[-1] = last * (1 - a); ws.append(last * a)
+    return dict(zip(bones, ws))
+
+TRUNK = ([(0, 0, .45), (0, 0, .60), (0, 0, .70), (0, 0, .80), (0, 0, .90), (0, 0, 1.0)], ['hips', 'spine', 'chest', 'neck', 'head'], [.06, .05, .04, .05])
+def trunk(p): return chain(p, *TRUNK)
+def leg(p, s):
+    x = s * LEGX; sd = 'l' if s < 0 else 'r'
+    return chain(p, [(x, 0, .62), (x, .01, .29), (x, 0, .10), (x, .12, .03)], ['upperleg.' + sd, 'lowerleg.' + sd, 'foot.' + sd], [.06, .04])
+def scale(w, f): return {k: v * f for k, v in w.items()}
+def merge(*ws):
+    o = {}
+    for w in ws:
+        for k, v in w.items(): o[k] = o.get(k, 0) + v
+    return o
+
+def weights_for(name, p):
+    n = name.split('.')[0]; s = -1 if p.x < 0 else 1
+    if n.startswith('h_'): return {'head': 1.0}
+    if n.startswith('ball'): return {'handslot.r': 1.0}
+    if n.startswith(('bottle', 'lid')): return {'handslot.l': 1.0}
+    if n.startswith(('bag', 'strap')): return {'prop': 1.0}
+    if n.startswith('hand_'): return {'hand.' + n[-1]: 1.0}
+    if n.startswith(('arm_', 'wstrap_')):
+        sd = n[-1]; k = 1 if sd == 'r' else -1; S, E = SHD[k], ELB[k]; W = WR_R if k == 1 else WR_L; tip = PALM_R if k == 1 else CB
+        w = chain(p, [S, E, W, tip], ['upperarm.' + sd, 'lowerarm.' + sd, 'hand.' + sd], [.06, .05])
+        wc = 1 - ss(-.04, .12, (p - S).dot((E - S).normalized()))
+        return merge(scale(w, 1 - wc), {'chest': wc})
+    if n in ('torso', 'tank') or n.startswith('pipe'): return trunk(p)
+    if n == 'hips_sh':
+        u = ss(.52, .40, p.z) * ss(.03, .13, abs(p.x)); return merge(scale(leg(p, s), u), scale({'hips': 1.0}, 1 - u))
+    if n.startswith(('shortleg', 'shorthem', 'calf', 'sock', 'shoe')):
+        w = leg(p, s)
+        if n.startswith('shoe'):
+            sd = 'l' if s < 0 else 'r'; t = ss(.15, .24, p.y); wf = w.pop('foot.' + sd); w['foot.' + sd] = wf * (1 - t); w['toes.' + sd] = wf * t
+        h = ss(.44, .52, p.z) if n.startswith(('shortleg', 'shorthem')) else 0.0
+        return merge(scale(w, 1 - h), {'hips': h})
+    print('[weights] unclassified', name); return {'hips': 1.0}
+
+def stage_rig():
+    openb('gym_build.blend'); O = bpy.data.objects
+    parts = [o for o in O if o.type == 'MESH' and o.name != 'cyc']
+    for o in parts:
+        o.data.update()
+        for v in o.data.vertices:
+            for b, w in weights_for(o.name, v.co).items():
+                if w > 1e-3:
+                    g = o.vertex_groups.get(b) or o.vertex_groups.new(name=b); g.add([v.index], w, 'REPLACE')
+    heads = [o for o in parts if o.name.startswith('h_')]; heads.sort(key=lambda o: o.name != 'h_face')
+    bodies = [o for o in parts if not o.name.startswith('h_')]
+    head = H.join(heads, 'gym_head'); body = H.join(bodies, 'gym_body'); rig = make_rig()
+    for ob in (head, body):
+        ob.parent = rig; m = ob.modifiers.new('arm', 'ARMATURE'); m.object = rig
+        for v in ob.data.vertices:
+            tot = sum(g.weight for g in v.groups)
+            if tot < .5: print('[rig] weak vertex', ob.name, v.index, tot)
+    for b in rig.data.bones: b.use_deform = b.name not in RIGID
+    print('[rig] shape keys', [k.name for k in head.data.shape_keys.key_blocks], 'tris', H.tri_count(head), H.tri_count(body))
+    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(WORK, 'gym_rig.blend'))
+
+# ---------------------------------------------------------------- animation (OG.pose_frame / OG.make_action reused)
+def stage_anim():
+    openb('gym_rig.blend'); SC.render.fps = OG.FPS; rig = bpy.data.objects['gym_rig']
+    acts = [OG.make_action(rig, 'idle', 'idle', 60), OG.make_action(rig, 'run', 'run', 24), OG.make_action(rig, 'attack', 'attack', 18, loop=False), OG.make_action(rig, 'ult', 'ult', 2)]
+    rig.animation_data.action = None
+    for a in acts:
+        tr = rig.animation_data.nla_tracks.new(); tr.name = a.name; tr.strips.new(a.name, 0, a); tr.mute = True
+    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(WORK, 'gym_anim.blend')); print('[anim] actions', [a.name for a in acts])
+
+def stage_export():
+    openb('gym_anim.blend'); O = bpy.data.objects; rig = O['gym_rig']; OG.reset_pose(rig)
+    for k in O['gym_head'].data.shape_keys.key_blocks: k.value = 0.0
+    H.select_only([O['gym_head'], O['gym_body'], rig], rig)
+    bpy.ops.export_scene.gltf(filepath=OUT_GLB, export_format='GLB', use_selection=True, export_yup=True, export_apply=False,
+                              export_animations=True, export_animation_mode='ACTIONS', export_nla_strips=True, export_skins=True, export_def_bones=False,
+                              export_morph=True, export_morph_normal=False, export_image_format='AUTO', export_materials='EXPORT', export_texcoords=True,
+                              export_normals=True, export_tangents=False, export_all_influences=False, export_optimize_animation_size=True)
+    print('[export] wrote', OUT_GLB, os.path.getsize(OUT_GLB) // 1024, 'KB')
+
+def stage_verify():
+    bpy.ops.wm.read_factory_settings(use_empty=True); bpy.ops.import_scene.gltf(filepath=OUT_GLB)
+    meshes = [o for o in bpy.data.objects if o.type == 'MESH' and not o.name.startswith('Icosphere')]
+    rig = [o for o in bpy.data.objects if o.type == 'ARMATURE'][0]
+    lo = V((1e9,) * 3); hi = V((-1e9,) * 3)
+    for o in meshes:
+        for v in o.data.vertices:
+            w = o.matrix_world @ v.co; lo = V(map(min, lo, w)); hi = V(map(max, hi, w))
+    print(f'[verify] tris {sum(H.tri_count(o) for o in meshes)}; X {lo.x:.3f}..{hi.x:.3f} height(Z after import) {hi.z - lo.z:.3f} depth(Y) {lo.y:.3f}..{hi.y:.3f}')
+    print('[verify] bones', [b.name for b in rig.data.bones])
+    for o in meshes:
+        if o.data.shape_keys: print('[verify] morphs on', o.name, [k.name for k in o.data.shape_keys.key_blocks])
+        print(f'[verify] {o.name}: {H.tri_count(o)} tris, {len(o.data.materials)} mats')
+    print('[verify] actions', sorted((a.name, round(a.frame_range[1] - a.frame_range[0])) for a in bpy.data.actions))
+
+# ---------------------------------------------------------------- shots
+def play(rig, name, frame):
+    rig.animation_data.action = bpy.data.actions[name]; SC.frame_set(frame)
+
+def set_key(head, name):
+    for k in head.data.shape_keys.key_blocks:
+        if k.name != 'Basis': k.value = 1.0 if k.name == name else 0.0
+
+def vstack(paths, out):
+    ims = []
+    for p in paths:
+        im = bpy.data.images.load(p); w, h = im.size; a = np.empty(w * h * 4, np.float32); im.pixels.foreach_get(a); ims.append(a.reshape(h, w, 4))
+    a = np.concatenate(ims[::-1], axis=0); h, w = a.shape[:2]      # pixel rows run bottom-up, so reverse to keep idle on top
+    o = bpy.data.images.new('v', w, h, alpha=False); o.pixels.foreach_set(a.ravel()); o.filepath_raw = out; o.file_format = 'PNG'; o.save()
+
+def stage_shots():
+    openb('gym_anim.blend'); O = bpy.data.objects; rig = O['gym_rig']; head = O['gym_head']; cam = O['cam']
+    only = [a for a in ARGS if a in ('beauty', 'turn', 'expr', 'sheet')]
+    want = lambda k: not only or k in only
+    play(rig, 'idle', 0); set_key(head, 'none')
+    if want('beauty'): shoot(cam, os.path.join(SHOTS, 'beauty.png'), 1600, 1600, 32, 8, (0, .2, .9), 2.3, cam_z=.85)
+    if want('turn'):
+        ps = []
+        for i, ang in enumerate((0, 90, 180)):
+            rig.rotation_euler = (0, 0, math.radians(-ang)); bpy.context.view_layer.update()
+            t = Matrix.Rotation(math.radians(-ang), 3, 'Z') @ V((0, .12, .9)); p = os.path.join(WORK, 't_%d.png' % i); ps.append(p)
+            shoot(cam, p, 534, 800, 0, 9, t, 1.75)
+        rig.rotation_euler = (0, 0, 0); row(ps, os.path.join(SHOTS, 'turnaround.png'))
+    if want('expr'):
+        ps = []
+        for name in ('smile', 'angry', 'grin', 'ult'):
+            set_key(head, name); p = os.path.join(WORK, 'e_%s.png' % name); ps.append(p); shoot(cam, p, 400, 440, 0, 7, (0, 0, 1.31), 1.3)
+        row(ps, os.path.join(SHOTS, 'expressions.png')); set_key(head, 'none')
+    if want('sheet'):
+        rows = []
+        for name, n in (('idle', 60), ('run', 24), ('attack', 18), ('ult', 2)):
+            ps = []
+            for i in range(4):
+                play(rig, name, min(n, int(i * n / 4)) if name != 'ult' else (0 if i < 2 else 2)); p = os.path.join(WORK, 'a_%s_%d.png' % (name, i)); ps.append(p)
+                shoot(cam, p, 400, 440, 25, 8, (0, .15, .92), 2.3, cam_z=.9)
+            r = os.path.join(WORK, 'arow_%s.png' % name); row(ps, r); rows.append(r)
+        vstack(rows, os.path.join(SHOTS, 'anim_sheet.png'))
+
+STAGES = dict(build=stage_build, rig=stage_rig, anim=stage_anim, export=stage_export, verify=stage_verify, shots=stage_shots)
+for a in ARGS:
+    if a in STAGES: STAGES[a]()

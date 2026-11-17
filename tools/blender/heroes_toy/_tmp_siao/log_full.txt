@@ -1,0 +1,52 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/siao.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/siao.py:694: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/siao.py:708: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+BREAK [('siao_head', 6488), ('hair', 2600), ('singlet', 2112), ('torso', 1398), ('pipe_top', 1152), ('hand', 950), ('hand.001', 950), ('pipe_hem', 768), ('arm', 756), ('arm.001', 756), ('nose', 528), ('neck', 428), ('short_leg', 428), ('short_leg.001', 428)]
+SIAO_TRIS {'siao_body': 13886, 'siao_head': 6488, 'siao_headgear': 7536} total 27910
+unweighted siao_body 0
+unweighted siao_head 0
+unweighted siao_headgear 0
+Info: Saved as "siao_rig.blend"
+Info: Saved as "siao.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+01:23:16 | INFO: Starting glTF 2.0 export
+01:23:16 | INFO: Extracting primitive: torso
+01:23:16 | INFO: Primitives created: 5
+01:23:16 | INFO: Extracting primitive: siao_head
+01:23:16 | INFO: Primitives created: 10
+01:23:16 | INFO: Extracting primitive: ear
+01:23:16 | INFO: Primitives created: 5
+01:23:16 | INFO: Finished glTF 2.0 export in 0.619992733001709 s
+00:25.948  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/shots/heroes_toy/siao/beauty.png'
+00:31.116  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/t0.png'
+00:36.043  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/t1.png'
+00:41.045  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/t2.png'
+00:44.768  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/e_smile.png'
+00:48.430  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/e_angry.png'
+00:52.036  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/e_grin.png'
+00:55.672  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/e_ult.png'
+00:58.044  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/idle_0.png'
+00:59.494  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/idle_1.png'
+01:00.875  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/idle_2.png'
+01:02.393  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/idle_3.png'
+01:03.996  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/run_0.png'
+01:05.400  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/run_1.png'
+01:06.940  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/run_2.png'
+01:08.333  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/run_3.png'
+01:09.745  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/attack_0.png'
+01:11.154  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/attack_1.png'
+01:12.588  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/attack_2.png'
+01:13.975  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/attack_3.png'
+01:15.388  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/ult_0.png'
+01:16.832  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/ult_1.png'
+01:18.286  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/ult_2.png'
+01:19.703  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_siao/shots/ult_3.png'
+
+EXPORT /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/siao.glb 1164 KB
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

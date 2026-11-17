@@ -1,0 +1,23 @@
+/* v5_backdrop: loads after v4.css with body.lv-a. Effects cut back, left column becomes a real menu list. */
+.bgs div{filter:blur(2.5px) saturate(1.28) contrast(1.06) brightness(1.02)}
+/* grade: no glow behind the hero, lighter wash, scrim under the menu column */
+.grade{background:linear-gradient(90deg,rgba(58,20,9,.9) 0,rgba(58,20,9,.62) 30%,rgba(58,20,9,0) 58%),linear-gradient(0deg,rgba(58,20,9,.45),rgba(58,20,9,0) 30%),linear-gradient(rgba(255,140,50,.07),rgba(255,140,50,.07))}
+.play::after{display:none}
+.hero{animation:none}
+.menu{top:196px;bottom:auto;width:460px}
+/* match block: Chope a Seat with its map and bots chips in one panel */
+.match{padding:12px;border-radius:30px;background:rgba(40,14,4,.5);box-shadow:inset 0 0 0 2px rgba(255,247,230,.14)}
+.match .play{height:112px;font-size:44px;border-radius:20px}
+.match .row{display:flex;gap:10px;margin:20px 0 0}
+.alt .match .row{margin:0 0 12px}
+.match .chip{flex:1;height:60px;box-shadow:none;border-radius:14px}.match .chip.bots{flex:0 0 150px}
+/* menu list */
+.list{margin-top:22px;display:flex;flex-direction:column;gap:8px}
+.item{height:66px;padding:0 22px;border-radius:16px;display:flex;align-items:center;gap:14px;font:400 30px/1 var(--d);color:#FFF7E6;background:rgba(40,14,4,.34);border-left:6px solid transparent;text-shadow:0 2px 0 rgba(40,10,0,.4);transition:background .12s,color .12s,padding .12s,border-color .12s}
+.item:not(:disabled):hover,.item.hov{background:#FFF7E6;color:#3A2417;text-shadow:none;padding-left:34px;border-left-color:#F2B62C}
+.item:not(:disabled):active{background:#F2B62C}
+.item:disabled{opacity:.5;cursor:not-allowed}
+.item em{font:700 13px var(--b);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;padding:4px 9px;border-radius:8px;background:#F2B62C;color:#3A2417;text-shadow:none}
+.item:disabled em{background:none;box-shadow:inset 0 0 0 2px currentColor;color:inherit}
+.item svg{width:20px;height:20px;margin-left:auto;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .12s}
+.item:not(:disabled):hover svg,.item.hov svg{opacity:1}

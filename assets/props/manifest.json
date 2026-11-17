@@ -1,0 +1,242 @@
+{
+ "stall_front": {
+  "tris": 2926,
+  "nodes": [
+   "SIGN_grade",
+   "SIGN_main",
+   "SIGN_menu_1",
+   "SIGN_menu_2",
+   "SIGN_menu_3",
+   "stall_front__food_charsiu",
+   "stall_front__food_chicken",
+   "stall_front__food_roast",
+   "stall_front__glass",
+   "stall_front__paint_cream",
+   "stall_front__paint_gold",
+   "stall_front__paint_maroon",
+   "stall_front__paint_shutter",
+   "stall_front__rubber_black",
+   "stall_front__steel_brushed",
+   "stall_front__wall_tile"
+  ],
+  "tex_slots": [
+   "steel_brushed",
+   "wall_tile"
+  ],
+  "flat_mats": [
+   "SIGN_grade",
+   "SIGN_main",
+   "SIGN_menu_1",
+   "SIGN_menu_2",
+   "SIGN_menu_3",
+   "food_charsiu",
+   "food_chicken",
+   "food_roast",
+   "glass",
+   "paint_cream",
+   "paint_gold",
+   "paint_maroon",
+   "paint_shutter",
+   "rubber_black"
+  ],
+  "bytes": 1378540
+ },
+ "hawker_table": {
+  "tris": 2988,
+  "nodes": [
+   "hawker_table__formica",
+   "hawker_table__plastic_red",
+   "hawker_table__steel_brushed"
+  ],
+  "tex_slots": [
+   "formica",
+   "plastic_red",
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "rubber_black"
+  ],
+  "bytes": 1777660
+ },
+ "stool_plastic_red": {
+  "tris": 1056,
+  "nodes": [
+   "stool_plastic_red__plastic_red",
+   "stool_plastic_red__rubber_black"
+  ],
+  "tex_slots": [
+   "plastic_red"
+  ],
+  "flat_mats": [
+   "rubber_black"
+  ],
+  "bytes": 474036
+ },
+ "stool_plastic_blue": {
+  "tris": 1056,
+  "nodes": [
+   "stool_plastic_blue__plastic_blue",
+   "stool_plastic_blue__rubber_black"
+  ],
+  "tex_slots": [
+   "plastic_blue"
+  ],
+  "flat_mats": [
+   "rubber_black"
+  ],
+  "bytes": 474292
+ },
+ "tray_return_rack": {
+  "tris": 1434,
+  "nodes": [
+   "SIGN_tray",
+   "tray_return_rack__paint_green",
+   "tray_return_rack__paint_white",
+   "tray_return_rack__plastic_blue",
+   "tray_return_rack__plastic_red",
+   "tray_return_rack__rubber_black",
+   "tray_return_rack__steel_brushed"
+  ],
+  "tex_slots": [
+   "plastic_blue",
+   "plastic_red",
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "SIGN_tray",
+   "paint_green",
+   "paint_white",
+   "rubber_black"
+  ],
+  "bytes": 1777680
+ },
+ "ceiling_fan": {
+  "tris": 1024,
+  "nodes": [
+   "FAN_rotor",
+   "ceiling_fan__paint_cream",
+   "ceiling_fan__steel_brushed"
+  ],
+  "tex_slots": [
+   "plywood",
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "paint_cream",
+   "rubber_black"
+  ],
+  "bytes": 1452580
+ },
+ "stockpot_wok": {
+  "tris": 3604,
+  "nodes": [
+   "stockpot_wok__broth",
+   "stockpot_wok__broth_bubble",
+   "stockpot_wok__flame",
+   "stockpot_wok__iron_dark",
+   "stockpot_wok__rubber_black",
+   "stockpot_wok__steel_brushed",
+   "stockpot_wok__wok_oil"
+  ],
+  "tex_slots": [
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "broth",
+   "broth_bubble",
+   "flame",
+   "iron_dark",
+   "rubber_black",
+   "wok_oil"
+  ],
+  "bytes": 1007376
+ },
+ "teh_tarik": {
+  "tris": 1912,
+  "nodes": [
+   "teh_tarik__glass",
+   "teh_tarik__paint_cream",
+   "teh_tarik__steel_brushed",
+   "teh_tarik__tea"
+  ],
+  "tex_slots": [
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "glass",
+   "paint_cream",
+   "rubber_black",
+   "tea"
+  ],
+  "bytes": 926836
+ },
+ "bowls_plates": {
+  "tris": 3632,
+  "nodes": [
+   "bowls_plates__ceramic_blue",
+   "bowls_plates__ceramic_rim",
+   "bowls_plates__ceramic_white"
+  ],
+  "tex_slots": [],
+  "flat_mats": [
+   "ceramic_blue",
+   "ceramic_rim",
+   "ceramic_white"
+  ],
+  "bytes": 127516
+ },
+ "chope_tissue": {
+  "tris": 288,
+  "nodes": [
+   "chope_tissue__tissue_crimp",
+   "chope_tissue__tissue_pack",
+   "chope_tissue__tissue_print"
+  ],
+  "tex_slots": [],
+  "flat_mats": [
+   "tissue_crimp",
+   "tissue_pack",
+   "tissue_print"
+  ],
+  "bytes": 16136
+ },
+ "bin": {
+  "tris": 1162,
+  "nodes": [
+   "SIGN_bin",
+   "bin__paint_green",
+   "bin__paint_white",
+   "bin__rubber_black",
+   "bin__steel_brushed"
+  ],
+  "tex_slots": [
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "SIGN_bin",
+   "bin_bag",
+   "paint_green",
+   "paint_white",
+   "rubber_black"
+  ],
+  "bytes": 890932
+ },
+ "fluorescent_tube": {
+  "tris": 536,
+  "nodes": [
+   "TUBE_emit.001",
+   "fluorescent_tube__paint_white",
+   "fluorescent_tube__rubber_black",
+   "fluorescent_tube__steel_brushed"
+  ],
+  "tex_slots": [
+   "steel_brushed"
+  ],
+  "flat_mats": [
+   "TUBE_emit",
+   "paint_white",
+   "rubber_black"
+  ],
+  "bytes": 872928
+ }
+}

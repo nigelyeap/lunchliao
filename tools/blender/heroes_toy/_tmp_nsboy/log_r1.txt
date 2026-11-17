@@ -1,0 +1,43 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:06.542  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_nsboy/nsboy_build.blend"
+00:06.765  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_nsboy/nsboy_rig.blend"
+00:06.907  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_nsboy/nsboy_anim.blend"
+TOY_TRIS 27003 objects 89
+TOY_TOP [('h_head', 2132), ('shirt', 2112), ('h_face', 2065), ('hand_r', 1100), ('hand_l', 1100), ('h_hair', 1088), ('arm_r', 1000), ('arm_l', 1000), ('h_beret', 840), ('lace', 836), ('pstrap', 808), ('torso', 772), ('tleg', 640), ('h_badge', 528), ('h_bband', 480), ('boot_foot', 448)]
+[build] pre-scale z -0.006 1.7371 GS 1.0823
+Info: Saved as "nsboy_build.blend"
+[rig] seam welded 28 of 28
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 7821 19182
+Info: Saved as "nsboy_rig.blend"
+Info: Saved as "nsboy_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+02:32:01 | INFO: Starting glTF 2.0 export
+02:32:01 | INFO: Extracting primitive: nsboy_body
+02:32:01 | INFO: Primitives created: 21
+02:32:01 | INFO: Extracting primitive: nsboy_head
+02:32:02 | INFO: Primitives created: 16
+02:32:02 | INFO: Finished glTF 2.0 export in 0.5469207763671875 s
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/nsboy.glb 2426 KB
+02:32:02 | INFO: Data are loaded, start creating Blender stuff
+02:32:02 | INFO: Blender create Mesh node nsboy_body
+02:32:02 | INFO: Blender create Mesh node nsboy_head
+02:32:02 | INFO: glTF import finished in 0.26s
+[verify] tris 27003; X -0.596..0.630 height(Z after import) 1.886 zmin -0.006 depth(Y) -0.523..0.553
+[verify] bones ['root', 'hips', 'spine', 'chest', 'neck', 'head', 'eye.l', 'eye.r', 'prop', 'upperarm.l', 'lowerarm.l', 'hand.l', 'handslot.l', 'upperarm.r', 'lowerarm.r', 'hand.r', 'handslot.r', 'upperleg.l', 'lowerleg.l', 'foot.l', 'toes.l', 'upperleg.r', 'lowerleg.r', 'foot.r', 'toes.r']
+[verify] nsboy_body: 19182 tris, 21 mats
+[verify] morphs on nsboy_head ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+[verify] nsboy_head: 7821 tris, 16 mats
+[verify] actions [('attack', 18), ('idle', 60), ('run', 24), ('ult', 2)]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

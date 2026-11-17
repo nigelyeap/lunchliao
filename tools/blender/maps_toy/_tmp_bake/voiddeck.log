@@ -1,0 +1,455 @@
+13:29:15 | INFO: Data are loaded, start creating Blender stuff
+13:29:15 | INFO: Blender create Mesh node #2b2b2b_0.5_0.0_0.15_0.0
+13:29:15 | INFO: Blender create Mesh node #2f6fb0_0.4_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #2f6fb0_0.35_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #2f6fb0_0.45_0.0_0.2_0.0
+13:29:15 | INFO: Blender create Mesh node #2f7d4f_0.4_0.0_0.3_0.0
+13:29:15 | INFO: Blender create Mesh node #2f7fc4_0.3_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #2f7fc4_0.35_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #2f8a74_0.4_0.0_0.3_0.0
+13:29:15 | INFO: Blender create Mesh node #2f9f95_0.4_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #2f9fd0_0.4_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #3aa35a_0.3_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #3aa39a_0.3_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #3b4250_0.5_0.0_0.15_0.0
+13:29:15 | INFO: Blender create Mesh node #4a7fb0_0.4_0.3_0.3_0.0
+13:29:15 | INFO: Blender create Mesh node #4f9440_0.7_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #6d6f73_0.35_0.8_0_0.0
+13:29:15 | INFO: Blender create Mesh node #7a4a2a_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #7a5a40_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #8d8d88_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #9a8468_0.7_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #9ac83a_0.4_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #74ad58_0.85_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #78ad5c_0.85_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #a8a399_0.6_0.0_0.05_0.0
+13:29:15 | INFO: Blender create Mesh node #a8352c_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #a8744a_0.55_0.0_0.1_0.0
+13:29:15 | INFO: Blender create Mesh node #b9b2a4_0.65_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #b9bdc2_0.3_0.9_0_0.0
+13:29:15 | INFO: Blender create Mesh node #b8544a_0.4_0.0_0.3_0.0
+13:29:15 | INFO: Blender create Mesh node #b9742f_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #c4bfb4_0.6_0.0_0.05_0.0
+13:29:15 | INFO: Blender create Mesh node #c9a66b_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #c9ccd0_0.25_1.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #c8221b_0.45_0.0_0.3_0.0
+13:29:15 | INFO: Blender create Mesh node #d9b96a_0.6_0.0_0_0.0
+13:29:15 | INFO: Blender create Mesh node #d3262b_0.3_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #d3262b_0.35_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #d3262b_0.35_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #e8452f_0.35_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #e8742a_0.45_0.0_0.2_0.0
+13:29:15 | INFO: Blender create Mesh node #f2a03a_0.4_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #f2b632_0.4_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #f2c230_0.3_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #f2c230_0.4_0.0_0.3_0.0
+13:29:15 | INFO: Blender create Mesh node #f2c230_0.35_0.0_0.4_0.0
+13:29:15 | INFO: Blender create Mesh node #f2c230_0.35_0.0_0.5_0.0
+13:29:15 | INFO: Blender create Mesh node #f4f1ea_0.4_0.0_0.2_0.0
+13:29:15 | INFO: Blender create Mesh node #ff9a2e_0.3_0.0_0.15_5
+13:29:16 | INFO: Blender create Mesh node #fff6dc_0.3_0.0_0.15_4.0
+13:29:16 | INFO: Blender create Mesh node accent_stripe
+13:29:16 | INFO: Blender create Mesh node case_glass
+13:29:16 | INFO: Blender create Mesh node chess
+13:29:16 | INFO: Blender create Mesh node epdm_blue
+13:29:16 | INFO: Blender create Mesh node epdm_red
+13:29:16 | INFO: Blender create Mesh node floor_cement
+13:29:16 | INFO: Blender create Mesh node hi_#2f7fc4_0.7_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#2f8a74_0.4_0.0_0.3_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#3aa35a_0.7_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#3f8438_0.65_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#4f9440_0.65_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#5b8275_0.45_0.0_0.2_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#6d9b8c_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#7a5a40_0.6_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#7aa595_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#7fb5a3_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#8fc0ae_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#9a6d64_0.45_0.0_0.2_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#9c8b57_0.45_0.0_0.2_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#9d8caf_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#68a54c_0.65_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#668a7d_0.45_0.0_0.2_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#837592_0.45_0.0_0.2_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#b7a3cc_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#b98a55_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#b8544a_0.4_0.0_0.3_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#b88278_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#baa668_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#c9ccd0_0.25_1.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#d9b96a_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#d9c27a_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#d9d4c8_0.4_0.0_0.15_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#d3262b_0.35_0.0_0.4_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#d6988c_0.5_0.0_0.1_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#e96aa0_0.7_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#e8452f_0.7_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#f2c230_0.7_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#f2c230_0.35_0.0_0.4_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#f4f1ea_0.4_0.0_0.2_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#fbf8f0_0.7_0.0_0_0.0
+13:29:16 | INFO: Blender create Mesh node hi_#fff6dc_0.3_0.0_0.15_4.0
+13:29:16 | INFO: Blender create Mesh node hi_beam
+13:29:16 | INFO: Blender create Mesh node hi_ceiling
+13:29:16 | INFO: Blender create Mesh node hi_facade_#7fb5a3_4.5
+13:29:16 | INFO: Blender create Mesh node hi_facade_#8fc0ae_0
+13:29:16 | INFO: Blender create Mesh node hi_facade_#b7a3cc_0
+13:29:16 | INFO: Blender create Mesh node hi_facade_#d9c27a_0
+13:29:16 | INFO: Blender create Mesh node hi_facade_#d6988c_4.5
+13:29:16 | INFO: Blender create Mesh node hi_linkway_roof
+13:29:16 | INFO: Blender create Mesh node hi_pavilion_roof
+13:29:16 | INFO: Blender create Mesh node hi_post_paint
+13:29:16 | INFO: Blender create Mesh node hi_signs
+13:29:16 | INFO: Blender create Mesh node park_steel
+13:29:16 | INFO: Blender create Mesh node path
+13:29:16 | INFO: Blender create Mesh node pavilion_pad
+13:29:16 | INFO: Blender create Mesh node post_paint
+13:29:16 | INFO: Blender create Mesh node rim
+13:29:16 | INFO: Blender create Mesh node signs
+13:29:16 | INFO: Blender create Mesh node terrazzo
+13:29:16 | INFO: Blender create Mesh node wall_concrete
+13:29:16 | INFO: glTF import finished in 0.25s
+AO bake 108 skip ['VD_case_glass']
+AO    1s unwrapped
+AO    2s packed
+AO    2s islands 25405
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+AO 1054s baked
+AO 1059s coverage 25.4%
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+13:46:59 | INFO: Starting glTF 2.0 export
+13:46:59 | INFO: Extracting primitive: #2b2b2b_0.5_0.0_0.15_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f6fb0_0.4_0.0_0.4_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f6fb0_0.35_0.0_0.4_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f6fb0_0.45_0.0_0.2_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f7d4f_0.4_0.0_0.3_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f7fc4_0.3_0.0_0.5_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f7fc4_0.35_0.0_0.5_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f8a74_0.4_0.0_0.3_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f9f95_0.4_0.0_0.4_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #2f9fd0_0.4_0.0_0.4_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #3aa35a_0.3_0.0_0.5_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #3aa39a_0.3_0.0_0.5_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #3b4250_0.5_0.0_0.15_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #4a7fb0_0.4_0.3_0.3_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #4f9440_0.7_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #6d6f73_0.35_0.8_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #7a4a2a_0.6_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #7a5a40_0.6_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #8d8d88_0.6_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #9a8468_0.7_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #9ac83a_0.4_0.0_0.4_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #74ad58_0.85_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #78ad5c_0.85_0.0_0_0.0
+13:46:59 | INFO: Primitives created: 1
+13:46:59 | INFO: Extracting primitive: #a8a399_0.6_0.0_0.05_0.0
+13:46:59 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #a8352c_0.6_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #a8744a_0.55_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #b9b2a4_0.65_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #b9bdc2_0.3_0.9_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #b8544a_0.4_0.0_0.3_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #b9742f_0.6_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #c4bfb4_0.6_0.0_0.05_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #c9a66b_0.6_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #c9ccd0_0.25_1.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #c8221b_0.45_0.0_0.3_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #d9b96a_0.6_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #d3262b_0.3_0.0_0.5_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #d3262b_0.35_0.0_0.4_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #d3262b_0.35_0.0_0.5_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #e8452f_0.35_0.0_0.5_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #e8742a_0.45_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f2a03a_0.4_0.0_0.4_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f2b632_0.4_0.0_0.4_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f2c230_0.3_0.0_0.5_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f2c230_0.4_0.0_0.3_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f2c230_0.35_0.0_0.4_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f2c230_0.35_0.0_0.5_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #f4f1ea_0.4_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #ff9a2e_0.3_0.0_0.15_5
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: #fff6dc_0.3_0.0_0.15_4.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: accent_stripe
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: case_glass
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: chess
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: epdm_blue
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: epdm_red
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: floor_cement
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#2f7fc4_0.7_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#2f8a74_0.4_0.0_0.3_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#3aa35a_0.7_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#3f8438_0.65_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#4f9440_0.65_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#5b8275_0.45_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#6d9b8c_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#7a5a40_0.6_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#7aa595_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#7fb5a3_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#8fc0ae_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#9a6d64_0.45_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#9c8b57_0.45_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#9d8caf_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#68a54c_0.65_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#668a7d_0.45_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#837592_0.45_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#b7a3cc_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#b98a55_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#b8544a_0.4_0.0_0.3_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#b88278_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#baa668_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#c9ccd0_0.25_1.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#d9b96a_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#d9c27a_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#d9d4c8_0.4_0.0_0.15_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#d3262b_0.35_0.0_0.4_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#d6988c_0.5_0.0_0.1_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#e96aa0_0.7_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#e8452f_0.7_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#f2c230_0.7_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#f2c230_0.35_0.0_0.4_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#f4f1ea_0.4_0.0_0.2_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#fbf8f0_0.7_0.0_0_0.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_#fff6dc_0.3_0.0_0.15_4.0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_beam
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_ceiling
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_facade_#7fb5a3_4.5
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_facade_#8fc0ae_0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_facade_#b7a3cc_0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_facade_#d9c27a_0
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_facade_#d6988c_4.5
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_linkway_roof
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_pavilion_roof
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_post_paint
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: hi_signs
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: park_steel
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: path
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: pavilion_pad
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: post_paint
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: rim
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: signs
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: terrazzo
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Extracting primitive: wall_concrete
+13:47:00 | INFO: Primitives created: 1
+13:47:00 | INFO: Finished glTF 2.0 export in 0.4060051441192627 s
+17:54.133  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/maps_toy/_tmp_bake/voiddeck_check.png'
+18:02.882  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/maps_toy/_tmp_bake/voiddeck_check_ao.png'
+
+AO wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/maps/voiddeck_lit.glb 9722 KB /Users/nigelyeap/Documents/lunchliao-hd/assets/maps/voiddeck_ao.png 1529 KB
+AO done voiddeck
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

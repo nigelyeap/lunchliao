@@ -1,0 +1,34 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:07.499  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_build.blend"
+00:07.606  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_rig.blend"
+00:07.698  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_anim.blend"
+TOY_TRIS 26499 objects 48
+TOY_TOP [('h_hair', 3800), ('h_face', 2113), ('h_head', 1476), ('torso', 1202), ('arm_r', 1200), ('arm_l', 1200), ('hand_r', 1100), ('hand_l', 1100), ('tank', 960), ('h_ear', 720), ('calf', 712), ('sockcuff', 672), ('h_band', 640), ('pipe_neck', 576)]
+Info: Saved as "gym_build.blend"
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 9613 16886
+Info: Saved as "gym_rig.blend"
+Info: Saved as "gym_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+23:51:20 | INFO: Starting glTF 2.0 export
+23:51:20 | INFO: Extracting primitive: gym_body
+23:51:20 | INFO: Primitives created: 11
+23:51:20 | INFO: Extracting primitive: gym_head
+23:51:20 | INFO: Primitives created: 14
+23:51:20 | INFO: Finished glTF 2.0 export in 0.30971193313598633 s
+00:08.046  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/gym_anim.blend"
+00:15.458  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/wrist_r.png'
+00:23.914  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_gym/wrist_l.png'
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/gym.glb 998 KB
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

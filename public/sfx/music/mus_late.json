@@ -1,0 +1,14 @@
+{
+  "src": "mus_late.wav",
+  "loopStart": 0.485333,
+  "loopEnd": 30.485333,
+  "sampleRate": 48000,
+  "loopStartSample": 23296,
+  "loopEndSample": 1463296,
+  "note": "Original v2. Play from 0 once, then loop loopStart to loopEnd. Pickup before loopStart.",
+  "bpm": 128,
+  "bar": 1.875,
+  "bars": 16,
+  "key": "F# minor",
+  "version": 2
+}

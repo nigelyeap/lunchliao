@@ -1,0 +1,14 @@
+{
+  "src": "mus_menu.wav",
+  "loopStart": 0.583646,
+  "loopEnd": 45.866667,
+  "sampleRate": 48000,
+  "loopStartSample": 28015,
+  "loopEndSample": 2201600,
+  "note": "Original v2. Play from 0 once, then loop loopStart to loopEnd. Pickup before loopStart.",
+  "bpm": 106,
+  "bar": 2.264151,
+  "bars": 20,
+  "key": "G major / E minor",
+  "version": 2
+}

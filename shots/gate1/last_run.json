@@ -1,0 +1,155 @@
+[
+  {
+    "shot": "ahma",
+    "preset": "default",
+    "file": "/Users/nigelyeap/Documents/lunchliao-hd/shots/gate1/ahma_default.png",
+    "info": {
+      "calls": 188,
+      "triangles": 56996,
+      "preset": "default"
+    },
+    "cpu": {
+      "avg": 7.824878048315281,
+      "p50": 8.5,
+      "p95": 10.200000047683716,
+      "max": 20.700000047683716,
+      "n": 205
+    },
+    "used": {
+      "assets": [
+        "tex:tile",
+        "tex:formica",
+        "tex:steel",
+        "tex:concrete",
+        "tex:wood",
+        "sign:SIGN_grade",
+        "sign:SIGN_main",
+        "sign:SIGN_menu_1",
+        "sign:SIGN_menu_2",
+        "sign:SIGN_menu_3",
+        "prop:stall_front.glb",
+        "sign:sign_menu_1.png",
+        "prop:stockpot_wok.glb",
+        "sign:sign_drinks.png",
+        "sign:sign_drinks.png",
+        "sign:sign_nosmoke.png",
+        "sign:sign_tray.png",
+        "prop:hawker_table.glb",
+        "prop:tray_return_rack.glb",
+        "sign:SIGN_tray",
+        "prop:bin.glb",
+        "prop:chope_tissue.glb",
+        "prop:teh_tarik.glb",
+        "prop:fluorescent_tube.glb",
+        "prop:bowls_plates.glb",
+        "prop:fan",
+        "hero:ahma.glb"
+      ],
+      "blockout": []
+    },
+    "benchMs": null,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version) +timerquery"
+  },
+  {
+    "shot": "ahma",
+    "preset": "high",
+    "file": "/Users/nigelyeap/Documents/lunchliao-hd/shots/gate1/ahma_high.png",
+    "info": {
+      "calls": 188,
+      "triangles": 57012,
+      "preset": "high"
+    },
+    "cpu": {
+      "avg": 15.67238096169063,
+      "p50": 18,
+      "p95": 19.300000071525574,
+      "max": 36.39999997615814,
+      "n": 105
+    },
+    "used": {
+      "assets": [
+        "tex:tile",
+        "tex:formica",
+        "tex:steel",
+        "tex:concrete",
+        "tex:wood",
+        "sign:SIGN_grade",
+        "sign:SIGN_main",
+        "sign:SIGN_menu_1",
+        "sign:SIGN_menu_2",
+        "sign:SIGN_menu_3",
+        "prop:stall_front.glb",
+        "sign:sign_menu_1.png",
+        "prop:stockpot_wok.glb",
+        "sign:sign_drinks.png",
+        "sign:sign_drinks.png",
+        "sign:sign_nosmoke.png",
+        "sign:sign_tray.png",
+        "prop:hawker_table.glb",
+        "prop:tray_return_rack.glb",
+        "sign:SIGN_tray",
+        "prop:bin.glb",
+        "prop:chope_tissue.glb",
+        "prop:teh_tarik.glb",
+        "prop:fluorescent_tube.glb",
+        "prop:bowls_plates.glb",
+        "prop:fan",
+        "hero:ahma.glb"
+      ],
+      "blockout": []
+    },
+    "benchMs": null,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version) +timerquery"
+  },
+  {
+    "shot": "ahma",
+    "preset": "ultra",
+    "file": "/Users/nigelyeap/Documents/lunchliao-hd/shots/gate1/ahma_ultra.png",
+    "info": {
+      "calls": 188,
+      "triangles": 57032,
+      "preset": "ultra"
+    },
+    "cpu": {
+      "avg": 22.30120481784085,
+      "p50": 27,
+      "p95": 28.600000023841858,
+      "max": 56.799999952316284,
+      "n": 83
+    },
+    "used": {
+      "assets": [
+        "tex:tile",
+        "tex:formica",
+        "tex:steel",
+        "tex:concrete",
+        "tex:wood",
+        "sign:SIGN_grade",
+        "sign:SIGN_main",
+        "sign:SIGN_menu_1",
+        "sign:SIGN_menu_2",
+        "sign:SIGN_menu_3",
+        "prop:stall_front.glb",
+        "sign:sign_menu_1.png",
+        "prop:stockpot_wok.glb",
+        "sign:sign_drinks.png",
+        "sign:sign_drinks.png",
+        "sign:sign_nosmoke.png",
+        "sign:sign_tray.png",
+        "prop:hawker_table.glb",
+        "prop:tray_return_rack.glb",
+        "sign:SIGN_tray",
+        "prop:bin.glb",
+        "prop:chope_tissue.glb",
+        "prop:teh_tarik.glb",
+        "prop:fluorescent_tube.glb",
+        "prop:bowls_plates.glb",
+        "prop:fan",
+        "hero:ahma.glb"
+      ],
+      "blockout": []
+    },
+    "benchMs": null,
+    "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version) +timerquery"
+  }
+]

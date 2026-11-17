@@ -1,0 +1,176 @@
+<!doctype html><meta charset="utf-8"><title>Lunch Liao! menu: Jotter</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Kalam:wght@400;700&family=Archivo:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="proto.css">
+<style>
+.stage{--paper:#FBF6E6;--ink:#2B3A67;--kopi:#3A2417;--red:#C8221B;--rim:#1F3C80;--kaya:#E3A92B;--line:#b9d2e2;font-family:'Kalam',cursive;color:var(--ink);
+ background:repeating-linear-gradient(92deg,rgba(120,70,30,.07) 0 3px,transparent 3px 41px),repeating-linear-gradient(88deg,rgba(255,240,210,.12) 0 2px,transparent 2px 67px),linear-gradient(#d8b185,#c99c6c)}
+.mk{font-family:'Permanent Marker',cursive;font-weight:400}
+.pr{font-family:'Archivo',sans-serif}
+
+.frame{isolation:isolate}.f2{z-index:2}
+/* the open book */
+.book{position:absolute;left:50px;top:22px;width:1390px;height:790px;border-radius:10px;background:#6fa58c;box-shadow:0 0 0 7px #6fa58c,0 0 0 9px #4d7d67,0 16px 0 6px rgba(58,36,23,.22),0 30px 40px rgba(58,36,23,.3)}
+.pg{position:absolute;top:0;width:695px;height:790px;background:
+ linear-gradient(90deg,transparent 63px,#e58a84 63px 65px,transparent 65px),
+ repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px) 0 14px,var(--paper)}
+.pg.l{left:0;border-radius:8px 0 0 8px}
+.pg.r{left:695px;border-radius:0 8px 8px 0;background:repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px) 0 14px,var(--paper)}
+.pg.l::after,.pg.r::after{content:'';position:absolute;top:0;bottom:0;width:60px;pointer-events:none}
+.pg.l::after{right:0;background:linear-gradient(90deg,transparent,rgba(58,36,23,.2))}
+.pg.r::after{left:0;background:linear-gradient(270deg,transparent,rgba(58,36,23,.2))}
+.staple{position:absolute;left:692px;width:6px;height:34px;border-radius:3px;background:#9aa3a8;box-shadow:0 1px 0 #fff inset;z-index:3}
+
+/* left page */
+.logo{position:absolute;left:86px;top:30px;transform:rotate(-3deg);transform-origin:0 50%}
+.logo h1{font-family:'Permanent Marker';font-weight:400;font-size:86px;line-height:1;color:var(--red);white-space:nowrap;position:relative;text-shadow:3px 3px 0 rgba(31,60,128,.22)}
+.logo h1::before{content:'';position:absolute;left:-8px;right:-10px;bottom:6px;height:34px;background:#f6dc6b;border-radius:8px 14px 10px 16px;z-index:-1;transform:rotate(.6deg)}
+.logo svg{position:absolute;left:0;top:92px;width:560px;height:18px}
+.tagl{position:absolute;left:92px;top:150px;font-size:25px;transform:rotate(-1.5deg)}
+.hero{position:absolute;left:84px;top:196px;height:404px;transform:rotate(-2deg);
+ filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(3px 5px 0 rgba(58,36,23,.28))}
+.who{position:absolute;left:392px;top:212px;width:280px}
+.who h2{font-family:'Permanent Marker';font-weight:400;font-size:66px;line-height:1;color:var(--rim)}
+.who .cls{display:inline-block;margin:8px 0 12px;font-family:'Archivo';font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--kopi);background:#a6d6be;border:2px solid var(--kopi);border-radius:4px;padding:3px 10px;transform:rotate(-1deg)}
+.who q{display:block;font-size:23px;line-height:1.38;quotes:'"' '"'}
+.who small{display:block;font-size:18px;color:#5b6b96;margin-top:2px}
+.arrow{position:absolute;left:318px;top:236px;width:78px;height:60px}
+.sticky{position:absolute;left:404px;top:512px;width:216px;height:86px;background:#f7dc62;transform:rotate(3deg);box-shadow:2px 6px 0 rgba(58,36,23,.2);font-family:'Permanent Marker';font-size:27px;color:var(--kopi);text-align:center;line-height:1;padding-top:10px;border-bottom-right-radius:26px 8px}
+.sticky::before{content:'';position:absolute;left:0;right:0;top:0;height:14px;background:rgba(58,36,23,.1)}
+.sticky i{display:block;font:400 17px 'Kalam';margin-top:6px}
+
+.pals{position:absolute;left:398px;top:432px;display:flex;gap:8px}.pals img{width:62px;height:62px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #fff,2px 4px 0 rgba(58,36,23,.22);transform:rotate(-5deg)}.pals img:nth-child(2){background:#fff;transform:rotate(4deg)}
+/* report book strip */
+.rep{position:absolute;left:84px;top:616px;width:586px;height:156px;background:#fff;border:2px solid var(--kopi);transform:rotate(-.7deg);box-shadow:2px 5px 0 rgba(58,36,23,.18);font-family:'Archivo';color:var(--kopi)}
+.rep header{height:30px;background:var(--rim);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
+.rep header span{font-weight:500;letter-spacing:.04em;text-transform:none}
+.rep .row{display:grid;grid-template-columns:118px 1fr 118px;height:66px;border-bottom:2px solid var(--kopi)}
+.rep .row>div{padding:7px 12px;border-right:2px solid var(--kopi)}.rep .row>div:last-child{border:0}
+.rep label{display:block;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#7a6453}
+.rep b{white-space:nowrap;font:700 25px/1.2 'Kalam';color:var(--ink)}
+.rep .xp{display:flex;align-items:center;gap:4px;margin-top:6px}
+.rep .xp i{width:19px;height:19px;border:2px solid var(--kopi);border-radius:2px}
+.rep .xp i.f{background:repeating-linear-gradient(-55deg,var(--ink) 0 3px,#5a6ea5 3px 5px)}
+.rep .xp em{font:700 19px 'Kalam';color:var(--ink);margin-left:6px;white-space:nowrap}
+.rep .rem{display:flex;align-items:center;gap:12px;height:54px;padding:0 12px}
+.rep .rem label{flex:none}
+.rep .rem span{flex:1;border-bottom:2px dotted #7a6453;font:700 27px/1.1 'Kalam';color:var(--red);padding-left:6px;transform:rotate(-1deg)}
+.rep .rem svg{flex:none;width:46px;height:40px}
+
+/* right page */
+.h2{position:absolute;left:30px;top:20px;font-family:'Permanent Marker';font-size:40px;line-height:1.2;color:var(--rim);transform:rotate(-1deg)}
+.h2 u{text-decoration:none;background:linear-gradient(transparent 62%,#f6dc6b 62% 92%,transparent 92%)}
+.more{position:absolute;right:28px;top:30px;font-size:19px;font-weight:700;color:var(--red);border-bottom:2px solid var(--red);line-height:1.2;transform:rotate(1.5deg)}
+.snaps{position:absolute;left:28px;top:102px;width:641px;display:grid;grid-template-columns:repeat(3,205px);gap:16px 13px}
+.snap{position:relative;display:block;height:228px;background:#fff;padding:7px 7px 0;box-shadow:0 0 0 1px rgba(58,36,23,.18),2px 5px 0 rgba(58,36,23,.2);transform:rotate(-1.4deg)}
+.snap:nth-of-type(2){transform:rotate(1.2deg)}.snap:nth-of-type(3){transform:rotate(-.6deg)}.snap:nth-of-type(4){transform:rotate(1.6deg)}.snap:nth-of-type(5){transform:rotate(-1deg)}
+.snap::before{content:'';position:absolute;left:50%;top:-11px;width:74px;height:24px;margin-left:-37px;background:rgba(242,210,124,.78);transform:rotate(-4deg);box-shadow:0 1px 0 rgba(58,36,23,.12);z-index:2}
+.snap:nth-of-type(2n)::before{background:rgba(158,201,223,.8);transform:rotate(3deg)}.snap:nth-of-type(3n)::before{background:rgba(235,193,201,.85)}
+.snap img{width:191px;height:107px;object-fit:cover}
+.snap b{display:block;font-size:20px;line-height:1.1;margin-top:7px;color:var(--kopi);white-space:nowrap}
+.snap p{font-size:15px;line-height:1.22;margin-top:3px}
+.ring{display:none;position:absolute;inset:-15px -14px;width:calc(100% + 28px);height:calc(100% + 30px);pointer-events:none;z-index:3;overflow:visible}
+.tick{display:none;position:absolute;right:-6px;top:84px;width:62px;height:56px;z-index:4;pointer-events:none}
+.on>.ring,.on>.tick{display:block}.snap.on,.big.on{z-index:5}
+.mcq{position:relative;padding:4px 0 0 8px}
+.mcq h3{font-size:21px;line-height:1.15;font-weight:700;color:var(--kopi)}
+.mcq h3 span{font-family:'Archivo';font-weight:800;font-size:15px;letter-spacing:.08em;margin-right:4px}
+.mcq button{display:flex;align-items:center;gap:12px;width:100%;height:44px;margin-top:8px;font-size:23px;font-weight:700}
+.mcq button i{flex:none;width:50px;height:28px;border:2px solid var(--kopi);border-radius:50%;display:grid;place-items:center;font:800 15px 'Archivo';color:var(--kopi);font-style:normal}
+.mcq button.on i{background:repeating-linear-gradient(-60deg,#3b3b3b 0 3px,#5b5b5b 3px 5px);color:transparent;transform:rotate(-3deg)}
+.mcq button.on{color:var(--kopi)}
+.mcq small{display:block;font:500 13px 'Archivo';letter-spacing:.04em;color:#7a6453;margin-top:8px}
+.chope{position:absolute;left:30px;top:598px;width:412px;height:142px;border-radius:14px;background:var(--red);color:#fff6e0;transform:rotate(-2deg);box-shadow:0 0 0 4px var(--kopi),0 12px 0 4px #7d130e,0 22px 18px rgba(58,36,23,.3);font-family:'Permanent Marker';font-size:52px;line-height:1;text-align:center;display:flex;align-items:center;justify-content:center;gap:18px}
+.chope::before{content:'';position:absolute;inset:9px;border:3px dashed rgba(255,246,224,.75);border-radius:8px}
+.chope svg{width:44px;height:44px;flex:none}
+.plan{position:absolute;left:472px;top:598px;width:200px;font-size:20px;line-height:1.3;transform:rotate(1.5deg)}
+.plan b{color:var(--red);font-size:23px}
+
+/* index tabs, desk stationery */
+.tab{position:absolute;left:1443px;width:148px;height:60px;border-radius:0 14px 14px 0;padding-left:12px;display:flex;align-items:center;gap:8px;font-family:'Archivo';font-weight:800;font-size:16px;color:var(--kopi);box-shadow:0 0 0 2px var(--kopi) inset,3px 5px 0 rgba(58,36,23,.22);z-index:0}
+.tab em{font-style:normal;font-size:13px;letter-spacing:.08em;background:var(--red);color:#fff;border-radius:4px;padding:2px 6px;transform:rotate(-6deg)}
+.ruler{position:absolute;left:58px;top:828px;width:640px;height:54px;border-radius:5px;background:repeating-linear-gradient(90deg,rgba(58,36,23,.75) 0 2px,transparent 2px 16px) 8px 0/100% 11px no-repeat,repeating-linear-gradient(90deg,rgba(58,36,23,.75) 0 2px,transparent 2px 80px) 8px 0/100% 18px no-repeat,linear-gradient(#f4d98a,#e9c466);box-shadow:0 0 0 2px #a67c2a inset,0 5px 0 rgba(58,36,23,.25);display:flex;align-items:flex-end;gap:16px;padding:0 0 7px 28px}
+.ruler button{height:30px;padding:0 16px;background:#fff;border:2px solid var(--kopi);border-radius:4px;font-family:'Archivo';font-weight:800;font-size:16px;letter-spacing:.06em;color:var(--kopi);transform:rotate(-1deg);box-shadow:1px 2px 0 rgba(58,36,23,.25)}
+.ruler button:nth-child(2){transform:rotate(1deg)}
+.ruler span{margin-left:auto;margin-right:14px;font:700 13px 'Archivo';letter-spacing:.14em;color:#8a6a22;padding-bottom:6px}
+.pen{position:absolute;left:760px;top:846px;width:330px;height:16px;border-radius:8px 3px 3px 8px;background:linear-gradient(90deg,var(--red) 0 250px,#eee 250px 262px,var(--red) 262px 300px,#d9c9a8 300px);box-shadow:0 0 0 2px var(--kopi),0 5px 0 rgba(58,36,23,.25);transform:rotate(-2deg)}
+.pen::after{content:'';position:absolute;right:-18px;top:2px;border:6px solid transparent;border-left:16px solid var(--kopi)}
+.foot{position:absolute;right:40px;top:842px;font:700 15px 'Archivo';letter-spacing:.02em;color:#5a3d26}
+
+/* frame 2: scrapbook spread */
+.f2 .pg.l{background:repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px) 0 14px,var(--paper)}
+.f2 .h2{left:44px;top:26px;font-size:50px}
+.f2 .sub{position:absolute;left:48px;top:98px;font-size:22px;transform:rotate(-1deg)}
+.big{position:absolute;display:block;width:296px;height:272px;background:#fff;padding:8px 8px 0;box-shadow:0 0 0 1px rgba(58,36,23,.18),3px 6px 0 rgba(58,36,23,.2);transform:rotate(-1.5deg)}
+.big img{width:280px;height:158px;object-fit:cover}
+.big b{display:block;font-size:25px;line-height:1.1;margin-top:8px;color:var(--kopi);white-space:nowrap}
+.big p{font-size:17px;line-height:1.25;margin-top:4px}
+.big i{position:absolute;width:26px;height:26px;border:13px solid transparent;z-index:2}
+.big i.a{left:2px;top:2px;border-left-color:var(--kopi);border-top-color:var(--kopi)}.big i.b{right:2px;top:2px;border-right-color:var(--kopi);border-top-color:var(--kopi)}
+.big i.c{left:2px;top:146px;border-left-color:var(--kopi);border-bottom-color:var(--kopi)}.big i.d{right:2px;top:146px;border-right-color:var(--kopi);border-bottom-color:var(--kopi)}
+.big .tick{top:120px;right:-10px;width:80px;height:72px}
+.big:nth-of-type(1){left:52px;top:158px}.big:nth-of-type(2){left:372px;top:170px;transform:rotate(1.4deg)}
+.big:nth-of-type(3){left:728px;top:50px;transform:rotate(1deg)}.big:nth-of-type(4){left:1054px;top:62px;transform:rotate(-1.2deg)}
+.big:nth-of-type(5){left:738px;top:404px;transform:rotate(-.8deg)}
+.pickd{position:absolute;left:56px;top:522px;width:600px}
+.pickd small{display:block;font:800 15px 'Archivo';letter-spacing:.14em;text-transform:uppercase;color:#7a6453}
+.pickd h3{font-family:'Permanent Marker';font-weight:400;font-size:42px;line-height:1.15;color:var(--red)}
+.pickd p{font-size:22px;line-height:1.35;margin-top:4px}
+.f2 .chope{left:56px;top:690px;width:330px;height:80px;font-size:34px;box-shadow:0 0 0 4px var(--kopi),0 8px 0 4px #7d130e}
+.f2 .chope svg{width:30px;height:30px}
+.back{position:absolute;left:1080px;top:440px;width:240px}
+.back p{font-size:21px;line-height:1.35}
+.back .sticky{position:relative;left:0;top:0;margin-top:18px;height:74px;padding-top:22px}
+</style>
+<div class="stage">
+<div class="frame">
+ <button class="tab" style="top:150px;background:#a6d6be">Practice range</button>
+ <button class="tab" style="top:226px;background:#f1b28c">Tutorial <em>NEW</em></button>
+ <div class="book"><i class="staple" style="top:190px"></i><i class="staple" style="top:560px"></i>
+  <div class="pg l">
+   <div class="logo"><h1>LUNCH LIAO!</h1><svg viewBox="0 0 560 18" fill="none" stroke="#1F3C80" stroke-width="4" stroke-linecap="round"><path d="M4 9c60-7 130 6 200 0s150-7 230-1 90 4 122 0"/></svg></div>
+   <div class="tagl">inspired by Singaporean culture</div>
+   <img class="hero" src="assets/heroes/ahma_full.png" alt="">
+   <svg class="arrow" viewBox="0 0 78 60" fill="none" stroke="#C8221B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M74 14C52 6 26 14 8 40"/><path d="M6 20l1 21 20-6"/></svg>
+   <div class="who"><h2>Ah Ma</h2><span class="cls">Class: Tank</span><q>Walk slowly also can reach.</q><small>my hero today</small></div>
+   <div class="pals"><img src="assets/heroes/uncle_bust.png" alt=""><img src="assets/heroes/tarik_bust.png" alt=""><img src="assets/heroes/rascal_bust.png" alt=""></div>
+   <button class="sticky">Change hero<i>13 in the class photo</i></button>
+   <div class="rep"><header>Report book <span>Player 1 &middot; Term 4</span></header>
+    <div class="row"><div><label>Level</label><b>Level 4</b></div>
+     <div><label>XP</label><div class="xp"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><em>180/300</em></div></div>
+     <div><label>Wins</label><b>12 wins</b></div></div>
+    <div class="rem"><label>Teacher's<br>remarks</label><span>Good effort! Can do better.</span><svg viewBox="0 0 46 40" fill="none" stroke="#C8221B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22l10 12C22 20 30 10 42 4"/></svg></div></div>
+  </div>
+  <div class="pg r">
+   <div class="h2">Where to <u>makan</u> today?</div>
+   <button class="more" data-go="maps">open scrapbook</button>
+   <div class="snaps"><template data-maps><button class="snap" data-map="{id}"><img src="assets/maps/{id}.jpg" alt=""><b>{short}</b><p>{line}</p>
+     <svg class="ring" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" stroke="#C8221B" stroke-width="4" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M16 5C40 2 70 2 90 5c7 2 8 14 7 45 0 30 0 43-7 45-30 3-60 3-80 0C3 93 3 80 3 50 2 20 3 9 12 6c18-3 38-4 54-2"/></svg>
+     <svg class="tick" viewBox="0 0 46 40" fill="none" stroke="#C8221B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22l10 12C22 20 30 10 42 4"/></svg></button></template>
+    <div class="mcq"><h3><span>Q1.</span>Bots how fierce?</h3>
+     <button data-bots="Easy"><i>A</i>Easy</button><button class="on" data-bots="Normal"><i>B</i>Normal</button><button data-bots="Hard"><i>C</i>Hard</button>
+     <small>Shade one oval with 2B pencil</small></div></div>
+   <button class="chope">Chope a seat<svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z" fill="currentColor"/></svg></button>
+   <div class="plan">Tissue packet ready.<br>Today we go:<br><b data-f="short"></b></div>
+  </div></div>
+ <div class="ruler"><button>Settings</button><button>Controls</button><button>Credits</button><span>30 CM</span></div>
+ <div class="pen"></div>
+ <div class="foot">Lunch Liao! v0.11.0 &middot; &copy; 2026 Nigel Yeap</div>
+</div>
+
+<div class="frame f2">
+ <div class="book"><i class="staple" style="top:190px"></i><i class="staple" style="top:560px"></i>
+  <div class="pg l"><div class="h2">My makan <u>scrapbook</u></div><div class="sub">Five places. Circle one in red pen.</div></div>
+  <div class="pg r"></div>
+  <div><template data-maps><button class="big" data-map="{id}"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><img src="assets/maps/{id}.jpg" alt=""><b>{short}</b><p>{line}</p>
+    <svg class="ring" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" stroke="#C8221B" stroke-width="5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M16 5C40 2 70 2 90 5c7 2 8 14 7 45 0 30 0 43-7 45-30 3-60 3-80 0C3 93 3 80 3 50 2 20 3 9 12 6c18-3 38-4 54-2"/></svg>
+    <svg class="tick" viewBox="0 0 46 40" fill="none" stroke="#C8221B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22l10 12C22 20 30 10 42 4"/></svg></button></template></div>
+  <div class="pickd"><small>Circled today &middot; <span data-f="tag"></span></small><h3 data-f="name"></h3><p data-f="line"></p></div>
+  <button class="chope">Chope a seat<svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z" fill="currentColor"/></svg></button>
+  <div class="back"><p>Tap a photo to circle it. Done already? Close the scrapbook.</p><button class="sticky" data-go="">Back to desk</button></div>
+ </div>
+ <div class="ruler"><button>Settings</button><button>Controls</button><button>Credits</button><span>30 CM</span></div>
+ <div class="pen"></div>
+ <div class="foot">Lunch Liao! v0.11.0 &middot; &copy; 2026 Nigel Yeap</div>
+</div>
+</div>
+<script src="proto.js"></script>

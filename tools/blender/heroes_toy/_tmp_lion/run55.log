@@ -1,0 +1,21 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+Traceback (most recent call last):
+  File "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/lion.py", line 917, in <module>
+    if a in STAGES: STAGES[a]()
+                    ~~~~~~~~~^^
+  File "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/lion.py", line 579, in stage_build
+    build_head(); build_face(); build_cloth(); build_tail(); build_performers()
+                                ~~~~~~~~~~~^^
+  File "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/lion.py", line 437, in build_cloth
+    outer = [cloth_prof(j) for j in range(NS + 1)]; TH = .018
+             ~~~~~~~~~~^^^
+  File "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/lion.py", line 427, in cloth_prof
+    for sd, k, f in DESC:
+                    ^^^^
+NameError: name 'DESC' is not defined
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

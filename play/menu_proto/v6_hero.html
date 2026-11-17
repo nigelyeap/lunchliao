@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Lunch Liao! v6: Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="proto.css"><link rel="stylesheet" href="v3.css"><link rel="stylesheet" href="v4.css"><link rel="stylesheet" href="v5.css"><link rel="stylesheet" href="v6.css">
+</head><body class="lv-a"><div class="stage"><div class="frame f1"><div class="bgs"></div><div class="grade"></div>
+<div class="hd"><a class="bk" href="v6_roster.html"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Characters</a><h1 id="nm"></h1><span class="role" id="rl"></span><small id="ix"></small><a class="nav p" id="pv" title="Previous hero"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></a><a class="nav n" id="nx" title="Next hero"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a></div>
+<div class="view"><img id="pt" alt=""><div class="hint">Drag to spin</div></div>
+<div class="pane"><div class="tabs"><button class="tab" data-t="ov">Overview</button><button class="tab" data-t="ab">Abilities</button><button class="tab" data-t="sk"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Skins <em>Soon</em></button><button class="tab" data-t="wp"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Weapons <em>Soon</em></button></div>
+<div class="body"><div id="ov"></div><div id="ab"></div><div id="sk" class="lock"></div><div id="wp" class="lock"></div></div></div>
+</div></div><script src="proto.js"></script><script src="v4.js"></script><script src="v6_data.js"></script><script>
+// DRAFT numbers Nigel can change. dps: steady main-attack damage a second, worked out from the LMB numbers in chope.html (see MENU_DESIGNS.md). util and diff: 1 to 5 proposals.
+const DRAFT={ahma:{dps:71,util:3,diff:2},gym:{dps:81,util:2,diff:1},uncle:{dps:66,util:4,diff:3},nsboy:{dps:121,util:2,diff:3},engineer:{dps:50,util:5,diff:4},debater:{dps:34,util:5,diff:4},tarik:{dps:40,util:5,diff:2},rider:{dps:45,util:2,diff:4},rascal:{dps:85,util:2,diff:4},lens:{dps:125,util:2,diff:5},siao:{dps:95,util:2,diff:3},dj:{dps:56,util:5,diff:2},ice:{dps:88,util:5,diff:3}};
+const H=V6.heroes,K=Object.keys(H),q=new URLSearchParams(location.search),id=H[q.get('h')]?q.get('h'):'ahma',h=H[id],D=DRAFT[id],i=K.indexOf(id),$=s=>document.getElementById(s);
+window.HERO=id;
+$('nm').textContent=h.name;$('rl').textContent=h.role;$('ix').textContent=(i+1)+' of '+K.length;$('pt').src='assets/heroes/'+id+'_full.png';
+$('pv').href='?h='+K[(i+K.length-1)%K.length];$('nx').href='?h='+K[(i+1)%K.length];
+const hpMax=Math.max(...K.map(k=>H[k].hp)),sp=K.map(k=>H[k].speed),s0=Math.min(...sp),s1=Math.max(...sp),dMax=Math.max(...K.map(k=>DRAFT[k].dps));
+const bar=(n,v,t,d)=>`<div class="st${d?' d':''}"><small>${n}</small><div class="bar"><i style="width:${v*20}%"></i></div><span>${t}</span></div>`;
+$('ov').innerHTML=`<p class="q">"${h.line}"</p><div class="tiles"><div><small>Health</small><b>${h.hp}<i>HP</i></b></div><div><small>Damage</small><b>${D.dps}<i>a sec</i></b></div><div><small>Move speed</small><b>${h.speed}<i>m/s</i></b></div><div><small>Ult charge</small><b>${h.ultCost}<i>pts</i></b></div><div><small>${h.mag?'Ammo, reload':'Ammo'}</small><b>${h.mag?h.mag.mag+'<i>'+h.mag.rl+' s</i>':'None<i>no reload</i>'}</b></div></div>`
+ +bar('Damage',D.dps/dMax*5,D.dps+' <u>a second</u>')+bar('Health',h.hp/hpMax*5,h.hp+' <u>HP</u>')+bar('Speed',1+(h.speed-s0)/(s1-s0)*4,h.speed+' <u>m/s</u>')+bar('Utility',D.util,D.util+' / 5 <u>draft</u>',1)+bar('Difficulty',D.diff,D.diff+' / 5 <u>draft</u>',1)
+ +`<p class="src">Health, speed, ult charge and ammo are the game's own numbers. Damage is the main attack's steady damage a second on body shots. Utility and difficulty are first-draft ratings.</p>`;
+$('ab').innerHTML=h.kit.map(a=>{const slot=a['key'];return `<div class="ab"><svg viewBox="0 0 24 24"><path d="${V6.icons[a.icon]||''}"/></svg><h4><kbd>${slot==='P'?'Passive':slot==='4'?'4 Ult':slot}</kbd>${a.name}</h4><p>${a.short}</p><p class="n">${a.detail}</p></div>`}).join('');
+const LK='<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
+const lock=(t,l)=>`${LK}<h3>${t} are coming soon</h3><p>${l}</p><div class="slots"><div>Default</div><div>Locked</div><div>Locked</div><div>Locked</div></div>`;
+$('sk').innerHTML=lock('Skins','Pick a look for '+h.name+' here. Each skin will preview on the spinning model.');
+$('wp').innerHTML=lock('Weapons','Swap the weapon '+h.name+' carries. The numbers will update to match.');
+const tab=t=>{document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t));document.querySelectorAll('.body>*').forEach(b=>b.classList.toggle('on',b.id===t));history.replaceState(0,'','#tab-'+t)};
+document.querySelector('.tabs').onclick=e=>{const b=e.target.closest('.tab');if(b)tab(b.dataset.t)};tab($(location.hash.slice(5))?location.hash.slice(5):'ov');
+</script>
+<script type="importmap">{"imports":{"three":"../three/build/three.module.js","three/addons/":"../three/examples/jsm/"}}</script>
+<script type="module">
+// Spinning model. If the module or the GLB fails to load (for example a page opened by double click), the portrait underneath stays.
+import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+const V=document.querySelector('.view'),W=700,Hh=740,r=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});r.setPixelRatio(2);r.setSize(W,Hh,false);r.outputColorSpace=THREE.SRGBColorSpace;
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(28,W/Hh,.1,50);sc.environment=new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(),.04).texture;
+const sun=new THREE.DirectionalLight(0xfff0d8,1.6);sun.position.set(2,4,3);sc.add(sun);
+new GLTFLoader().load('../assets/heroes/'+HERO+'.glb',g=>{const o=g.scene,piv=new THREE.Group();sc.add(piv);piv.add(o);
+ const b=new THREE.Box3().setFromObject(o),s=b.getSize(new THREE.Vector3()),c=b.getCenter(new THREE.Vector3()),k=1.9/Math.max(s.y,s.x*1.15,s.z*1.15);
+ o.scale.setScalar(k);o.position.set(-c.x*k,-b.min.y*k,-c.z*k);o.rotation.y=Math.PI; // the toys face -z
+ cam.position.set(0,1.25,5.4);cam.lookAt(0,.95,0);
+ const mx=new THREE.AnimationMixer(o),idle=g.animations.find(a=>a.name==='idle');if(idle)mx.clipAction(idle).play();
+ let drag=0,down=null,hold=0,last=performance.now(),spin=0;
+ V.prepend(r.domElement);V.classList.add('gl');window.MODEL=1;
+ r.domElement.onpointerdown=e=>{down=[e.clientX,drag];r.domElement.setPointerCapture(e.pointerId)};
+ r.domElement.onpointermove=e=>{if(down)drag=down[1]+(e.clientX-down[0])*.012};r.domElement.onpointerup=()=>down=null;
+ // window.__t (seconds) overrides the clock so a recording can step frames. The spin pauses while dragging.
+ (function f(){const n=performance.now(),dt=(n-last)/1e3;last=n;hold+=dt;if(!down)spin+=dt;const t=window.__t;mx.setTime(t??hold);piv.rotation.y=.5+(t??spin)*.6+drag;r.render(sc,cam);requestAnimationFrame(f)})()
+},undefined,e=>console.warn('model failed, portrait kept',e))
+</script></body></html>

@@ -1,0 +1,221 @@
+14:01:22 | INFO: Data are loaded, start creating Blender stuff
+14:01:22 | INFO: Blender create Mesh node blue
+14:01:22 | INFO: Blender create Mesh node c_2f7d4f
+14:01:22 | INFO: Blender create Mesh node c_2f86d6
+14:01:22 | INFO: Blender create Mesh node c_3f9bd0
+14:01:22 | INFO: Blender create Mesh node c_4fb58a
+14:01:22 | INFO: Blender create Mesh node c_6fb39a
+14:01:22 | INFO: Blender create Mesh node c_7aa6d0
+14:01:22 | INFO: Blender create Mesh node c_7dbb4e
+14:01:22 | INFO: Blender create Mesh node c_9ec9df
+14:01:22 | INFO: Blender create Mesh node c_35b0a6
+14:01:22 | INFO: Blender create Mesh node c_dd8fa3
+14:01:22 | INFO: Blender create Mesh node c_e6b455
+14:01:22 | INFO: Blender create Mesh node c_e8bf3f
+14:01:22 | INFO: Blender create Mesh node c_e58f7a
+14:01:22 | INFO: Blender create Mesh node c_e0709c
+14:01:22 | INFO: Blender create Mesh node c_e8746a
+14:01:22 | INFO: Blender create Mesh node c_ee8a4a
+14:01:22 | INFO: Blender create Mesh node c_f0b93a
+14:01:22 | INFO: Blender create Mesh node c_f1e2bd
+14:01:22 | INFO: Blender create Mesh node c_f29b7a
+14:01:22 | INFO: Blender create Mesh node cap
+14:01:22 | INFO: Blender create Mesh node cglass
+14:01:22 | INFO: Blender create Mesh node conc
+14:01:22 | INFO: Blender create Mesh node cream
+14:01:22 | INFO: Blender create Mesh node dark
+14:01:22 | INFO: Blender create Mesh node floor
+14:01:22 | INFO: Blender create Mesh node glass
+14:01:22 | INFO: Blender create Mesh node grass
+14:01:22 | INFO: Blender create Mesh node head
+14:01:22 | INFO: Blender create Mesh node lamp
+14:01:22 | INFO: Blender create Mesh node leaf
+14:01:22 | INFO: Blender create Mesh node leaf2
+14:01:22 | INFO: Blender create Mesh node lift
+14:01:22 | INFO: Blender create Mesh node maroon
+14:01:22 | INFO: Blender create Mesh node o_cap
+14:01:22 | INFO: Blender create Mesh node o_glass
+14:01:22 | INFO: Blender create Mesh node o_green
+14:01:22 | INFO: Blender create Mesh node o_maroon
+14:01:22 | INFO: Blender create Mesh node o_ochre
+14:01:22 | INFO: Blender create Mesh node road
+14:01:22 | INFO: Blender create Mesh node rubber
+14:01:22 | INFO: Blender create Mesh node sred
+14:01:22 | INFO: Blender create Mesh node steel
+14:01:22 | INFO: Blender create Mesh node tail
+14:01:22 | INFO: Blender create Mesh node teal
+14:01:22 | INFO: Blender create Mesh node tile
+14:01:22 | INFO: Blender create Mesh node trunk
+14:01:22 | INFO: Blender create Mesh node under
+14:01:22 | INFO: Blender create Mesh node white
+14:01:22 | INFO: Blender create Mesh node yellow
+14:01:22 | INFO: Blender create Mesh node signs
+14:01:22 | INFO: glTF import finished in 0.17s
+AO bake 47 skip ['map_cglass', 'map_glass', 'map_o_glass', 'signs']
+AO    0s unwrapped
+AO    2s packed
+AO    2s islands 13506
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+AO  479s baked
+AO  481s coverage 42.9%
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+14:09:26 | INFO: Starting glTF 2.0 export
+14:09:26 | INFO: Extracting primitive: blue
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_2f7d4f
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_2f86d6
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_3f9bd0
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_4fb58a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_6fb39a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_7aa6d0
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_7dbb4e
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_9ec9df
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_35b0a6
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_dd8fa3
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_e6b455
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_e8bf3f
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_e58f7a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_e0709c
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_e8746a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_ee8a4a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_f0b93a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_f1e2bd
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: c_f29b7a
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: cap
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: cglass
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: conc
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: cream
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: dark
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: floor
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: glass
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: grass
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: head
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: lamp
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: leaf
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: leaf2
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: lift
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: maroon
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: o_cap
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: o_glass
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: o_green
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: o_maroon
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: o_ochre
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: road
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: rubber
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: sred
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: steel
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: tail
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: teal
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: tile
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: trunk
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: under
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: white
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: yellow
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Extracting primitive: signs
+14:09:26 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+14:09:26 | INFO: Primitives created: 1
+14:09:26 | INFO: Finished glTF 2.0 export in 0.1829531192779541 s
+08:11.722  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/maps_toy/_tmp_bake/carpark_check.png'
+08:17.906  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/maps_toy/_tmp_bake/carpark_check_ao.png'
+
+AO wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/maps/carpark_lit.glb 7357 KB /Users/nigelyeap/Documents/lunchliao-hd/assets/maps/carpark_ao.png 2171 KB
+AO done carpark
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit

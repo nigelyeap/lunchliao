@@ -1,0 +1,67 @@
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:96: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('lens'); m.use_nodes = True; nt = m.node_tree
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:450: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('World'); SC.world = w; w.use_nodes = True
+/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/styles/toy/ahma_toy.py:465: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('cyc'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+00:12.617  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_build.blend"
+00:12.737  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_rig.blend"
+00:12.840  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_anim.blend"
+TOY_TRIS 27896 objects 64
+TOY_TOP [('h_head', 2924), ('h_face', 2450), ('hips_sh', 2064), ('singlet', 2016), ('torso', 1314), ('h_comb', 1232), ('h_fringe', 1200), ('arm_l', 1000), ('arm_r', 1000), ('hand_l', 950), ('hand_r', 950), ('pipe_top', 864), ('pipe_hem', 768), ('strap', 752), ('h_ear', 720), ('shorthem', 672)]
+TOY_GS 1.049 raw height 1.794 bottom -0.002
+Info: Saved as "uncle_build.blend"
+[rig] shape keys ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult'] tris 8962 18394
+Info: Saved as "uncle_rig.blend"
+Info: Saved as "uncle_anim.blend"
+[anim] actions ['idle', 'run', 'attack', 'ult']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+09:05:13 | INFO: Starting glTF 2.0 export
+09:05:13 | INFO: Extracting primitive: uncle_body
+09:05:13 | INFO: Primitives created: 13
+09:05:13 | INFO: Extracting primitive: uncle_head
+09:05:13 | INFO: Primitives created: 12
+09:05:13 | INFO: Finished glTF 2.0 export in 0.32496190071105957 s
+
+[export] wrote /Users/nigelyeap/Documents/lunchliao-hd/assets/heroes/uncle.glb 1239 KB
+09:05:13 | INFO: Data are loaded, start creating Blender stuff
+09:05:13 | INFO: Blender create Mesh node uncle_body
+09:05:13 | INFO: Blender create Mesh node uncle_head
+09:05:13 | INFO: glTF import finished in 0.07s
+00:13.373  blend            | Read blend: "/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/uncle_anim.blend"
+00:45.029  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/shots/heroes_toy/uncle/beauty.png'
+00:55.167  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/t_0.png'
+01:04.747  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/t_1.png'
+01:14.565  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/t_2.png'
+01:20.997  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/e_smile.png'
+01:27.181  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/e_angry.png'
+01:33.427  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/e_grin.png'
+01:39.956  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/e_ult.png'
+01:46.403  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_idle_0.png'
+01:52.332  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_idle_1.png'
+01:58.285  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_idle_2.png'
+02:05.005  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_idle_3.png'
+02:10.674  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_run_0.png'
+02:15.725  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_run_1.png'
+02:21.096  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_run_2.png'
+02:26.644  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_run_3.png'
+02:32.108  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_attack_0.png'
+02:36.841  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_attack_1.png'
+02:41.701  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_attack_2.png'
+02:45.951  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_attack_3.png'
+02:48.645  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_ult_0.png'
+02:50.820  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_ult_1.png'
+02:52.927  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_ult_2.png'
+02:54.911  render           | Saved: '/Users/nigelyeap/Documents/lunchliao-hd/tools/blender/heroes_toy/_tmp_uncle/a_ult_3.png'
+[verify] tris 27356; X -0.726..0.733 height(Z after import) 1.882 depth(Y) -0.491..0.551
+[verify] bones ['root', 'hips', 'spine', 'chest', 'neck', 'head', 'eye.l', 'eye.r', 'prop', 'upperarm.l', 'lowerarm.l', 'hand.l', 'handslot.l', 'upperarm.r', 'lowerarm.r', 'hand.r', 'handslot.r', 'upperleg.l', 'lowerleg.l', 'foot.l', 'toes.l', 'upperleg.r', 'lowerleg.r', 'foot.r', 'toes.r']
+[verify] uncle_body: 18394 tris, 13 mats
+[verify] morphs on uncle_head ['Basis', 'blink', 'mouth_open', 'smile', 'angry', 'grin', 'ult']
+[verify] uncle_head: 8962 tris, 12 mats
+[verify] actions [('attack', 18), ('idle', 60), ('run', 24), ('ult', 2)]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:31:22)
+
+Blender quit
